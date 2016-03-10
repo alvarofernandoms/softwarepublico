@@ -171,3 +171,38 @@
 #search-subheader{
 	display: none;
 }
+
+.controller-search .main-content .search-form .search_form #search-header ul#assets-menu {
+  display: block;
+  border: none;
+  background-color: transparent;
+  margin-left: -50px;
+}
+
+.controller-search .main-content .search-form .search_form #search-header ul#assets-menu li {
+  display: none;
+}
+
+.controller-search .main-content .search-form .search_form #search-header ul#assets-menu li.selected {
+  display: inline-block;
+}
+
+.controller-search .main-content .search-form .search_form #search-header ul#assets-menu li.selected a {
+  color: #172738;
+  font-family: Arial;
+  font-size: 34px;
+  font-weight: bold;
+  font-variant: normal;
+}
+.controller-search .main-content .search-form .search_form #search-header ul#assets-menu li.selected a::before {
+  content: "Buscar ";
+}
+
+.controller-search .main-content .search-form .search_form #search-header ul#assets-menu li a {
+  background-color: transparent;
+  border: none;
+}
+
+.controller-search .main-content .search-form .search_form .search-field .formfield input#search-input {
+  margin-top: 70px;
+}
