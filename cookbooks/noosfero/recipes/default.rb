@@ -10,8 +10,15 @@ package 'noosfero-deps' do
   notifies :restart, 'service[noosfero]'
 end
 
+#Verify if exits more then one noosfero package then remove it
+bash 'noosfero remove extra packages' do
+  code 'rpm -q noosfero | while read line; do rpm -e --noscripts $line; done'
+  #ignore_failure true
+   only_if 'a=$(rpm -q noosfero | wc -l);if [ "$a" -gt "1" ] ; then "0"; else "1" ;fi'
+end
+
 package 'noosfero' do
-  action :upgrade
+  action :install
   notifies :restart, 'service[noosfero]'
 end
 

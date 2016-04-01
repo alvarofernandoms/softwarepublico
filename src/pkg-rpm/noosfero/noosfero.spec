@@ -101,6 +101,7 @@ production:
   database: noosfero_production
   username: noosfero
   host: localhost
+
   port: 5432
 EOF
 
@@ -163,7 +164,7 @@ fi
 
 %preun
 service noosfero stop
-chkconfig --del noosfero
+systemctl disable noosfero
 
 %files
 /usr/lib/noosfero
