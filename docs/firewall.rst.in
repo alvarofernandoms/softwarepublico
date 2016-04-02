@@ -40,11 +40,16 @@ Destino       Origem        Serviço        Porta
 database      integration   Redis          6379
 database      integration   PostgreSQL     5432
 database      social        PostgreSQL     5432
+database      mezuro        PostgreSQL     5432
 social        reverseproxy  Nginx          80
 social        reverseproxy  Nginx          443
+mezuro        reverseproxy  Nginx          80
+mezuro        reverseproxy  Nginx          443
 integration   reverseproxy  Nginx          80
 integration   reverseproxy  Nginx          443
 email         externa       Postfix        25
+monitor       externa       Nginx          80
+monitor       externa       Nginx          443
 reverseproxy  externa       Nginx          80
 reverseproxy  externa       Nginx          443
 reverseproxy  externa       OpenSSH (git)  22
@@ -58,6 +63,8 @@ Comunicação externa
 Destino      Serviço       Porta
 ============ ============= =====
 email        Postfix       25
+monitor      Nginx         80
+monitor      Nginx         443
 reverseproxy Nginx         80
 reverseproxy Nginx         443
 reverseproxy OpenSSH (git) 22

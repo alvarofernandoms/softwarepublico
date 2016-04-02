@@ -54,7 +54,7 @@ Os seguintes arquivos a seguir contém logs relevantes para o Portal do SPB, de
 modo que é interessante monitorá-los, note que os arquivos estão organizados
 por máquinas.
 
-* social
+* Social
   
   * /var/log/nginx/noosfero.access.log
 
@@ -64,7 +64,7 @@ por máquinas.
 
   * /var/log/rsnapshot
 
-* integration
+* Integration
 
   * /var/log/nginx/colab.access.log
 
@@ -100,7 +100,7 @@ por máquinas.
     
   * /var/log/rsnapshot
 
-* database
+* Database
 
   * /var/log/redis/redis.log
 
