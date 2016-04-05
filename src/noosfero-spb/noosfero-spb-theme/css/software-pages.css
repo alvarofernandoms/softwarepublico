@@ -26,7 +26,7 @@
 
 /*** Software Header ***/
 /*block title software button control painel*/
-.action-content_viewer-view_page #content .software-information-block .admin-link a{
+.action-content_viewer-view_page #content .software-communities-plugin_software-information-block .admin-link a {
   padding: 5px 10px;
   background: #3E67B1;
   border-radius: 4px;
@@ -35,12 +35,12 @@
   margin-top:15px;
   color:#fff;
 }
-.action-content_viewer-view_page #content .software-information-block .profile-big-image img{
+.action-content_viewer-view_page #content .software-communities-plugin_software-information-block .profile-big-image img {
   margin-bottom:20px;
 }
 /**************************/
 
-#content .software-information-block {
+#content .software-communities-plugin_software-information-block {
   margin: 0px 0px 60px 0px;
 }
 
