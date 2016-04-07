@@ -680,3 +680,7 @@ font-size: 10px;
   padding-top: 7px;
   height: 25px;
 }
+
+table.cms-articles td:first-child, table.cms-articles th:first-child {
+  width: 25%;
+}
