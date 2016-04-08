@@ -984,3 +984,9 @@
   background-color: #555;
 }
 /*** End - Editing sideboxes - Help icon same of the noosfero ***/
+
+/* Area 4 edition buttons */
+.action-profile_design-index #content #box-organizer .block-outer:hover .software-communities-plugin_software-information-block .button-bar {
+  margin-top: 31px;
+}
+/*** Area 4 edition buttons */
