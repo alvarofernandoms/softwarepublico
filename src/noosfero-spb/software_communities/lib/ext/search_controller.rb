@@ -33,7 +33,7 @@ class SearchController
     @software_count = results.count
     results = results.paginate(:per_page => @per_page, :page => params[:page])
 
-    @asset = "software_communities_plugin/software_infos".to_sym
+    @asset = "software_infos".to_sym
     @assets = [@asset]
     @searches[@asset] = @searches.delete(:software_infos)
     @titles[@asset] = @titles.delete(:software_infos)
