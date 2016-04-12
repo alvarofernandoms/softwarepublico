@@ -151,7 +151,7 @@ class SearchController
     @selected_categories_id = params[:selected_categories_id]
     @selected_categories_id ||= []
     @selected_categories_id = @selected_categories_id.map(&:to_i)
-    @all_selected = params[:software_type] == "all"
+    @all_selected = params[:software_type] == "all" || params[:software_type].blank?
     @public_software_selected = !@all_selected
     @per_page = prepare_per_page
   end
