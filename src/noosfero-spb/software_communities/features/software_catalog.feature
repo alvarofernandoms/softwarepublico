@@ -32,6 +32,14 @@ Feature: Search software
     Given I go to /search/software_infos
     Then the "all_radio_button" checkbox should be checked
 
+  @selenium
+  Scenario: Show search for a query when I click on search button
+    Given I go to /search/software_infos?lang=pt
+    Then I fill in "search-input" with "Software One"
+    Then I follow "Filtro"
+    And I sleep for 2 seconds
+    Then I should see "Software One"
+
   Scenario: Show all "public_software" softwares when search software
     Given I go to /search/software_infos
     And I fill in "search-input" with "Software"
