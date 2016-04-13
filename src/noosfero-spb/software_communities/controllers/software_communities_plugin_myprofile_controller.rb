@@ -33,9 +33,9 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
     software_info_insert_models.call(@list_languages, 'software_languages')
     software_info_insert_models.call(@list_databases, 'software_databases')
     software_info_insert_models.call(@list_operating_systems, 'operating_systems')
-
     begin
       raise NotAdminException unless can_change_public_software?
+      @software_info.public_software = params['software']['public_software'].present?
       @software_info.update_attributes!(params[:software])
 
       @community = @software_info.community

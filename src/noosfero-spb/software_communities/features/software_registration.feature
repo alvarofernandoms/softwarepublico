@@ -11,9 +11,12 @@ Feature: edit public software information
     And I check "SoftwareCommunitiesPlugin"
     And I press "Save changes"
     And I go to /myprofile/mpog-admin
+    Given the following users
+      | login      | email             |
+      | josesilva  | silva@invalid.br  |
     And the following softwares
-      | name           | public_software | finality                |
-      | basic software | true            | basic software finality |
+      | name           | public_software | finality                | owner     |
+      | basic software | true            | basic software finality | josesilva |
 
   @selenium
   Scenario: Show SoftwareLangue fields when click in New Language
@@ -85,3 +88,15 @@ Feature: edit public software information
     And I follow "Software Info"
     And I type in "gp" in autocomplete list "#license_info_version" and I choose "GPL-3"
     Then I should see "Read license" within "#version_link"
+
+  @selenium
+  Scenario: Env Admin be able to mark and unmark Software as Public Software
+    Given I go to /myprofile/basic-software/plugin/software_communities/edit_software
+    And I follow "Specifications"
+    Then the "software_public_software" checkbox should be checked
+    And I uncheck "software_public_software"
+    And I press "Save"
+    When I go to /myprofile/basic-software/plugin/software_communities/edit_software
+	And I follow "Specifications"
+    Then the "software_public_software" checkbox should not be checked
+
