@@ -1090,10 +1090,14 @@
   padding-bottom: 30px;
 }
 
-.action-profile-members .box-1 .common-profile-list-block .profile-list-members span{
+.action-profile-members .box-1 .common-profile-list-block span {
   margin-right: 0px;
   width: 90px;
   height: 86px;
+}
+
+#content .common-profile-list-block .profile-members-tabs-container ul {
+  padding: 0 18px;
 }
 
 .action-profile-members .box-1 .common-profile-list-block .button-bar span{
