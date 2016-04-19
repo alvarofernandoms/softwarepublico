@@ -36,7 +36,7 @@ modulejs.define('SoftwareDownload', ['jquery', 'NoosferoRoot'], function($, Noos
 
   return {
     isCurrentPage: function() {
-      return $('.download-block').length !== 0;
+      return $('.software-communities-plugin_download-block').length !== 0;
     },
 
     init: function() {
