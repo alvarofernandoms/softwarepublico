@@ -28,6 +28,10 @@ Feature: Search software
     Then I should see "Software One"
     Then I should see "Software Two"
 
+  Scenario: Show all "public_software" softwares when open search page
+    Given I go to /search/software_infos
+    Then the "all_radio_button" checkbox should be checked
+
   Scenario: Show all "public_software" softwares when search software
     Given I go to /search/software_infos
     And I fill in "search-input" with "Software"
