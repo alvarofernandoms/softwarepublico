@@ -55,7 +55,7 @@ modo que é interessante monitorá-los, note que os arquivos estão organizados
 por máquinas.
 
 * Social
-  
+
   * /var/log/nginx/noosfero.access.log
 
   * /var/log/nginx/noosfero.error.log
@@ -97,7 +97,7 @@ por máquinas.
   * /var/log/mailman/qrunner
 
   * /var/log/mailman/error
-    
+
   * /var/log/rsnapshot
 
 * Database
@@ -111,3 +111,23 @@ por máquinas.
   * /var/log/nginx/ssl-\*.access.log
 
   * /var/log/nginx/ssl-\*.error.log
+
+Alterando Limite de Upload das Ferramentas
+------------
+
+Nas ferramentas existe um limite de tamanho para upload dos arquivos.
+Esta configuração é feita nos arquivos da receita de automação e pode
+ser alterada. **Importante**: essa alteração é realizada na receita de
+automação e pode causar efeitos colaterais durante o *converge*.
+
+* **Gitlab**: o *template* `cookbooks/gitlab/templates/nginx.conf.erb` carrega as
+configurações do servidor web. A variável `client_max_body_size` define
+o limite de tamanho para uma requisição. O valor é definido com `<valor>m`,
+exemplo `client_max_body_size = 20m`. Coloque `0` para desabilitar a checagem.
+Consulte a documentação [Nginx](http://nginx.org/en/docs/http/ngx_http_core_module.html)
+para mais informação.
+
+* **Noosfero**: o procedimento é o mesmo definido para o **Gitlab**. O *template*
+a ser alterado `cookbooks/noosfero/templates/nginx.conf.erb`. Outro arquivo a
+ser alterado `cookbooks/noosfero/files/noosfero.yml` a variável `max_upload_size`
+é definido em `<valor>MB`, exemplo `max_upload_size: 500MB`.
