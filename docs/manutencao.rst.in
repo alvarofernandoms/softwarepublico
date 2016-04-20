@@ -120,6 +120,7 @@ Esta configuração é feita nos arquivos da receita de automação e pode
 ser alterada. **Importante**: essa alteração é realizada na receita de
 automação e pode causar efeitos colaterais durante o *converge*.
 
+
 * **Gitlab**: o *template* `cookbooks/gitlab/templates/nginx.conf.erb` carrega as
 configurações do servidor web. A variável `client_max_body_size` define
 o limite de tamanho para uma requisição. O valor é definido com `<valor>m`,
@@ -131,3 +132,9 @@ para mais informação.
 a ser alterado `cookbooks/noosfero/templates/nginx.conf.erb`. Outro arquivo a
 ser alterado `cookbooks/noosfero/files/noosfero.yml` a variável `max_upload_size`
 é definido em `<valor>MB`, exemplo `max_upload_size: 500MB`.
+
+* **Reverseproxy**: todas as requisições passam pela máquina reverseproxy. Portanto
+o maior limite de todas as aplicações deve ser colocado na configuração
+do Nginx `cookbooks/reverse_proxy/templates/reverse_proxy.conf.erb` na variável
+`client_max_upload_size`. O valor deve ser definido como `<valor>m`. Exemplo
+`client_max_body_size = 500m` sendo 500m o maior limite entre as ferramentas.
