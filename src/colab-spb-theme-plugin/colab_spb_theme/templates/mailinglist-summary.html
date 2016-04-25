@@ -85,50 +85,72 @@
 
   {% block mailinglist_view_paginator %}
     {% if page_obj.has_other_pages %}
-      <div class="text-center">
-        <ul class="pagination">
-          <li {% if page_obj.number == 1 %}class="disabled"{% endif %}>
-            <a href="{% if page_obj.number == 1 %}javascript:void(0);{% else %}?page={{1}}{% endif %}"><span class="glyphicon glyphicon-chevron-left small-icon"></span><span class="glyphicon glyphicon-chevron-left small-icon"></span></a>
-          </li>
-          <li {% if not page_obj.has_previous %}class="disabled"{% endif %}>
-            <a href="{% if page_obj.has_previous %}?page={{page_obj.previous_page_number }}{% else %}javascript:void(0);{% endif %}"><span class="glyphicon glyphicon-chevron-left small-icon"></span></a>
-          </li>
+      <div id="pagination-block">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="pull-left">
+              <ul class="pagination">
+                <li {% if not page_obj.has_previous %}class="disabled"{% endif %}>
+                  <span class="previous_page">
+                    <a href="{% if page_obj.has_previous %}{% append_to_get page=page_obj.previous_page_number %}{% else %}javascript:void(0);{% endif %}"><span class="previous-arrow">« </span>Anterior</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-          {% if page_obj.has_previous %}
-            {% if page_obj.previous_page_number > 1 %}
-              <li>
-                <a href="?page={{page_obj.previous_page_number|add:-1 }}">{{ page_obj.number|add:-2 }}</a>
-              </li>
-            {% endif %}
-            <li>
-              <a href="?page={{page_obj.previous_page_number }}">{{ page_obj.number|add:-1 }}</a>
-            </li>
-          {% endif %}
+          <div class="col-md-8">
+            <div id="pagination-center" class="text-center">
+              {% if page_obj.has_previous %}
+                <ul class="pagination">
+                  {% if page_obj.previous_page_number > 1 %}
+                    <li>
+                      <a href="{% append_to_get page=page_obj.previous_page_number|add:-1 %}">{{ page_obj.number|add:-2 }}</a>
+                    </li>
+                  </ul>
+                  <ul class="pagination">
+                  {% endif %}
+                  <li>
+                    <a href="{% append_to_get page=page_obj.previous_page_number %}">{{ page_obj.number|add:-1 }}</a>
+                  </li>
+                </ul>
+              {% endif %}
 
-          <li class="active">
-            <a href="javascript:void(0);">{{ page_obj.number }}</a>
-          </li>
+              <ul class="pagination">
+                <li class="active">
+                  <a href="javascript:void(0);">{{ page_obj.number }}</a>
+                </li>
+              </ul>
 
-          {% if page_obj.has_next %}
-            <li>
-              <a href="?page={{page_obj.next_page_number }}">{{ page_obj.number|add:1 }}</a>
-            </li>
-            {% if page_obj.next_page_number < page_obj.paginator.num_pages %}
-              <li>
-                <a href="?page={{page_obj.next_page_number|add:1 }}">{{ page_obj.number|add:2 }}</a>
-              </li>
-            {% endif %}
-          {% endif %}
+              {% if page_obj.has_next %}
+                <ul class="pagination">
+                  <li>
+                    <a href="{% append_to_get page=page_obj.next_page_number %}">{{ page_obj.number|add:1 }}</a>
+                  </li>
+                  {% if page_obj.next_page_number < page_obj.paginator.num_pages %}
+                  </ul>
+                  <ul class="pagination">
+                    <li>
+                      <a href="{% append_to_get page=page_obj.next_page_number|add:1 %}">{{ page_obj.number|add:2 }}</a>
+                    </li>
+                  {% endif %}
+                </ul>
+              {% endif %}
+            </div>
+          </div>
 
-          <li {% if not page_obj.has_next %}class="disabled"{% endif %}>
-            <a href="{% if page_obj.has_next %}?page={{page_obj.next_page_number }}{% else %}javascript:void(0);{% endif %}"><span class="glyphicon glyphicon-chevron-right small-icon"></span></a>
-          </li>
-
-          <li {% if page_obj.number == page_obj.paginator.num_pages %}class="disabled"{% endif %}>
-            <a href="{% if page_obj.number == page_obj.paginator.num_pages %}javascript:void(0);{% else %}?page={{page_obj.paginator.num_pages }}{% endif %}"><span class="glyphicon glyphicon-chevron-right small-icon"></span><span class="glyphicon glyphicon-chevron-right small-icon"></span></a>
-          </li>
-
-        </ul>
+          <div class="col-md-2">
+            <div class="pull-right">
+              <ul class="pagination">
+                <li {% if not page_obj.has_next %}class="disabled"{% endif %}>
+                  <span class="next_page">
+                    <a href="{% if page_obj.has_next %}{% append_to_get page=page_obj.next_page_number %}{% else %}javascript:void(0);{% endif %}">Próximo<span class="next-arrow"> »</span></a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     {% endif %}
   {% endblock %}
