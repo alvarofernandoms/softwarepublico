@@ -194,6 +194,7 @@
   padding-top: 23px;
 }
 
+.action-profile_editor-edit #content .main-content #profile-data .modal-dialog .formlabel,
 #content .main-content .star-rate-data .star-rate-form .star-comment-container .formlabel {
   letter-spacing: -0.2px;
   margin-bottom: 2px;
