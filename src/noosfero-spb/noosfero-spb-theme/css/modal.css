@@ -113,7 +113,8 @@
 /* Bootstrap modal override */
 .action-profile_editor-edit #content .main-content #profile-data .modal-title,
 .modal-title {
-  font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.1px;
 }
 
 .action-profile_editor-edit #content .main-header h4,
@@ -260,6 +261,11 @@
   width: 190px;
   margin-top: 2px;
 }
+
+.action-profile_editor-edit #content .main-content #profile-data .modal #community_city {
+  margin-top: 4px;
+}
+
 
 .action-profile_editor-edit #content .main-content #profile-data .modal #institutions_cnpj,
 .action-profile_editor-edit #content .main-content #profile-data .modal #institutions_acronym,
