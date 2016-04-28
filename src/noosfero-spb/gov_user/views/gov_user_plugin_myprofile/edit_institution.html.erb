@@ -27,31 +27,41 @@
   <%= labelled_form_for :community,:html => { :multipart => true, :id=>"institution_form" } do |f| %>
     <%= hidden_field_tag "edit_institution_page", true %>
     <%= fields_for :institutions do |inst| %>
-      <span class=''>
+    <div class="spb-row no-margin-top">
+        <span class=''>
           <div class='formfield type-radio'>
-            <label> <%= _("Public Institution") %>
-              <%= radio_button_tag("institutions[type]", "PublicInstitution", (@institution.type == "PublicInstitution")) %>
-            </label>
-
-            <label>
-              <%= _("Private Institution") %>
-              <%= radio_button_tag("institutions[type]" ,"PrivateInstitution", (@institution.type == "PrivateInstitution"))%>
-            </label>
+            <div class='spb-col spb-col-2'>
+              <%= labelled_radio_button _('Public Institution'), 'institutions[type]', 'PublicInstitution', (@institution.type == "PublicInstitution") %>
+            </div>
+            <div class='spb-col spb-col-2'>
+              <%= labelled_radio_button _('Private Institution'), 'institutions[type]', 'PrivateInstitution', (@institution.type == "PrivateInstitution") %>
+            </div>
           </div>
         </span>
+      </div>
 
-      <%= required labelled_form_field(_('Corporate Name'), text_field_tag('community[name]', @institution.community.name)) %>
+      <div class="spb-row">
+        <div class="spb-col spb-col-4">
+          <%= required labelled_form_field(_('Corporate Name'), text_field_tag('community[name]', @institution.community.name)) %>
+        </div>
+        <div class="spb-col spb-col-5">
+          <%= labelled_form_field(_('Fantasy name'), inst.text_field(:corporate_name, :value => @institution.corporate_name)) %>
+        </div>
+      </div>
 
-      <%= labelled_form_field(_('Fantasy name'), inst.text_field(:corporate_name, :value => @institution.corporate_name)) %>
-
-      <%= required labelled_form_field(_('Country'), select("community", "country", [[_('Select a country'), -1]] + country_helper.countries,
+      <div class="spb-row">
+        <div class="spb-col spb-col-4">
+          <%= required labelled_form_field(_('Country'), select("community", "country", [[_('Select a country'), -1]] + country_helper.countries,
                                                             {:selected => @institution.community.country, :class => "type-select #{flash[:error_community_country]}"})) %>
-
-      <%= required labelled_form_field(_('State'), select("community", "state", [[_('Select a state'), '']] + @state_list.collect {|state| [state.name, state.name]},
+        </div>
+        <div class="spb-col spb-col-2">
+          <%= required labelled_form_field(_('State'), select("community", "state", [[_('Select a state'), '']] + @state_list.collect {|state| [state.name, state.name]},
                                                           {:selected => @institution.community.state, :class => "type-select #{flash[:error_community_state]}"})) %>
-
-      <%= required f.text_field(:city, :value => @institution.community.city) %>
-
+        </div>
+        <div class="spb-col spb-col-3">
+          <%= required f.text_field(:city, :value => @institution.community.city) %>
+        </div>
+      </div>
 
       <span class='optional-field'>
         <div class="formfield type-text">
@@ -69,41 +79,71 @@
         </div>
       </span>
 
-      <span class='required-field public-institutions-fields'>
-        <div class="formfield type-text">
-          <%= inst.label("governmental_sphere_id" ,_("Governmental Sphere:"), :class=>"formlabel") %>
-          <%= inst.select(:governmental_sphere, [[_("Select a Governmental Sphere"), 0]]|GovernmentalSphere.all.map {|s| [s.name, s.id]}, {:selected=>@institution.governmental_power_id})%>
+      <div class="spb-row public-institutions-fields">
+        <div class="spb-col spb-col-6">
+          <span class='required-field public-institutions-fields'>
+            <div class="formfield type-text">
+              <%= inst.label("governmental_sphere_id" ,_("Governmental Sphere:"), :class=>"formlabel") %>
+              <%= inst.select(:governmental_sphere, [[_("Select a Governmental Sphere"), 0]]|GovernmentalSphere.all.map {|s| [s.name, s.id]}, {:selected=>@institution.governmental_power_id})%>
+            </div>
+          </span>
         </div>
-      </span>
+      </div>
 
-      <span class='required-field public-institutions-fields'>
-        <div class="formfield type-text">
-          <%= inst.label("governmental_power_id" ,_("Governmental Power:"), :class=>"formlabel") %>
-          <%= inst.select(:governmental_power, [[_("Select a Governmental Power"), 0]]|GovernmentalPower.all.map {|g| [g.name, g.id]}, {:selected=> @institution.governmental_sphere_id})%>
+      <div class="spb-row public-institutions-fields">
+        <div class="spb-col spb-col-6">
+          <span class='required-field public-institutions-fields'>
+            <div class="formfield type-text">
+              <%= inst.label("governmental_power_id" ,_("Governmental Power:"), :class=>"formlabel") %>
+              <%= inst.select(:governmental_power, [[_("Select a Governmental Power"), 0]]|GovernmentalPower.all.map {|g| [g.name, g.id]}, {:selected=> @institution.governmental_sphere_id})%>
+            </div>
+          </span>
         </div>
-      </span>
-      <span class='required-field public-institutions-fields'>
-        <div class="formfield type-text">
-          <%= inst.label("juridical_nature_id" ,_("Juridical Nature:"), :class=>"formlabel") %>
-          <%= inst.select(:juridical_nature, [[_("Select a Juridical Nature"), 0]]|JuridicalNature.all.map {|j| [j.name, j.id]}, {:selected=> @institution.juridical_nature_id})%>
-        </div>
-      </span>
+      </div>
 
-      <span class='required-field public-institutions-fields'>
-        <div class="formfield type-text">
-          <%= _("SISP?") %>
-          <% if @show_sisp_field %>
-            <%= inst.label("sisp" ,_("Yes")) %>
-            <%= inst.radio_button(:sisp, true, :checked=>(@institution.sisp ? true : false)) %>
-            <%= inst.label("sisp" ,_("No")) %>
-            <%= inst.radio_button(:sisp, false, :checked=>(@institution.sisp ? false : true)) %>
-          <% else %>
-            <%= inst.label("sisp", _("No")) %>
-          <% end %>
+      <div class="spb-row public-institutions-fields">
+        <div class="spb-col spb-col-6">
+          <span class='required-field public-institutions-fields'>
+            <div class="formfield type-text">
+              <%= inst.label("juridical_nature_id" ,_("Juridical Nature:"), :class=>"formlabel") %>
+              <%= inst.select(:juridical_nature, [[_("Select a Juridical Nature"), 0]]|JuridicalNature.all.map {|j| [j.name, j.id]}, {:selected=> @institution.juridical_nature_id})%>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="spc-col spb-col-12 sisp-fields">
+        <div class="spb-row public-institutions-fields">
+          <div class="spb-col spb-col-3">
+            <span class='required-field public-institutions-fields'>
+              <div class="formfield type-text">
+                <div class="spb-col spb-col-12">
+                  <%= _("SISP?") %>
+                </div>
+                <% if @show_sisp_field %>
+                  <div class="spb-col spb-col-4">
+                    <%= inst.radio_button(:sisp, true, :checked=>(@institution.sisp ? true : false)) %>
+                    <%= inst.label("sisp" ,_("Yes")) %>
+                  </div>
+                  <div class="spb-col spb-col-6">
+                    <%= inst.radio_button(:sisp, false, :checked=>(@institution.sisp ? false : true)) %>
+                    <%= inst.label("sisp" ,_("No")) %>
+                  </div>
+                <% else %>
+                  <%= inst.label("sisp", _("No")) %>
+                <% end %>
+                </div>
+            </span>
           </div>
-      </span>
+        </div>
+      </div>
 
-    <%= submit_button :save, _('Save') %>
+    <div class="spb-row modal-form-actions">
+      <div class="spb-col spb-col-6">
+        <%= submit_button :save, _('Save') %>
+        <%= button(:cancel, _("Cancel"), {:controller => "profile", :action => 'index'}) %>
+      </div>
+    </div>
+
   <% end %>
 <% end %>
-
