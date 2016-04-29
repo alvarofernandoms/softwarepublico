@@ -1,11 +1,5 @@
 include_recipe 'mezuro::service'
-
-# TODO: remove before define main repo
-execute 'download:mezuro' do
-  command 'wget https://bintray.com/mezurometrics/rpm/rpm -O bintray-mezurometrics-rpm.repo'
-  cwd '/etc/yum.repos.d'
-  user 'root'
-end
+include_recipe 'mezuro::repo'
 
 package 'kalibro-configurations'
 
