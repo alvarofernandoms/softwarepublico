@@ -2,7 +2,7 @@
 %define cache_dirs javascripts/cache stylesheets/cache
 
 Name:    noosfero
-Version: 1.4.0+spb3
+Version: 1.5.0+spb1
 Release: 1
 Summary: Social Networking Platform
 Group:   Applications/Publishing
@@ -10,8 +10,8 @@ License: AGPLv3
 URL:     http://noosfero.org
 Source0: %{name}-%{version}.tar.gz
 BuildArch: noarch
-BuildRequires: noosfero-deps >= 1.4, gettext, po4a
-Requires: noosfero-deps >= 1.4, po4a, tango-icon-theme, memcached,crontabs, nodejs
+BuildRequires: noosfero-deps >= 1.5, gettext, po4a
+Requires: noosfero-deps >= 1.5, po4a, tango-icon-theme, memcached,crontabs, nodejs
 
 %description
 Noosfero is a web platform for social and solidarity economy networks with blog,
