@@ -778,3 +778,7 @@ body > .alert,
     background-color: #ECEDF1;
     border: 1px solid #D3D6DE;
 }
+
+#password_container {
+    float: right
+}
