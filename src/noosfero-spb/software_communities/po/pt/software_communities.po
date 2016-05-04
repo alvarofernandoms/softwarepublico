@@ -1208,8 +1208,6 @@ msgstr "Criar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#~ msgid "Download"
-#~ msgstr "Opções de Download"
 #~ msgid "Platform:"
 #~ msgstr "Plataforma:"
 #~ msgid ""
