@@ -1,18 +1,19 @@
+rpm_repository: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/epel-7-$basearch/
+rpm_gpgkey: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/pubkey.gpg
 admins:
   - ["Paulo Meirelles", "paulo@softwarelivre.org"]
 site_url: https://softwarepublico.lappis
 external_hostname: softwarepublico.lappis
 monitor_external_hostname: status.softwarepublico.lappis
 external_ip: 10.0.0.54
+alt_ssh_port: 5555
 colab_from_address: '"Portal do Software Publico" <noreply@softwarepublico.lappis>'
 server_email: '"Portal do Software Publico" <noreply@softwarepublico.lappis>'
-email_subject_prefix: '[spb]'
+email_subject_prefix: '[spb|local]'
 lists_hostname: listas.softwarepublico.lappis
 lists_admin: paulo@softwarelivre.org
 relay_hostname: relay.softwarepublico.lappis
 relay_ip: 10.0.0.51
-alt_ssh_port: 5555
 from_address: noreply@softwarepublico.lappis
-# define less frequent backup for dev envs
 dev_backup_frequency: true
 disable_send_emails: true
