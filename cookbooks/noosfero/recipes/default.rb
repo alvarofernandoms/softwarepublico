@@ -120,6 +120,11 @@ cookbook_file '/etc/default/noosfero' do
   notifies :restart, 'service[noosfero]'
 end
 
+cookbook_file '/etc/environment' do
+  owner 'root'; group 'root'; mode 0644
+  source 'environment'
+end
+
 package 'cronie'
 service 'crond' do
   action [:enable, :start]
