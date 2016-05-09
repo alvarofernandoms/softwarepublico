@@ -1,3 +1,5 @@
 name 'email_server'
 description 'E-mail server'
-run_list 'recipe[email::relay]'
+run_list *[
+  'recipe[email::relay]',
+]
