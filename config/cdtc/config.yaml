@@ -1,7 +1,6 @@
 admins:
   - ["Paulo Meirelles", "paulo@softwarelivre.org"]
 external_hostname: spb.cdtc.unb.br
-sisp_external_hostname: sisp.cdtc.unb.br
 monitor_external_hostname: status.cdtc.unb.br
 external_ip: 164.41.9.49
 site_url: https://spb.cdtc.unb.br
