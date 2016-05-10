@@ -3,14 +3,10 @@ require 'test_helper'
 class LibraryValidationTest < ActiveSupport::TestCase
 
   def setup
-    @library = Library.new
+    @library = SoftwareCommunitiesPlugin::Library.new
     @library.name = "name"
     @library.version = "version"
     @library.license = "license"
-  end
-
-  def teardown
-    @Libray = nil
   end
 
   should "Save Libray if all fields are filled" do

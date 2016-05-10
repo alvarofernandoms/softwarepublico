@@ -21,6 +21,23 @@ class SoftwareCommunitiesPlugin < Noosfero::Plugin
     [SoftwareCommunitiesPlugin::API]
   end
 
+  SOFTWARE_CATEGORIES = [
+    _('Agriculture, Fisheries and Extraction'),
+    _('Science, Information and Communication'),
+    _('Economy and Finances'),
+    _('Public Administration'),
+    _('Habitation, Sanitation and Urbanism'),
+    _('Individual, Family and Society'),
+    _('Health'),
+    _('Social Welfare and Development'),
+    _('Defense and Security'),
+    _('Education'),
+    _('Government and Politics'),
+    _('Justice and Legislation'),
+    _('International Relationships'),
+    _('Transportation and Transit')
+  ]
+
   def profile_tabs
     if context.profile.community? && context.profile.software?
       return profile_tabs_software
@@ -37,20 +54,29 @@ class SoftwareCommunitiesPlugin < Noosfero::Plugin
 
   def self.extra_blocks
     {
-      SoftwaresBlock => { :type => [Environment, Person]  },
-      SoftwareInformationBlock => {  :type => [Community]  },
-      DownloadBlock => { :type => [Community] },
-      RepositoryBlock => { :type => [Community] },
-      CategoriesAndTagsBlock => { :type => [Community] },
-      CategoriesSoftwareBlock => { :type => [Environment] },
-      SearchCatalogBlock => { :type => [Environment] },
-      SoftwareHighlightsBlock => { :type => [Environment] },
-      SoftwareTabDataBlock => {:type => [Community], :position => 1},
-      SispTabDataBlock => {:type => [Community], :position => 1},
-      WikiBlock => {:type => [Community]},
-      StatisticBlock => { :type => [Community] },
-      SoftwareEventsBlock => { :type => [Community] }
+      SoftwareCommunitiesPlugin::SoftwaresBlock => { :type => [Environment, Person]  },
+      SoftwareCommunitiesPlugin::SoftwareInformationBlock => {  :type => [Community]  },
+      SoftwareCommunitiesPlugin::DownloadBlock => { :type => [Community] },
+      SoftwareCommunitiesPlugin::RepositoryBlock => { :type => [Community] },
+      SoftwareCommunitiesPlugin::CategoriesAndTagsBlock => { :type => [Community] },
+      SoftwareCommunitiesPlugin::CategoriesSoftwareBlock => { :type => [Environment] },
+      SoftwareCommunitiesPlugin::SearchCatalogBlock => { :type => [Environment] },
+      SoftwareCommunitiesPlugin::SoftwareHighlightsBlock => { :type => [Environment] },
+      SoftwareCommunitiesPlugin::SoftwareTabDataBlock => {:type => [Community], :position => 1},
+      SoftwareCommunitiesPlugin::SispTabDataBlock => {:type => [Community], :position => 1},
+      SoftwareCommunitiesPlugin::WikiBlock => {:type => [Community]},
+      SoftwareCommunitiesPlugin::StatisticBlock => { :type => [Community] },
+      SoftwareCommunitiesPlugin::SoftwareEventsBlock => { :type => [Community] }
     }
+  end
+
+  def self.software_categories
+    software_category = Category.find_by_name("Software")
+    if software_category.nil?
+      []
+    else
+      software_category.children
+    end
   end
 
   def stylesheet?
@@ -131,7 +157,6 @@ class SoftwareCommunitiesPlugin < Noosfero::Plugin
         is_admin = user.is_admin? || user_rating.organization.is_admin?(user)
 
         if is_admin and profile.software?
-
             render :file => 'organization_ratings_task_extra_fields_show_statistics',
                    :locals => {:user_rating => user_rating}
         end
@@ -153,7 +178,7 @@ class SoftwareCommunitiesPlugin < Noosfero::Plugin
   protected
 
   def software_info_transaction
-    SoftwareInfo.transaction do
+    SoftwareCommunitiesPlugin::SoftwareInfo.transaction do
       context.profile.
         software_info.
         update_attributes!(context.params[:software_info])
@@ -161,7 +186,7 @@ class SoftwareCommunitiesPlugin < Noosfero::Plugin
   end
 
   def license_transaction
-    license = LicenseInfo.find(context.params[:version])
+    license = SoftwareCommunitiesPlugin::LicenseInfo.find(context.params[:version])
     context.profile.software_info.license_info = license
     context.profile.software_info.save!
   end

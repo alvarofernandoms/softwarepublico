@@ -12,15 +12,15 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
     @community = Community.new(params[:community])
     @community.environment = environment
 
-    @license_info = LicenseInfo.find_by_id(params[:license][:license_infos_id]) if params[:license]
-    @license_info ||= LicenseInfo.new
+    @license_info = SoftwareCommunitiesPlugin::LicenseInfo.find_by_id(params[:license][:license_infos_id]) if params[:license]
+    @license_info ||= SoftwareCommunitiesPlugin::LicenseInfo.new
 
-    @software_info = SoftwareInfo.new(params[:software_info])
+    @software_info = SoftwareCommunitiesPlugin::SoftwareInfo.new(params[:software_communities_plugin_software_info])
     @software_info.community = @community
     @software_info.license_info = @license_info
 
     control_software_creation
-    update_new_software_errors
+    update_software_highlight_errors
   end
 
   def edit_software
@@ -103,10 +103,16 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
 
   def create_software
     @software_info = @profile.software_info
+
+    params[:software][:public_software] ||= false unless @software_info.public_software?
+    @license = SoftwareCommunitiesPlugin::LicenseInfo.find(params[:license][:license_infos_id])
+    @software_info.license_info = @license
+    @software_info.update_attributes(params[:software])
+
     another_license_version = nil
     another_license_link = nil
     if params[:license]
-      @license = LicenseInfo.find(params[:license][:license_infos_id])
+      @license = SoftwareCommunitiesPlugin::LicenseInfo.find(params[:license][:license_infos_id])
       @software_info.license_info = @license
 
       another_license_version = params[:license][:version]
@@ -121,10 +127,10 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
   end
 
   def create_list_model_helpers
-    @list_libraries = LibraryHelper.list_library(params[:library])
-    @list_languages = SoftwareLanguageHelper.list_language(params[:language])
-    @list_databases = DatabaseHelper.list_database(params[:database])
-    @list_operating_systems = OperatingSystemHelper.list_operating_system(params[:operating_system])
+    @list_libraries = SoftwareCommunitiesPlugin::LibraryHelper.list_library(params[:library])
+    @list_languages = SoftwareCommunitiesPlugin::SoftwareLanguageHelper.list_language(params[:language])
+    @list_databases = SoftwareCommunitiesPlugin::DatabaseHelper.list_database(params[:database])
+    @list_operating_systems = SoftwareCommunitiesPlugin::OperatingSystemHelper.list_operating_system(params[:operating_system])
   end
 
   def send_software_to_moderation
@@ -134,8 +140,8 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
       another_license_version = params[:license][:version]
       another_license_link = params[:license][:link]
     end
-    @software_info = SoftwareInfo.create_after_moderation(user,
-                        params[:software_info].merge({
+    @software_info = SoftwareCommunitiesPlugin::SoftwareInfo.create_after_moderation(user,
+                        params[:software_communities_plugin_software_info].merge({
                           :environment => environment,
                           :name => params[:community][:name],
                           :identifier => params[:community][:identifier],
@@ -170,7 +176,7 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
     @another_license_version = ""
     @another_license_link = ""
 
-    license_another = LicenseInfo.find_by_version("Another")
+    license_another = SoftwareCommunitiesPlugin::LicenseInfo.find_by_version("Another")
     if license_another && @software_info.license_info_id == license_another.id
       @license_version = "Another"
       @another_license_version = @software_info.license_info.version
@@ -179,8 +185,8 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
   end
 
   def set_software_as_template
-    software_template = Community['software']
-    software_valid = !software_template.blank? && software_template.is_template && !params['community'].blank?
+    software_template = SoftwareCommunitiesPlugin::SoftwareHelper.software_template
+    software_valid = !software_template.blank? && !params['community'].blank?
     if software_valid
       params['community']['template_id'] = software_template.id if software_valid
     end
@@ -203,7 +209,9 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
       @license_info.valid? if @license_info
       add_software_erros
     end
+  end
 
+  def update_software_highlight_errors
     @error_community_name = @community.errors.include?(:name) ? "highlight-error" : "" if @community
     @error_software_acronym = @software_info.errors.include?(:acronym) ? "highlight-error" : "" if @software_info
     @error_software_domain = @community.errors.include?(:identifier) ? "highlight-error" : "" if @community

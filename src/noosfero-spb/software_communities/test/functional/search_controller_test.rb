@@ -21,8 +21,8 @@ class SearchControllerTest < ActionController::TestCase
     @response = ActionController::TestResponse.new
 
     @licenses = [
-      LicenseInfo.create(:version => "GPL - 1"),
-      LicenseInfo.create(:version => "GPL - 2")
+      SoftwareCommunitiesPlugin::LicenseInfo.create(:version => "GPL - 1"),
+      SoftwareCommunitiesPlugin::LicenseInfo.create(:version => "GPL - 2")
     ]
 
     create_software_categories
@@ -32,18 +32,14 @@ class SearchControllerTest < ActionController::TestCase
     @softwares << create_software_info("Software One", :acronym => "SFO", :finality => "Help")
     @softwares << create_software_info("Software Two", :acronym => "SFT", :finality => "Task")
 
-    @softwares[0].community.categories << Category.first
-    @softwares[1].community.categories << Category.last
+    @softwares[0].community.categories << Category.all[0]
+    @softwares[1].community.categories << Category.all[1]
 
     @softwares[0].license_info = @licenses.first
     @softwares[1].license_info = @licenses.last
 
     @softwares[0].save!
     @softwares[1].save!
-  end
-
-  def teardown
-    SoftwareInfo.destroy_all
   end
 
   should "communities searches don't have software" do
@@ -60,8 +56,8 @@ class SearchControllerTest < ActionController::TestCase
 
      get :software_infos, :query => "One"
 
-     assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-     assert_not_includes assigns(:searches)[:software_infos][:results], community
+     assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+     assert_not_includes assigns(:searches)[:"software_infos"][:results], community
   end
 
 
@@ -87,11 +83,11 @@ class SearchControllerTest < ActionController::TestCase
     get(
       :software_infos,
       :query => "",
-      :selected_categories_id => [Category.first.id]
+      :selected_categories_id => [Category.all[0].id]
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], @softwares.last.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], @softwares.last.community
   end
 
   should "return software_infos with category matching query" do
@@ -100,11 +96,12 @@ class SearchControllerTest < ActionController::TestCase
 
     get(
       :software_infos,
-      :query => "Health",
+      :sort => "relevance",
+      :query => "Health"
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares[0].community
-    assert_not_includes assigns(:searches)[:software_infos][:results], @softwares[1].community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares[0].community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], @softwares[1].community
   end
 
   should "software_infos search by sub category" do
@@ -123,8 +120,8 @@ class SearchControllerTest < ActionController::TestCase
       :selected_categories_id => [category.id]
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], software.community
-    assert_includes assigns(:searches)[:software_infos][:results], software2.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software2.community
   end
 
   should "software_infos search softwares with one or more selected categories" do
@@ -134,12 +131,12 @@ class SearchControllerTest < ActionController::TestCase
     get(
       :software_infos,
       :query => "",
-      :selected_categories_id => [Category.all[0], Category.all[1]]
+      :selected_categories_id => [Category.all[0].id, Category.all[1].id]
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.last.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], software.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.last.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], software.community
   end
 
 
@@ -155,8 +152,8 @@ class SearchControllerTest < ActionController::TestCase
       :query => "python",
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], @softwares.last.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], @softwares.last.community
   end
 
   should "software_infos search by database description" do
@@ -171,8 +168,8 @@ class SearchControllerTest < ActionController::TestCase
       :query => "mysql",
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], @softwares.last.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], @softwares.last.community
   end
 
   should "software_infos search by finality" do
@@ -182,8 +179,8 @@ class SearchControllerTest < ActionController::TestCase
     )
 
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], @softwares.last.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], @softwares.last.community
   end
 
   should "software_infos search by acronym" do
@@ -192,13 +189,13 @@ class SearchControllerTest < ActionController::TestCase
       :query => "SFO",
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], @softwares.first.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], @softwares.last.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], @softwares.first.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], @softwares.last.community
   end
 
   should "software_infos search by relevance" do
     @softwares << create_software_info("Software Three", :acronym => "SFW", :finality => "Java")
-    @softwares.last.license_info = LicenseInfo.create :version => "GPL - 3.0"
+    @softwares.last.license_info = SoftwareCommunitiesPlugin::LicenseInfo.create :version => "GPL - 3.0"
 
 
     @softwares.first.software_languages << create_software_language("Java", "8.0")
@@ -213,9 +210,9 @@ class SearchControllerTest < ActionController::TestCase
       :query => "Java"
     )
 
-    assert_equal assigns(:searches)[:software_infos][:results][0], @softwares[1].community
-    assert_equal assigns(:searches)[:software_infos][:results][1], @softwares[2].community
-    assert_equal assigns(:searches)[:software_infos][:results][2], @softwares[0].community
+    assert_equal assigns(:searches)[:"software_infos"][:results][0], @softwares[1].community
+    assert_equal assigns(:searches)[:"software_infos"][:results][1], @softwares[2].community
+    assert_equal assigns(:searches)[:"software_infos"][:results][2], @softwares[0].community
   end
 
   should "software_infos search only public_software" do
@@ -230,9 +227,9 @@ class SearchControllerTest < ActionController::TestCase
       :software_type => "public_software"
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], software_one.community
-    assert_includes assigns(:searches)[:software_infos][:results], software_two.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], software_three.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_one.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_two.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], software_three.community
   end
 
   should "software_infos search public_software and other all" do
@@ -247,9 +244,9 @@ class SearchControllerTest < ActionController::TestCase
       :software_type => "all"
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], software_one.community
-    assert_includes assigns(:searches)[:software_infos][:results], software_two.community
-    assert_includes assigns(:searches)[:software_infos][:results], software_three.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_one.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_two.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_three.community
   end
 
   should "software_infos search return only the software in params" do
@@ -262,9 +259,9 @@ class SearchControllerTest < ActionController::TestCase
       :only_softwares => ["software-three", "java"]
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], software_two.community
-    assert_includes assigns(:searches)[:software_infos][:results], software_three.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], software_one.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_two.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_three.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], software_one.community
   end
 
   should "software_infos search return only the software in params order by Z-A" do
@@ -278,15 +275,15 @@ class SearchControllerTest < ActionController::TestCase
       :sort => "desc"
     )
 
-    assert_equal assigns(:searches)[:software_infos][:results][0], software_three.community
-    assert_equal assigns(:searches)[:software_infos][:results][1], software_two.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], software_one.community
+    assert_equal assigns(:searches)[:"software_infos"][:results][0], software_three.community
+    assert_equal assigns(:searches)[:"software_infos"][:results][1], software_two.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], software_one.community
   end
 
 
   should "software_infos search return only enabled softwares" do
-    s1 = SoftwareInfo.first
-    s2 = SoftwareInfo.last
+    s1 = SoftwareCommunitiesPlugin::SoftwareInfo.first
+    s2 = SoftwareCommunitiesPlugin::SoftwareInfo.last
 
     # First get them all normally
     get(
@@ -294,8 +291,8 @@ class SearchControllerTest < ActionController::TestCase
       :query => "software"
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], s1.community
-    assert_includes assigns(:searches)[:software_infos][:results], s2.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], s1.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], s2.community
 
     s2.community.disable
 
@@ -305,8 +302,8 @@ class SearchControllerTest < ActionController::TestCase
       :query => "software"
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], s1.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], s2.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], s1.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], s2.community
   end
 
   should "software_infos search not return software with secret community" do
@@ -321,9 +318,9 @@ class SearchControllerTest < ActionController::TestCase
       :software_infos,
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], software_two.community
-    assert_includes assigns(:searches)[:software_infos][:results], software_three.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], software_one.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_two.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_three.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], software_one.community
   end
 
   should "software_infos search not return sisp softwares" do
@@ -338,9 +335,9 @@ class SearchControllerTest < ActionController::TestCase
       :software_infos,
     )
 
-    assert_includes assigns(:searches)[:software_infos][:results], software_two.community
-    assert_includes assigns(:searches)[:software_infos][:results], software_three.community
-    assert_not_includes assigns(:searches)[:software_infos][:results], software_one.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_two.community
+    assert_includes assigns(:searches)[:"software_infos"][:results], software_three.community
+    assert_not_includes assigns(:searches)[:"software_infos"][:results], software_one.community
   end
 
   should "sisp search not return software without sisp" do
@@ -405,12 +402,12 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   def create_software_language(name, version)
-    unless ProgrammingLanguage.find_by_name(name)
-      ProgrammingLanguage.create(:name => name)
+    unless SoftwareCommunitiesPlugin::ProgrammingLanguage.find_by_name(name)
+      SoftwareCommunitiesPlugin::ProgrammingLanguage.create(:name => name)
     end
 
-    software_language = SoftwareLanguage.new
-    software_language.programming_language = ProgrammingLanguage.find_by_name(name)
+    software_language = SoftwareCommunitiesPlugin::SoftwareLanguage.new
+    software_language.programming_language = SoftwareCommunitiesPlugin::ProgrammingLanguage.find_by_name(name)
     software_language.version = version
     software_language.save!
 
@@ -418,12 +415,12 @@ class SearchControllerTest < ActionController::TestCase
   end
 
   def create_software_database(name, version)
-    unless DatabaseDescription.find_by_name(name)
-      DatabaseDescription.create(:name => name)
+    unless SoftwareCommunitiesPlugin::DatabaseDescription.find_by_name(name)
+      SoftwareCommunitiesPlugin::DatabaseDescription.create(:name => name)
     end
 
-    software_database = SoftwareDatabase.new
-    software_database.database_description = DatabaseDescription.find_by_name(name)
+    software_database = SoftwareCommunitiesPlugin::SoftwareDatabase.new
+    software_database.database_description = SoftwareCommunitiesPlugin::DatabaseDescription.find_by_name(name)
     software_database.version = version
     software_database.save!
 

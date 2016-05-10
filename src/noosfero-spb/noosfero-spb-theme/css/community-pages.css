@@ -531,12 +531,12 @@
 
 /* Software Tab Data - Need to develop solution - Only display on profile page */
 
-#content .software-tab-data-block{
+#content .software-communities-plugin_software-tab-data-block{
   display: none;
 }
 
-.profile-type-is-community .action-profile_design-index #content .software-tab-data-block,
-.profile-type-is-community .action-profile-index #content .software-tab-data-block{
+.profile-type-is-community .action-profile_design-index #content .software-communities-plugin_software-tab-data-block,
+.profile-type-is-community .action-profile-index #content .software-communities-plugin_software-tab-data-block{
   display: block;
 }
 
@@ -589,23 +589,23 @@
   opacity: 1.0;
 }
 
-#content .software-events-block{
+#content .software-communities-plugin_software-events-block {
   display: none;
 }
 
-.action-profile_design-index #content .software-events-block,
-.profile-type-is-community .action-profile-index #content .software-events-block{
+.action-profile_design-index #content .software-communities-plugin_software-events-block,
+.profile-type-is-community .action-profile-index #content .software-communities-plugin_software-events-block {
   display: block;
 }
 
 /*** Right bar ***/
 
-.template-default.profile-type-is-community .action-profile-index #content .box-3 .software-events-block,
-.template-lefttopright.profile-type-is-community .action-profile-index #content .box-2 .software-events-block{
+.template-default.profile-type-is-community .action-profile-index #content .box-3 .software-communities-plugin_software-events-block,
+.template-lefttopright.profile-type-is-community .action-profile-index #content .box-2 .software-communities-plugin_software-events-block {
   display: none;
 }
 
-.template-lefttopright.profile-type-is-community .action-content_viewer-view_page #content .box-2 .software-events-block{
+.template-lefttopright.profile-type-is-community .action-content_viewer-view_page #content .box-2 .software-communities-plugin_software-events-block {
   display: block;
 }
 
@@ -1090,10 +1090,14 @@
   padding-bottom: 30px;
 }
 
-.action-profile-members .box-1 .common-profile-list-block .profile-list-members span{
+.action-profile-members .box-1 .common-profile-list-block span {
   margin-right: 0px;
   width: 90px;
   height: 86px;
+}
+
+#content .common-profile-list-block .profile-members-tabs-container ul {
+  padding: 0 18px;
 }
 
 .action-profile-members .box-1 .common-profile-list-block .button-bar span{
@@ -1278,24 +1282,24 @@
 
 /*software-events-block box-1*/
 
-.box-1 .software-events-block ul.software-community-events-list {
+.box-1 .software-communities-plugin_software-events-block ul.software-community-events-list {
   border: 1px solid #D3D6DE;
   border-radius: 8px;
   width: 100%;
 }
 
-.box-1 .software-events-block li.software-events-list-item {
+.box-1 .software-communities-plugin_software-events-block li.software-events-list-item {
   border-bottom: 1px dotted #D3D6DE;
   font-size: 14px;
   padding: 7px 0px;
   padding-left: 16px;
 }
 
-.box-1 .software-events-block li.software-events-list-item:last-child{
+.box-1 .software-communities-plugin_software-events-block li.software-events-list-item:last-child {
   border:none;
 }
 
-.box-1 .software-events-block .software-events-list-item-calendar {
+.box-1 .software-communities-plugin_software-events-block .software-events-list-item-calendar {
   background-image: url("../images/calendar-icon.png");
   background-repeat: no-repeat;
   width: 14px;
@@ -1304,29 +1308,29 @@
   margin-top: 2px;
 }
 
-.box-1 .software-events-block .software-events-list-item-date {
+.box-1 .software-communities-plugin_software-events-block .software-events-list-item-date {
   padding-left: 5px;
   font-weight: 700;
 }
 
-.box-1 .software-events-block .software-events-list-item-title {
+.box-1 .software-communities-plugin_software-events-block .software-events-list-item-title {
   padding-left: 1px;
 }
 
 /*software-events-block - sidebar - box2*/
-#content .box-2 .software-events-block .software-community-events-block{
+#content .box-2 .software-communities-plugin_software-events-block .software-community-events-block {
   border:1px solid #C0C1C1;
   border-radius:4px;
   background-color:#ECEDF1;
   display: none;
 }
 
-.article-type-event #content .box-2 .software-events-block,
-.article-type-event #content .box-2 .software-events-block .software-community-events-block {
+.article-type-event #content .box-2 .software-communities-plugin_software-events-block,
+.article-type-event #content .box-2 .software-communities-plugin_software-events-block .software-community-events-block {
   display: block;
 }
 
-#content .box-2 .software-events-block .software-events-list-item{
+#content .box-2 .software-communities-plugin_software-events-block .software-events-list-item {
   padding:10px 15px;
   border-bottom:1px dotted #C0C1C1;
   color:#2C4B6B;
@@ -1334,16 +1338,16 @@
   font-weight: 500;
 }
 
-#content .box-2 .software-events-block .software-events-list-item-date{
+#content .box-2 .software-communities-plugin_software-events-block .software-events-list-item-date {
   font-weight: 800;
 }
 
-#content .box-2 .software-events-block .software-events-list-item-title a,
-#content .box-2 .software-events-block .software-events-list-item-title a:visited{
+#content .box-2 .software-communities-plugin_software-events-block .software-events-list-item-title a,
+#content .box-2 .software-communities-plugin_software-events-block .software-events-list-item-title a:visited {
   color:#2C4B6B;
 }
 
-#content .box-2 .software-events-block .software-events-list-item:first-child{
+#content .box-2 .software-communities-plugin_software-events-block .software-events-list-item:first-child {
   color:#172738;
   font-weight: 800;
   text-transform: uppercase;
@@ -1351,7 +1355,7 @@
   padding:10px 15px;
 }
 
-#content .box-2 .software-events-block .software-events-list-item:last-child{
+#content .box-2 .software-communities-plugin_software-events-block .software-events-list-item:last-child {
   border:none;
 }
 
@@ -1391,4 +1395,149 @@
 .action-events-events .event-date{
   background:none;
   padding-left:0;
+}
+
+.action-search-communities #colorbox .join-community-confirmation,
+.action-profile-members #colorbox .join-community-confirmation,
+.action-profile-index #colorbox .join-community-confirmation {
+  height: 255px;
+  width: 320px;
+  padding: 0;
+}
+
+.action-search-communities #colorbox #cboxContent,
+.action-profile-members #colorbox #cboxContent,
+.action-profile-index #colorbox #cboxContent {
+  border-radius: 5px;
+  height: 255px;
+  width: 320px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation h1,
+.action-profile-members #colorbox .join-community-confirmation h1,
+.action-profile-index #colorbox .join-community-confirmation h1 {
+  color: #2C394B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant: normal;
+  margin: 20px 40px 13px 25px;
+  line-height: 27px;
+  font-size: 20px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation p,
+.action-profile-members #colorbox .join-community-confirmation p,
+.action-profile-index #colorbox .join-community-confirmation p {
+  color: #2d3a4a;
+  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+  margin: 20px 40px 50px 25px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation p::before,
+.action-profile-members #colorbox .join-community-confirmation p::before,
+.action-profile-index #colorbox .join-community-confirmation p::before {
+  content: "\f1fa";
+  font-family: "FontAwesome";
+  font-size: 52px;
+  color: #5671bb;
+  display: block;
+  float: left;
+  margin: 15px 10px 50px 10px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation form,
+.action-profile-members #colorbox .join-community-confirmation form,
+.action-profile-index #colorbox .join-community-confirmation form {
+  border-top: 1px solid #ccc;
+}
+
+.action-search-communities #colorbox #cboxContent #cboxLoadedContent,
+.action-profile-members #colorbox #cboxContent #cboxLoadedContent,
+.action-profile-index #colorbox #cboxContent #cboxLoadedContent {
+  margin-bottom: 0;
+}
+
+.action-search-communities #colorbox #cboxTopLeft,
+.action-search-communities #colorbox #cboxTopCenter,
+.action-search-communities #colorbox #cboxTopRight,
+.action-search-communities #colorbox #cboxBottomLeft,
+.action-search-communities #colorbox #cboxBottomCenter,
+.action-search-communities #colorbox #cboxBottomRight,
+.action-search-communities #colorbox #cboxMiddleRight,
+.action-search-communities #colorbox #cboxMiddleLeft,
+.action-profile-members #colorbox #cboxTopLeft,
+.action-profile-members #colorbox #cboxTopCenter,
+.action-profile-members #colorbox #cboxTopRight,
+.action-profile-members #colorbox #cboxBottomLeft,
+.action-profile-members #colorbox #cboxBottomCenter,
+.action-profile-members #colorbox #cboxBottomRight,
+.action-profile-members #colorbox #cboxMiddleRight,
+.action-profile-members #colorbox #cboxMiddleLeft,
+.action-profile-index #colorbox #cboxTopLeft,
+.action-profile-index #colorbox #cboxTopCenter,
+.action-profile-index #colorbox #cboxTopRight,
+.action-profile-index #colorbox #cboxBottomLeft,
+.action-profile-index #colorbox #cboxBottomCenter,
+.action-profile-index #colorbox #cboxBottomRight,
+.action-profile-index #colorbox #cboxMiddleRight,
+.action-profile-index #colorbox #cboxMiddleLeft {
+  background: none;
+}
+
+.action-search-communities #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-search-communities #colorbox .button.with-text.icon-ok.submit,
+.action-profile-members #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit,
+.action-profile-index #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit {
+  height: 36px;
+  padding: 5px 15px;
+  background: #FFF none;
+  color: #3E67B1;
+  border-radius: 4px;
+  border: 1px solid #3E67B1;
+  font-size: 14px;
+  line-height: 14px;
+  content: "\f105";
+}
+
+.action-search-communities #colorbox .button.with-text.icon-ok.submit,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit {
+  background-color: #5671b8;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.action-search-communities #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-members #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-index #colorbox .button.icon-close.with-text.modal-toggle.modal-close {
+  border: medium none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.action-search-communities #colorbox .button.with-text.icon-ok.submit,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit {
+  margin: 12px 0 0 92px;
+  padding: 9px 15px 24px 15px;
+}
+
+.action-search-communities #colorbox .button.with-text.icon-ok.submit:hover,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit:hover,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit:hover {
+  cursor: pointer;
+  background-color: #3E67B1;
+  color: #FFF;
+}
+
+.action-search-communities #colorbox .button.icon-close.with-text.modal-toggle.modal-close:hover,
+.action-profile-members #colorbox .button.icon-close.with-text.modal-toggle.modal-close:hover,
+.action-profile-index #colorbox .button.icon-close.with-text.modal-toggle.modal-close:hover {
+  color: #5671b8;
 }

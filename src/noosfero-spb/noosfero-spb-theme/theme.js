@@ -97,7 +97,7 @@ SPBNoosferoTheme.HighlightedSoftwaresBlock = (function($) {
   }
 
   function initialize() {
-    $('#boxes .box-1 div.softwares-block').doOnce(function() {
+    $('#boxes .box-1 div.software-communities-plugin_softwares-block').doOnce(function() {
       setFadeInOutFinality();
     });
   }

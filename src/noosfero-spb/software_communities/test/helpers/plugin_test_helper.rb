@@ -11,8 +11,7 @@ module PluginTestHelper
   def create_software_info name, finality = "something", acronym = ""
     license = create_license_info("GPL")
     community = create_community(name)
-
-    software_info = SoftwareInfo.new
+    software_info = SoftwareCommunitiesPlugin::SoftwareInfo.new
     software_info.community = community
     software_info.license_info = license
     software_info.finality = finality
@@ -28,22 +27,14 @@ module PluginTestHelper
       name.to_slug,
       email,
       password,
-      password_confirmation,
+      password_confirmation
     )
-    person = Person::new
 
-    user.person = person
-    person.user = user
-
-    person.name = name
-    person.identifier = name.to_slug
-    person.state = state
-    person.city = city
+    user.person.state = state
+    user.person.city = city
 
     user.save
-    person.save
-
-    person
+    user.person
   end
 
   def create_user login, email, password, password_confirmation
@@ -54,11 +45,12 @@ module PluginTestHelper
     user.password = password
     user.password_confirmation = password_confirmation
 
+    user.save
     user
   end
 
   def create_license_info version, link = ""
-    license = LicenseInfo.find_or_create_by_version(version)
+    license = SoftwareCommunitiesPlugin::LicenseInfo.create(:version => version)
     license.link = link
     license.save
 

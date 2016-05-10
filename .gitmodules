@@ -1,0 +1,3 @@
+[submodule "noosfero"]
+	path = noosfero
+	url = https://gitlab.com/softwarepublico/noosfero.git

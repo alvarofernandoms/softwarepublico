@@ -4,7 +4,12 @@ class CreateProgrammingLanguagesTable < ActiveRecord::Migration
       t.string :name
     end
 
-    SoftwareHelper.create_list_with_file("plugins/software_communities/public/static/languages.txt", ProgrammingLanguage)
+    file_name = "plugins/software_communities/public/static/languages.txt"
+    list_file = File.open file_name, "r"
+    list_file.each_line do |line|
+      execute("INSERT INTO programming_languages (name) VALUES ('#{line.strip}')")
+    end
+    list_file.close
   end
 
   def self.down

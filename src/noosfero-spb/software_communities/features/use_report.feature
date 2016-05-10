@@ -13,22 +13,16 @@ Feature: Use report
     And the following softwares
       | name      | public_software | finality      |
       | Noosfero  | true            | some finality |
+    And the following blocks
+      | owner            | type                      |
+      | noosfero         | OrganizationRatingsBlock  |
+      | noosfero         | AverageRatingBlock        |
 
-  Scenario: Add Organization Ratings Block
+  Scenario: See Organization Ratings and Average Rating blocks
     Given I go to Noosfero's control panel
     And I follow "Edit sideboxes"
-    When I follow "Add a block"
-    And I choose "Organization Ratings"
-    And I press "Add"
     Then I should see "Report your experiences"
-
-  Scenario: Add Average Rating Block
-    Given I go to Noosfero's control panel
-    And I follow "Edit sideboxes"
-    When I follow "Add a block"
-    And I choose "Organization Average Rating"
-    And I press "Add"
-    Then I should see "Be the first to rate!"
+    And I should see "Be the first to rate!"
 
   @selenium
   Scenario: Test Additional Fields JavaScript
@@ -41,12 +35,7 @@ Feature: Use report
 
    @selenium
    Scenario: Validate Use Report fields format
-    Given I go to Noosfero's control panel
-    And I follow "Edit sideboxes"
-    When I follow "Add a block"
-    And I choose "Organization Ratings"
-    And I press "Add"
-    And I am on Noosfero's homepage
+    Given I am on Noosfero's homepage
     And I follow "Rate Community"
     When I click on anything with selector "comments-additional-information"
     And I fill in "people_benefited_tmp" with "123123"

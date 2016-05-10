@@ -6,7 +6,7 @@ class CreateLicenseInfosTable < ActiveRecord::Migration
     end
 
     link = "http://creativecommons.org/licenses/GPL/2.0/legalcode.pt"
-    LicenseInfo.create(:version => "CC-GPL-V2", :link => link)
+    execute("INSERT INTO license_infos (version, link) VALUES ('CC-GPL-V2', '#{link}')")
   end
 
   def self.down

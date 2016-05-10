@@ -3,8 +3,8 @@ require 'test_helper'
 class DatabaseValidationTest < ActiveSupport::TestCase
 
   def setup
-   @database_desc = DatabaseDescription.create(:name => "ABC")
-   @database = SoftwareDatabase.new
+   @database_desc = SoftwareCommunitiesPlugin::DatabaseDescription.create(:name => "ABC")
+   @database = SoftwareCommunitiesPlugin::SoftwareDatabase.new
    @database.database_description = @database_desc
    @database.version = "MYSQL"
    @database
@@ -12,8 +12,8 @@ class DatabaseValidationTest < ActiveSupport::TestCase
 
   def teardown
     @database = nil
-    DatabaseDescription.destroy_all
-    SoftwareDatabase.destroy_all
+    SoftwareCommunitiesPlugin::DatabaseDescription.destroy_all
+    SoftwareCommunitiesPlugin::SoftwareDatabase.destroy_all
   end
 
   should "Save database if all fields are filled" do

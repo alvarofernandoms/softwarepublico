@@ -264,29 +264,49 @@
 /* Create Instituition */
 
 /*Temporary - Best fix html structure*/
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content form,
 .action-gov_user_plugin-create_institution_admin #institution_form{
   font-size: 12px;
   font-family: Arial;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution input[type="text"],
+.action-gov_user_plugin_myprofile-edit_institution select,
 .action-gov_user_plugin-create_institution_admin input[type="text"],
 .action-gov_user_plugin-create_institution_admin select {
   height: 30px;
   border-radius: 5px;
   border: solid 1px #ccc;
-  background-color: #fff;
+  background: none;
   padding: 0px 5px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution select,
 .action-gov_user_plugin-create_institution_admin select{
   height: 32px;
   font-size: 12px;
   font-family: Arial;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution select {
+  color: black;
+}
+
+
+.action-gov_user_plugin_myprofile-edit_institution input[type="radio"],
 .action-gov_user_plugin-create_institution_admin input[type="radio"] {
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution label.formlabel {
+  margin: 10px 0px 3px 0px;
+  color: #444;
+  font-weight: normal;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution label.formlabel::after {
+  color: red;
 }
 
 .action-gov_user_plugin-create_institution_admin label.formlabel {
@@ -294,6 +314,7 @@
 }
 
 .action-software_communities_plugin_myprofile-new_software .explanation,
+.action-gov_user_plugin_myprofile-edit_institution .explanation,
 .action-gov_user_plugin-create_institution_admin .explanation {
   color: #3F60C6;
   font-size: 12px;
@@ -306,6 +327,8 @@
   margin-top: 5px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content .required-field,
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content .errorExplanation,
 .action-gov_user_plugin-create_institution_admin .required-field,
 .action-gov_user_plugin-create_institution_admin .errorExplanation {
   color: #EA1C00;
@@ -314,44 +337,79 @@
   font-family: Arial;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content .required-field {
+  color: #444;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution .errorExplanation:empty,
 .action-gov_user_plugin-create_institution_admin .errorExplanation:empty {
   margin-bottom: 10px;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution #community_name {
+  color: black;
+  width: 220px
 }
 
 .action-gov_user_plugin-create_institution_admin #community_name {
   width: 200px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #institutions_corporate_name {
+  width: 287px;
+  color: black;
+}
+
 .action-gov_user_plugin-create_institution_admin #institutions_corporate_name {
   width: 310px;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution #community_country {
+  width: 232px;
+  color: black;
 }
 
 .action-gov_user_plugin-create_institution_admin #community_country {
   width: 213px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #community_state {
+  width: 111px;
+  color: black;
+}
+
 .action-gov_user_plugin-create_institution_admin #community_state {
   width: 81px;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution #community_city {
+  width: 165px;
+  color: black;
 }
 
 .action-gov_user_plugin-create_institution_admin #community_city {
   width: 222px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #institutions_cnpj,
+.action-gov_user_plugin_myprofile-edit_institution #institutions_acronym,
 .action-gov_user_plugin-create_institution_admin #institutions_cnpj,
 .action-gov_user_plugin-create_institution_admin #institutions_acronym {
   text-indent: 5px;
   width: 530px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution .modal-form-actions,
 .action-gov_user_plugin-create_institution_admin .modal-form-actions {
   margin-top: 20px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution .sisp-fields,
 .action-gov_user_plugin-create_institution_admin .sisp-fields {
   margin-top: 15px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #content form input.button.with-text,
 .action-gov_user_plugin-create_institution_admin #content form input.button.with-text {
   background-color: #3E67B1;
   color: #fff;
@@ -361,6 +419,7 @@
   line-height: 17px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #content form a.button.with-text,
 .action-gov_user_plugin-create_institution_admin #content form a.button.with-text{
   padding: 7px 15px;
 }
@@ -544,7 +603,8 @@
   margin: 0 10px 0 10px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data div{
+.action-profile_editor-edit #content .main-content #email_public_message,
+.action-profile_editor-edit #content .main-content .formfieldline {
   margin: 5px 0 5px 0;
 }
 
@@ -563,7 +623,7 @@
 .action-profile_editor-edit #content .main-content #profile-data .formlabel,
 .controller-maps.action-maps-edit_location #content .main-content form label,
 .action-account-change_password #content .main-content form label,
-.action-profile_editor-edit #content .main-content #profile-data .formfieldline label{
+.action-profile_editor-edit #content .main-content #profile-data .formfieldline label :not(#institution_modal_body) :not(.modal-body) {
   color: #231F20;
   font-size: 14px;
   font-weight: 300;
@@ -797,7 +857,7 @@
 
 /* Members management */
 .action-profile_members-index #members-list td{
-  padding-top: 5px; 
+  padding-top: 5px;
 }
 
 /*recover behavior of noosfero*/
@@ -958,3 +1018,41 @@
 .action-admin_panel-site_info #content .main-content #thanks-for-signing p:nth-child(10) {
   margin-bottom: 31px;
 }
+
+/* Editing sideboxes - Help icon same of the noosfero */
+.action-environment_design-index #content #block-types .slick-list .slick-track div .button-bar .icon-help span,
+.action-profile_design-index #content #block-types .slick-list .slick-track div .button-bar .icon-help span {
+  display: none;
+}
+
+.action-environment_design-index #content #block-types .slick-list .slick-track div .button-bar a.button.icon-help.with-text.modal-toggle,
+.action-profile_design-index #content #block-types .slick-list .slick-track div .button-bar a.button.icon-help.with-text.modal-toggle {
+  background-image: url(../../../icons/tango/Tango/16x16/apps/gnome-help.png);
+  background-repeat: no-repeat;
+  background-color: #EEE;
+  background-position: 3px 50%;
+  color: #FFF;
+  border: 1px solid #aaaaaa;
+  text-decoration: none;
+  padding: 0px 2px 0px 22px;
+  margin: 0px 0px 0px 0px;
+  height: 20px;
+}
+
+.action-environment_design-index #content #block-types .slick-list .slick-track div .button-bar a.button.icon-help.with-text.modal-toggle:hover,
+.action-profile_design-index #content #block-types .slick-list .slick-track div .button-bar a.button.icon-help.with-text.modal-toggle:hover {
+  background-color: #555;
+}
+/*** End - Editing sideboxes - Help icon same of the noosfero ***/
+
+/* Area 4 edition buttons */
+.action-profile_design-index #content #box-organizer .block-outer:hover .software-communities-plugin_software-information-block .button-bar {
+  margin-top: 31px;
+}
+/*** End - Area 4 edition buttons */
+
+/* Download Link Scroll options */
+.action-profile_design-index .download-forms .toggle-form ul {
+  overflow: auto;
+}
+/*** End - Download Link Scroll options */

@@ -3,7 +3,7 @@ require 'test_helper'
 class LicenseInfoTest < ActiveSupport::TestCase
 
   should "save if all informations are filled" do
-    @software_license_info = LicenseInfo.create(
+    @software_license_info = SoftwareCommunitiesPlugin::LicenseInfo.create(
                               :version => "GPL",
                               :link => "www.gpl2.com"
                             )
@@ -11,7 +11,7 @@ class LicenseInfoTest < ActiveSupport::TestCase
   end
 
   should "not save if license info version is empty" do
-    @software_license_info = LicenseInfo.create(
+    @software_license_info = SoftwareCommunitiesPlugin::LicenseInfo.create(
                               :version => "GPL",
                               :link => "www.gpl2.com"
                             )
@@ -20,7 +20,7 @@ class LicenseInfoTest < ActiveSupport::TestCase
   end
 
   should "save if link is empty" do
-    @software_license_info = LicenseInfo.create(
+    @software_license_info = SoftwareCommunitiesPlugin::LicenseInfo.create(
                               :version => "GPL",
                               :link => "www.gpl2.com")
     @software_license_info.link = nil
@@ -34,11 +34,11 @@ class LicenseInfoTest < ActiveSupport::TestCase
       {:version=>"GNU 3", :link=>"#"},
       {:version=>"Another", :link=>"#"}
     ]
-    test_data.each {|data| LicenseInfo.create! data}
+    test_data.each {|data| SoftwareCommunitiesPlugin::LicenseInfo.create! data}
 
-    another = LicenseInfo.find_by_version "Another"
+    another = SoftwareCommunitiesPlugin::LicenseInfo.find_by_version "Another"
 
     assert_not_nil another
-    assert !LicenseInfo.without_another.include?(another), "Scope without_another shoud get all except for another"
+    assert !SoftwareCommunitiesPlugin::LicenseInfo.without_another.include?(another), "Scope without_another shoud get all except for another"
   end
 end

@@ -10,36 +10,23 @@ Feature: edit adherent fields
     And I check "SoftwareCommunitiesPlugin"
     And I press "Save changes"
     And the following softwares
-    | name             | public_software | finality      |
-    | Public Software  | true            | some finality |
-    | Generic Software | false           | some finality |
-
-  Scenario: Add software block
-    Given I follow "Control panel"
-    And I follow "Edit sideboxes"
-    When I follow "Add a block"
-    And I choose "Softwares"
-    And I press "Add"
-    Then I should see "softwares"
+      | name             | public_software | finality      |
+      | Public Software  | true            | some finality |
+      | Generic Software | false           | some finality |
+    And the following blocks
+      | owner            | type                                      |
+      | environment      | SoftwareCommunitiesPlugin::SoftwaresBlock |
 
   Scenario: Change software block to generic software block
-    Given I follow "Control panel"
-    And I follow "Edit sideboxes"
-    When I follow "Add a block"
-    And I choose "Softwares"
-    And I press "Add"
-    And I follow "Edit" within ".softwares-block"
-    And I select "Generic" from "block_software_type"
+    Given I go to /admin/environment_design
+    And I follow "Edit" within ".block.software-communities-plugin_softwares-block"
+    When I select "Generic" from "block_software_type"
     And I press "Save"
-    Then I should see "generic software"
+    Then I should see "Generic Software"
 
   Scenario: Change software block to generic software block
-    Given I follow "Control panel"
-    And I follow "Edit sideboxes"
-    When I follow "Add a block"
-    And I choose "Softwares"
-    And I press "Add"
-    And I follow "Edit" within ".softwares-block"
-    And I select "Public" from "block_software_type"
+    Given I go to /admin/environment_design
+    And I follow "Edit" within ".block.software-communities-plugin_softwares-block"
+    When I select "Public" from "block_software_type"
     And I press "Save"
-    Then I should see "public software"
+    Then I should see "Public Software"

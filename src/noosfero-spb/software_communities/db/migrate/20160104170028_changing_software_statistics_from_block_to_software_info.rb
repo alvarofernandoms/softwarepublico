@@ -1,6 +1,6 @@
 class ChangingSoftwareStatisticsFromBlockToSoftwareInfo < ActiveRecord::Migration
   def up
-    select_all("SELECT * FROM software_infos").each do |software|
+    select_all("SELECT * FROM software_communities_plugin_software_infos").each do |software|
       benefited_people = 0
       saved_resources = 0
 
@@ -12,13 +12,13 @@ class ChangingSoftwareStatisticsFromBlockToSoftwareInfo < ActiveRecord::Migratio
           benefited_people += organization_rating["people_benefited"].to_i
           saved_resources += organization_rating["saved_value"].to_f
         end
-        execute("UPDATE software_infos SET benefited_people=#{benefited_people}, saved_resources=#{saved_resources} WHERE id=#{software['id']}")
+        execute("UPDATE software_communities_plugin_software_infos SET benefited_people=#{benefited_people}, saved_resources=#{saved_resources} WHERE id=#{software['id']}")
       end
     end
 
   end
 
   def down
-    execute("UPDATE software_infos SET benefited_people=0,saved_resources=0")
+    execute("UPDATE software_communities_plugin_software_infos SET benefited_people=0,saved_resources=0")
   end
 end

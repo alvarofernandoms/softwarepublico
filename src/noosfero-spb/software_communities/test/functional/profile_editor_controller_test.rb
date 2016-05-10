@@ -15,7 +15,7 @@ class ProfileEditorControllerTest < ActionController::TestCase
     @response   = ActionController::TestResponse.new
     @profile = create_user('default_user').person
 
-    LicenseInfo.create(
+    SoftwareCommunitiesPlugin::LicenseInfo.create(
       :version=>"CC-GPL-V2",
       :link=>"http://creativecommons.org/licenses/GPL/2.0/legalcode.pt"
     )
@@ -33,11 +33,6 @@ class ProfileEditorControllerTest < ActionController::TestCase
     login_as('adminuser')
     @environment.add_admin(admin)
     @environment.save
-  end
-
-  def teardown
-    Community.destroy_all
-    SoftwareInfo.destroy_all
   end
 
   should "redirect to edit_software_community on edit community of software" do

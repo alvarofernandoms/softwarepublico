@@ -4,8 +4,12 @@ class CreateDatabaseDescriptionsTable < ActiveRecord::Migration
       t.string :name
     end
 
-    path_to_file = "plugins/software_communities/public/static/databases.txt"
-    SoftwareHelper.create_list_with_file(path_to_file, DatabaseDescription)
+    file_name = "plugins/software_communities/public/static/databases.txt"
+    list_file = File.open file_name, "r"
+    list_file.each_line do |line|
+      execute("INSERT INTO database_descriptions (name) VALUES ('#{line.strip}')")
+    end
+    list_file.close
   end
 
   def self.down

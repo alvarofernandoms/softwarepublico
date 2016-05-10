@@ -6,22 +6,17 @@ class SoftwareRegistrationTest < ActiveSupport::TestCase
     @environment = Environment.default
     @environment.enable_plugin(SoftwareCommunitiesPlugin)
 
-    @license_info = LicenseInfo.create(:version => "New License", :link => "#")
-  end
-
-  def teardown
-    Community.destroy_all
-    SoftwareInfo.destroy_all
-    Task.destroy_all
+    @license_info = SoftwareCommunitiesPlugin::LicenseInfo.create(:version => "New License", :link => "#")
   end
 
   should 'include software registration task if is admin' do
     person = create_user('molly').person
     @environment.add_admin(person)
-    task = CreateSoftware.create!(
+    task = SoftwareCommunitiesPlugin::CreateSoftware.create!(
             :name => "Teste One",
             :requestor => person,
-            :environment => @environment
+            :environment => @environment,
+            :finality => "Something"
            )
     assert_equal [task], Task.to(person).pending
   end
@@ -29,7 +24,7 @@ class SoftwareRegistrationTest < ActiveSupport::TestCase
   should 'create software when admin accept software create task' do
     person = create_user('Pedro').person
     @environment.add_admin(person)
-    task = CreateSoftware.create!(
+    task = SoftwareCommunitiesPlugin::CreateSoftware.create!(
             :name => "Teste Two",
             :requestor => person,
             :environment => @environment,
@@ -37,9 +32,9 @@ class SoftwareRegistrationTest < ActiveSupport::TestCase
             :license_info => @license_info
            )
 
-    software_count = SoftwareInfo.count
+    software_count = SoftwareCommunitiesPlugin::SoftwareInfo.count
     task.finish
 
-    assert_equal software_count+1, SoftwareInfo.count
+    assert_equal software_count+1, SoftwareCommunitiesPlugin::SoftwareInfo.count
   end
 end
