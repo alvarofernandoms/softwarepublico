@@ -684,3 +684,11 @@ font-size: 10px;
 table.cms-articles td:first-child, table.cms-articles th:first-child {
   width: 25%;
 }
+
+.action-tasks-index #content .main-content .task_boxes .task_information a {
+  color: #2C66CE;
+}
+
+.action-tasks-index #content .main-content .task_boxes #task_email a {
+  color: #2C66CE;
+}

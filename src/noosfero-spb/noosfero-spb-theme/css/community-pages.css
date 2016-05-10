@@ -1396,3 +1396,148 @@
   background:none;
   padding-left:0;
 }
+
+.action-search-communities #colorbox .join-community-confirmation,
+.action-profile-members #colorbox .join-community-confirmation,
+.action-profile-index #colorbox .join-community-confirmation {
+  height: 255px;
+  width: 320px;
+  padding: 0;
+}
+
+.action-search-communities #colorbox #cboxContent,
+.action-profile-members #colorbox #cboxContent,
+.action-profile-index #colorbox #cboxContent {
+  border-radius: 5px;
+  height: 255px;
+  width: 320px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation h1,
+.action-profile-members #colorbox .join-community-confirmation h1,
+.action-profile-index #colorbox .join-community-confirmation h1 {
+  color: #2C394B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant: normal;
+  margin: 20px 40px 13px 25px;
+  line-height: 27px;
+  font-size: 20px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation p,
+.action-profile-members #colorbox .join-community-confirmation p,
+.action-profile-index #colorbox .join-community-confirmation p {
+  color: #2d3a4a;
+  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+  margin: 20px 40px 50px 25px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation p::before,
+.action-profile-members #colorbox .join-community-confirmation p::before,
+.action-profile-index #colorbox .join-community-confirmation p::before {
+  content: "\f1fa";
+  font-family: "FontAwesome";
+  font-size: 52px;
+  color: #5671bb;
+  display: block;
+  float: left;
+  margin: 15px 10px 50px 10px;
+}
+
+.action-search-communities #colorbox .join-community-confirmation form,
+.action-profile-members #colorbox .join-community-confirmation form,
+.action-profile-index #colorbox .join-community-confirmation form {
+  border-top: 1px solid #ccc;
+}
+
+.action-search-communities #colorbox #cboxContent #cboxLoadedContent,
+.action-profile-members #colorbox #cboxContent #cboxLoadedContent,
+.action-profile-index #colorbox #cboxContent #cboxLoadedContent {
+  margin-bottom: 0;
+}
+
+.action-search-communities #colorbox #cboxTopLeft,
+.action-search-communities #colorbox #cboxTopCenter,
+.action-search-communities #colorbox #cboxTopRight,
+.action-search-communities #colorbox #cboxBottomLeft,
+.action-search-communities #colorbox #cboxBottomCenter,
+.action-search-communities #colorbox #cboxBottomRight,
+.action-search-communities #colorbox #cboxMiddleRight,
+.action-search-communities #colorbox #cboxMiddleLeft,
+.action-profile-members #colorbox #cboxTopLeft,
+.action-profile-members #colorbox #cboxTopCenter,
+.action-profile-members #colorbox #cboxTopRight,
+.action-profile-members #colorbox #cboxBottomLeft,
+.action-profile-members #colorbox #cboxBottomCenter,
+.action-profile-members #colorbox #cboxBottomRight,
+.action-profile-members #colorbox #cboxMiddleRight,
+.action-profile-members #colorbox #cboxMiddleLeft,
+.action-profile-index #colorbox #cboxTopLeft,
+.action-profile-index #colorbox #cboxTopCenter,
+.action-profile-index #colorbox #cboxTopRight,
+.action-profile-index #colorbox #cboxBottomLeft,
+.action-profile-index #colorbox #cboxBottomCenter,
+.action-profile-index #colorbox #cboxBottomRight,
+.action-profile-index #colorbox #cboxMiddleRight,
+.action-profile-index #colorbox #cboxMiddleLeft {
+  background: none;
+}
+
+.action-search-communities #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-search-communities #colorbox .button.with-text.icon-ok.submit,
+.action-profile-members #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit,
+.action-profile-index #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit {
+  height: 36px;
+  padding: 5px 15px;
+  background: #FFF none;
+  color: #3E67B1;
+  border-radius: 4px;
+  border: 1px solid #3E67B1;
+  font-size: 14px;
+  line-height: 14px;
+  content: "\f105";
+}
+
+.action-search-communities #colorbox .button.with-text.icon-ok.submit,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit {
+  background-color: #5671b8;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.action-search-communities #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-members #colorbox .button.icon-close.with-text.modal-toggle.modal-close,
+.action-profile-index #colorbox .button.icon-close.with-text.modal-toggle.modal-close {
+  border: medium none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.action-search-communities #colorbox .button.with-text.icon-ok.submit,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit {
+  margin: 12px 0 0 92px;
+  padding: 9px 15px 24px 15px;
+}
+
+.action-search-communities #colorbox .button.with-text.icon-ok.submit:hover,
+.action-profile-members #colorbox .button.with-text.icon-ok.submit:hover,
+.action-profile-index #colorbox .button.with-text.icon-ok.submit:hover {
+  cursor: pointer;
+  background-color: #3E67B1;
+  color: #FFF;
+}
+
+.action-search-communities #colorbox .button.icon-close.with-text.modal-toggle.modal-close:hover,
+.action-profile-members #colorbox .button.icon-close.with-text.modal-toggle.modal-close:hover,
+.action-profile-index #colorbox .button.icon-close.with-text.modal-toggle.modal-close:hover {
+  color: #5671b8;
+}
