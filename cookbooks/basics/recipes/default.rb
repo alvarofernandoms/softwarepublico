@@ -65,7 +65,6 @@ package 'tmux'
 package 'less'
 package 'htop'
 package 'ntp'
-package 'screen'
 
 cookbook_file '/usr/local/bin/is-a-container' do
   owner   'root'
