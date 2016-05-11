@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-30 18:21+0000\n"
-"PO-Revision-Date: 2016-03-30 18:21+0000\n"
+"POT-Creation-Date: 2016-05-10 16:42-0300\n"
+"PO-Revision-Date: 2016-05-10 16:42-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Domain %s"
 msgstr ""
 
-#: ../controllers/software_communities_plugin_myprofile_controller.rb:150
+#: ../controllers/software_communities_plugin_myprofile_controller.rb:156
 msgid ""
 "Your new software request will be evaluated by anadministrator. You will be no"
 "tified."
@@ -57,52 +57,148 @@ msgstr ""
 msgid "Invalid download params"
 msgstr ""
 
-#: ../lib/categories_and_tags_block.rb:10
+#: ../lib/ext/search_controller.rb:15
+msgid "Communities Search"
+msgstr ""
+
+#: ../lib/ext/search_controller.rb:152
+msgid "Result Search"
+msgstr ""
+
+#: ../lib/ext/search_controller.rb:178
+msgid "Selected options: "
+msgstr ""
+
+#: ../lib/macros/allow_variables.rb:5
+msgid "Insert Profile"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:17
+msgid "Add Public Software and MPOG features."
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:25
+msgid "Agriculture, Fisheries and Extraction"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:26
+msgid "Science, Information and Communication"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:27
+msgid "Economy and Finances"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:28
+msgid "Public Administration"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:29
+msgid "Habitation, Sanitation and Urbanism"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:30
+msgid "Individual, Family and Society"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:31
+msgid "Health"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:32
+msgid "Social Welfare and Development"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:33
+msgid "Defense and Security"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:34
+msgid "Education"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:35
+msgid "Government and Politics"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:36
+msgid "Justice and Legislation"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:37
+msgid "International Relationships"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:38
+msgid "Transportation and Transit"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:122
+msgid "Rate this software"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:126
+msgid "Use reports"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:198
+msgid "Software Info"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:209
+msgid "Create a new software"
+msgstr ""
+
+#: ../lib/software_communities_plugin.rb:219
+msgid "Software"
+msgstr ""
+
+#: ../lib/software_communities_plugin/categories_and_tags_block.rb:10
 msgid "Categories and Tags"
 msgstr ""
 
-#: ../lib/categories_and_tags_block.rb:14
+#: ../lib/software_communities_plugin/categories_and_tags_block.rb:14
 msgid "This block displays the categories and tags of a software."
 msgstr ""
 
-#: ../lib/categories_software_block.rb:10
+#: ../lib/software_communities_plugin/categories_software_block.rb:10
 msgid "Categories Softwares"
 msgstr ""
 
-#: ../lib/categories_software_block.rb:14
+#: ../lib/software_communities_plugin/categories_software_block.rb:14
 msgid ""
 "This block displays the categories and the amount of softwares for\n"
 "      each category."
 msgstr ""
 
-#: ../lib/create_software.rb:44
+#: ../lib/software_communities_plugin/create_software.rb:42
 msgid "New software"
 msgstr ""
 
-#: ../lib/create_software.rb:52
+#: ../lib/software_communities_plugin/create_software.rb:50
 msgid "%{requestor} wants to create software %{subject} with"
 msgstr ""
 
-#: ../lib/create_software.rb:54
+#: ../lib/software_communities_plugin/create_software.rb:52
 msgid " no finality."
 msgstr ""
 
-#: ../lib/create_software.rb:56
+#: ../lib/software_communities_plugin/create_software.rb:54
 msgid " this finality:<p><em>%{finality}</em></p>"
 msgstr ""
 
-#: ../lib/create_software.rb:76
+#: ../lib/software_communities_plugin/create_software.rb:74
 msgid "%{requestor} wants to create software %{subject}"
 msgstr ""
 
-#: ../lib/create_software.rb:81
+#: ../lib/software_communities_plugin/create_software.rb:79
 msgid ""
 "User \"%{user}\" just requested to create software %{software}.\n"
 "      You have to approve or reject it through the \"Pending Validations\"\n"
 "      section in your control panel.\n"
 msgstr ""
 
-#: ../lib/create_software.rb:88
+#: ../lib/software_communities_plugin/create_software.rb:86
 msgid ""
 "Your request for registering software %{software} at %{environment} was\n"
 "      just sent. Environment administrator will receive it and will approve or"
@@ -114,7 +210,7 @@ msgid ""
 "      about your request."
 msgstr ""
 
-#: ../lib/create_software.rb:98
+#: ../lib/software_communities_plugin/create_software.rb:96
 msgid ""
 "Your request for registering software %{software} at %{environment} was\n"
 "      not approved by the environment administrator. The following explanation"
@@ -124,288 +220,197 @@ msgid ""
 "%{explanation}"
 msgstr ""
 
-#: ../lib/create_software.rb:107
+#: ../lib/software_communities_plugin/create_software.rb:105
 msgid ""
 "Your request for registering the software \"%{software}\" was approved.\n"
 "      You can access %{url} and finish the registration of your software."
 msgstr ""
 
-#: ../lib/download_block.rb:28
+#: ../lib/software_communities_plugin/download_block.rb:28
 msgid "Download Stable Version"
 msgstr ""
 
-#: ../lib/download_block.rb:32
+#: ../lib/software_communities_plugin/download_block.rb:32
 msgid "This block displays the stable version of a software."
 msgstr ""
 
-#: ../lib/dynamic_table_helper.rb:17
+#: ../lib/software_communities_plugin/dynamic_table_helper.rb:17
 #: ../views/box_organizer/_download_list_item.html.erb:4
+#: ../views/box_organizer/software_communities_plugin/_download_list_template.html.erb:4
 #: ../views/software_communities_plugin_myprofile/_main_software_editor_extras.html.erb:3
 #: ../views/software_communities_plugin_myprofile/new_software.html.erb:37
 msgid "Name"
 msgstr ""
 
-#: ../lib/dynamic_table_helper.rb:18
+#: ../lib/software_communities_plugin/dynamic_table_helper.rb:18
 msgid "Version"
 msgstr ""
 
-#: ../lib/dynamic_table_helper.rb:19 ../views/profile/_software_tab.html.erb:18
+#: ../lib/software_communities_plugin/dynamic_table_helper.rb:19
+#: ../views/profile/_software_tab.html.erb:18
 msgid "License"
 msgstr ""
 
-#: ../lib/dynamic_table_helper.rb:91
+#: ../lib/software_communities_plugin/dynamic_table_helper.rb:91
 msgid "Autocomplete field, type something"
 msgstr ""
 
-#: ../lib/dynamic_table_helper.rb:116
+#: ../lib/software_communities_plugin/dynamic_table_helper.rb:116
 #: ../views/box_organizer/_download_list_item.html.erb:21
+#: ../views/box_organizer/software_communities_plugin/_download_list_template.html.erb:23
 msgid "Delete"
 msgstr ""
 
-#: ../lib/ext/category.rb:5
-msgid "Agriculture, Fisheries and Extraction"
-msgstr ""
-
-#: ../lib/ext/category.rb:6
-msgid "Science, Information and Communication"
-msgstr ""
-
-#: ../lib/ext/category.rb:7
-msgid "Economy and Finances"
-msgstr ""
-
-#: ../lib/ext/category.rb:8
-msgid "Public Administration"
-msgstr ""
-
-#: ../lib/ext/category.rb:9
-msgid "Habitation, Sanitation and Urbanism"
-msgstr ""
-
-#: ../lib/ext/category.rb:10
-msgid "Individual, Family and Society"
-msgstr ""
-
-#: ../lib/ext/category.rb:11
-msgid "Health"
-msgstr ""
-
-#: ../lib/ext/category.rb:12
-msgid "Social Welfare and Development"
-msgstr ""
-
-#: ../lib/ext/category.rb:13
-msgid "Defense and Security"
-msgstr ""
-
-#: ../lib/ext/category.rb:14
-msgid "Education"
-msgstr ""
-
-#: ../lib/ext/category.rb:15
-msgid "Government and Politics"
-msgstr ""
-
-#: ../lib/ext/category.rb:16
-msgid "Justice and Legislation"
-msgstr ""
-
-#: ../lib/ext/category.rb:17
-msgid "International Relationships"
-msgstr ""
-
-#: ../lib/ext/category.rb:18
-msgid "Transportation and Transit"
-msgstr ""
-
-#: ../lib/ext/search_controller.rb:15
-msgid "Communities Search"
-msgstr ""
-
-#: ../lib/ext/search_controller.rb:148
-msgid "Result Search"
-msgstr ""
-
-#: ../lib/ext/search_controller.rb:174
-msgid "Selected options: "
-msgstr ""
-
-#: ../lib/library.rb:5
+#: ../lib/software_communities_plugin/library.rb:5
 msgid "can't be blank"
 msgstr ""
 
-#: ../lib/library.rb:8
+#: ../lib/software_communities_plugin/library.rb:8
 msgid "Too long (maximum is 20 characters)"
 msgstr ""
 
-#: ../lib/macros/allow_variables.rb:5
-msgid "Insert Profile"
-msgstr ""
-
-#: ../lib/operating_system.rb:12
+#: ../lib/software_communities_plugin/operating_system.rb:12
 msgid "too long (maximum is 20 characters)"
 msgstr ""
 
-#: ../lib/repository_block.rb:8
+#: ../lib/software_communities_plugin/repository_block.rb:8
 msgid "Repository Link"
 msgstr ""
 
-#: ../lib/repository_block.rb:12
+#: ../lib/software_communities_plugin/repository_block.rb:12
 msgid "This block displays the repository link of a software."
 msgstr ""
 
-#: ../lib/search_catalog_block.rb:10
+#: ../lib/software_communities_plugin/search_catalog_block.rb:10
 msgid "Search Softwares catalog"
 msgstr ""
 
-#: ../lib/search_catalog_block.rb:14
+#: ../lib/software_communities_plugin/search_catalog_block.rb:14
 msgid "This block displays the search categories field "
 msgstr ""
 
-#: ../lib/sisp_tab_data_block.rb:3
+#: ../lib/software_communities_plugin/sisp_tab_data_block.rb:3
 msgid "Sisp Tab Data"
 msgstr ""
 
-#: ../lib/sisp_tab_data_block.rb:7
+#: ../lib/software_communities_plugin/sisp_tab_data_block.rb:7
 msgid "This block is used to display SISP Data"
 msgstr ""
 
-#: ../lib/software_communities_plugin.rb:17
-msgid "Add Public Software and MPOG features."
-msgstr ""
-
-#: ../lib/software_communities_plugin.rb:96
-msgid "Rate this software"
-msgstr ""
-
-#: ../lib/software_communities_plugin.rb:100
-msgid "Use reports"
-msgstr ""
-
-#: ../lib/software_communities_plugin.rb:173
-msgid "Software Info"
-msgstr ""
-
-#: ../lib/software_communities_plugin.rb:184
-msgid "Create a new software"
-msgstr ""
-
-#: ../lib/software_communities_plugin.rb:194
-msgid "Software"
-msgstr ""
-
-#: ../lib/software_database.rb:12
+#: ../lib/software_communities_plugin/software_database.rb:12
 msgid "Software database is too long (maximum is 20 characters)"
 msgstr ""
 
-#: ../lib/software_events_block.rb:12
+#: ../lib/software_communities_plugin/software_events_block.rb:12
 msgid "Software community events"
 msgstr ""
 
-#: ../lib/software_events_block.rb:16
+#: ../lib/software_communities_plugin/software_events_block.rb:16
 msgid "This block displays the software community events in a list."
 msgstr ""
 
-#: ../lib/software_events_block.rb:20
+#: ../lib/software_communities_plugin/software_events_block.rb:20
 msgid "Other events"
 msgstr ""
 
-#: ../lib/software_highlights_block.rb:4
+#: ../lib/software_communities_plugin/software_highlights_block.rb:4
 msgid "Software Highlights Block"
 msgstr ""
 
-#: ../lib/software_highlights_block.rb:8
+#: ../lib/software_communities_plugin/software_highlights_block.rb:8
 msgid "This block displays the softwares icon into a highlight"
 msgstr ""
 
-#: ../lib/software_info.rb:168
+#: ../lib/software_communities_plugin/software_info.rb:168
 msgid "Name is too long (maximum is %{count} characters)"
 msgstr ""
 
-#: ../lib/software_info.rb:239
+#: ../lib/software_communities_plugin/software_info.rb:239
 msgid "can't have more than 10 characteres"
 msgstr ""
 
-#: ../lib/software_info.rb:242
+#: ../lib/software_communities_plugin/software_info.rb:242
 msgid "can't have whitespaces"
 msgstr ""
 
-#: ../lib/software_info.rb:250 ../lib/software_info.rb:256
-#: ../lib/software_info.rb:262
+#: ../lib/software_communities_plugin/software_info.rb:250
+#: ../lib/software_communities_plugin/software_info.rb:256
+#: ../lib/software_communities_plugin/software_info.rb:262
 msgid ": at least one must be filled"
 msgstr ""
 
-#: ../lib/software_information_block.rb:8
+#: ../lib/software_communities_plugin/software_information_block.rb:8
 msgid "Basic Software Information"
 msgstr ""
 
-#: ../lib/software_information_block.rb:12
+#: ../lib/software_communities_plugin/software_information_block.rb:12
 msgid "This block displays the basic information of a software profile."
 msgstr ""
 
-#: ../lib/software_language.rb:10
+#: ../lib/software_communities_plugin/software_language.rb:11
 msgid "Software language is too long (maximum is 20 characters)"
 msgstr ""
 
-#: ../lib/software_tab_data_block.rb:10
+#: ../lib/software_communities_plugin/software_tab_data_block.rb:10
 msgid "Software Tab Data"
 msgstr ""
 
-#: ../lib/software_tab_data_block.rb:14
+#: ../lib/software_communities_plugin/software_tab_data_block.rb:14
 msgid "This block is used by colab to insert data into Noosfero"
 msgstr ""
 
-#: ../lib/softwares_block.rb:8
+#: ../lib/software_communities_plugin/softwares_block.rb:8
 msgid "Softwares"
 msgstr ""
 
-#: ../lib/softwares_block.rb:13
+#: ../lib/software_communities_plugin/softwares_block.rb:13
 msgid "{#} generic software"
 msgid_plural "{#} generic softwares"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../lib/softwares_block.rb:15
+#: ../lib/software_communities_plugin/softwares_block.rb:15
 msgid "{#} public software"
 msgid_plural "{#} public softwares"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../lib/softwares_block.rb:17
+#: ../lib/software_communities_plugin/softwares_block.rb:17
 msgid "{#} software"
 msgid_plural "{#} softwares"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../lib/softwares_block.rb:22
+#: ../lib/software_communities_plugin/softwares_block.rb:22
 msgid "This block displays the softwares in which the user is a member."
 msgstr ""
 
-#: ../lib/softwares_block.rb:31 ../lib/softwares_block.rb:37
+#: ../lib/software_communities_plugin/softwares_block.rb:31
+#: ../lib/software_communities_plugin/softwares_block.rb:37
 msgid "softwares|View all"
 msgstr ""
 
-#: ../lib/statistic_block.rb:9
+#: ../lib/software_communities_plugin/statistic_block.rb:9
 msgid "Software Statistics"
 msgstr ""
 
-#: ../lib/statistic_block.rb:13
+#: ../lib/software_communities_plugin/statistic_block.rb:13
 msgid "This block displays software statistics."
 msgstr ""
 
-#: ../lib/wiki_block.rb:8
+#: ../lib/software_communities_plugin/wiki_block.rb:8
 msgid "Wiki Link"
 msgstr ""
 
-#: ../lib/wiki_block.rb:12
+#: ../lib/software_communities_plugin/wiki_block.rb:12
 msgid "This block displays a link to the software wiki."
 msgstr ""
 
-#: ../test/unit/software_info_validation_test.rb:112
+#: ../test/unit/software_info_validation_test.rb:102
 msgid "Features is too long (maximum is 4000 characters)"
 msgstr ""
 
-#: ../test/unit/software_info_validation_test.rb:120
+#: ../test/unit/software_info_validation_test.rb:110
 msgid "Objectives is too long (maximum is 4000 characters)"
 msgstr ""
 
@@ -456,6 +461,7 @@ msgstr ""
 
 #: ../views/blocks/download.html.erb:18
 #: ../views/box_organizer/_download_list_item.html.erb:17
+#: ../views/box_organizer/software_communities_plugin/_download_list_template.html.erb:16
 msgid "Minimum Requirements"
 msgstr ""
 
@@ -479,7 +485,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: ../views/blocks/software_highlights.html.erb:18
+#: ../views/blocks/software_communities_plugin/software_highlights.html.erb:18
 msgid "See all"
 msgstr ""
 
@@ -515,73 +521,88 @@ msgstr ""
 msgid "Wiki"
 msgstr ""
 
-#: ../views/box_organizer/_categories_and_tags_block.html.erb:4
-#: ../views/box_organizer/_categories_software_block.html.erb:4
-#: ../views/box_organizer/_search_catalog_block.html.erb:4
-msgid "Catalog: "
-msgstr ""
-
-#: ../views/box_organizer/_download_block.html.erb:3
-msgid "Download options"
-msgstr ""
-
-#: ../views/box_organizer/_download_block.html.erb:10
-msgid "New link"
-msgstr ""
-
 #: ../views/box_organizer/_download_list_item.html.erb:5
 msgid "Edit"
 msgstr ""
 
 #: ../views/box_organizer/_download_list_item.html.erb:8
+#: ../views/box_organizer/software_communities_plugin/_download_list_template.html.erb:8
 msgid "Link"
 msgstr ""
 
 #: ../views/box_organizer/_download_list_item.html.erb:16
+#: ../views/box_organizer/software_communities_plugin/_download_list_template.html.erb:12
 msgid "Platforms"
 msgstr ""
 
 #: ../views/box_organizer/_download_list_item.html.erb:18
+#: ../views/box_organizer/software_communities_plugin/_download_list_template.html.erb:20
 msgid "Size"
 msgstr ""
 
-#: ../views/box_organizer/_software_events_block.html.erb:2
+#:
+#: ../views/box_organizer/software_communities_plugin/_categories_and_tags_block.html.erb:4
+#: ../views/box_organizer/software_communities_plugin/_categories_software_block.html.erb:4
+#: ../views/box_organizer/software_communities_plugin/_search_catalog_block.html.erb:4
+msgid "Catalog: "
+msgstr ""
+
+#:
+#: ../views/box_organizer/software_communities_plugin/_download_block.html.erb:3
+msgid "Download options"
+msgstr ""
+
+#:
+#: ../views/box_organizer/software_communities_plugin/_download_block.html.erb:10
+msgid "New link"
+msgstr ""
+
+#:
+#: ../views/box_organizer/software_communities_plugin/_software_events_block.html.erb:2
 msgid "Amount of events to display:"
 msgstr ""
 
-#: ../views/box_organizer/_software_events_block.html.erb:3
+#:
+#: ../views/box_organizer/software_communities_plugin/_software_events_block.html.erb:3
 msgid "This field must contain values bigger than 0"
 msgstr ""
 
-#: ../views/box_organizer/_software_tab_data_block.html.erb:5
+#:
+#: ../views/box_organizer/software_communities_plugin/_software_tab_data_block.html.erb:5
 msgid "Which blog should have its posts displayed: "
 msgstr ""
 
-#: ../views/box_organizer/_software_tab_data_block.html.erb:13
+#:
+#: ../views/box_organizer/software_communities_plugin/_software_tab_data_block.html.erb:13
 msgid "This community has no blogs"
 msgstr ""
 
-#: ../views/box_organizer/_softwares_block.html.erb:2
+#:
+#: ../views/box_organizer/software_communities_plugin/_softwares_block.html.erb:2
 msgid "Limit of items"
 msgstr ""
 
-#: ../views/box_organizer/_softwares_block.html.erb:3
+#:
+#: ../views/box_organizer/software_communities_plugin/_softwares_block.html.erb:3
 msgid "Software Type:"
 msgstr ""
 
-#: ../views/box_organizer/_statistic_block.html.erb:5
+#:
+#: ../views/box_organizer/software_communities_plugin/_statistic_block.html.erb:5
 msgid "Statistics to be displayed "
 msgstr ""
 
-#: ../views/box_organizer/_statistic_block.html.erb:7
+#:
+#: ../views/box_organizer/software_communities_plugin/_statistic_block.html.erb:7
 msgid "People Benefited: "
 msgstr ""
 
-#: ../views/box_organizer/_statistic_block.html.erb:8
+#:
+#: ../views/box_organizer/software_communities_plugin/_statistic_block.html.erb:8
 msgid "Saved Resources: "
 msgstr ""
 
-#: ../views/box_organizer/_wiki_block.html.erb:3
+#: ../views/box_organizer/software_communities_plugin/_wiki_block.html.erb:3
 msgid "Wiki link"
 msgstr ""
 
@@ -642,16 +663,16 @@ msgid "Yes"
 msgstr ""
 
 #: ../views/profile/_software_tab.html.erb:7
-msgid "Adherent to e_mag:"
-msgstr ""
-
-#: ../views/profile/_software_tab.html.erb:7
 #: ../views/profile/_software_tab.html.erb:8
 #: ../views/profile/_software_tab.html.erb:9
 #: ../views/profile/_software_tab.html.erb:10
 #: ../views/profile/_software_tab.html.erb:11
 #: ../views/profile_editor/_software_community.html.erb:50
 msgid "No"
+msgstr ""
+
+#: ../views/profile/_software_tab.html.erb:7
+msgid "Adherent to e_mag:"
 msgstr ""
 
 #: ../views/profile/_software_tab.html.erb:8
@@ -874,7 +895,7 @@ msgid "Send me relationship suggestions by email"
 msgstr ""
 
 #: ../views/profile_editor/edit_software_community.html.erb:68
-#: ../views/search/_full_community.html.erb:31
+#: ../views/search/_full_community.html.erb:32
 msgid "Software Categories"
 msgstr ""
 
@@ -893,12 +914,12 @@ msgid "Delete software and community"
 msgstr ""
 
 #: ../views/profile_editor/edit_software_community.html.erb:83
-#: ../views/profile_editor/edit_software_community.html.erb:85
-msgid "Are you sure you want to deactivate this profile?"
+msgid "Deactivate software and community"
 msgstr ""
 
 #: ../views/profile_editor/edit_software_community.html.erb:83
-msgid "Deactivate software and community"
+#: ../views/profile_editor/edit_software_community.html.erb:85
+msgid "Are you sure you want to deactivate this profile?"
 msgstr ""
 
 #: ../views/profile_editor/edit_software_community.html.erb:85
@@ -935,7 +956,7 @@ msgid ""
 "ividually"
 msgstr ""
 
-#: ../views/search/_full_community.html.erb:49
+#: ../views/search/_full_community.html.erb:50
 msgid "This software doesn't have categories"
 msgstr ""
 
@@ -944,25 +965,25 @@ msgid "Search Software Catalog"
 msgstr ""
 
 #: ../views/search/_software_search_form.html.erb:15
+msgid "All"
+msgstr ""
+
+#: ../views/search/_software_search_form.html.erb:16
+msgid ""
+"Public softwares and softwares that meet the requirements of Art. 14 of IN 01/"
+"2011, government software."
+msgstr ""
+
+#: ../views/search/_software_search_form.html.erb:19
 #: ../views/software_communities_plugin_myprofile/_public_software_info.html.erb:3
 #: ../views/software_communities_plugin_myprofile/_public_software_info.html.erb:5
 msgid "Public Software"
 msgstr ""
 
-#: ../views/search/_software_search_form.html.erb:16
+#: ../views/search/_software_search_form.html.erb:20
 msgid ""
 "Softwares in accordance with the technical and legal requirements of IN 01/201"
 "1."
-msgstr ""
-
-#: ../views/search/_software_search_form.html.erb:19
-msgid "All"
-msgstr ""
-
-#: ../views/search/_software_search_form.html.erb:20
-msgid ""
-"Public softwares and softwares that meet the requirements of Art. 14 of IN 01/"
-"2011, government software."
 msgstr ""
 
 #: ../views/search/_software_search_form.html.erb:26
