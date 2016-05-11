@@ -6,7 +6,7 @@ upstream noosfero {
 
 server {
   listen *:80;
-  server_name <%= node['config']['external_hostname'] %> <%= node['peers']['social'] %> <%= node['config']['sisp_external_hostname'] %>;
+  server_name <%= node['config']['external_hostname'] %> <%= node['peers']['social'] %>;
   underscores_in_headers  on;
   access_log            /var/log/nginx/noosfero.access.log;
   error_log             /var/log/nginx/noosfero.error.log;
