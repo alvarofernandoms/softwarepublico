@@ -115,7 +115,7 @@ Feature: Search software
 	And I go to /profile/software-two/plugin/organization_ratings/new_rating?lang=pt
     And I press "Salvar"
     And I go to /search/software_infos
-    When I select "Rating" from "sort"
+    When I select "Avaliação" from "sort"
     And I sleep for 3 seconds
     Then I should see "Software Two" before "Software One"
     And I should see "1" of this selector "div.medium-star-positive"
