@@ -1,0 +1,21 @@
+div#header {
+  height: 70px;
+}
+
+ul#login-menu {
+  margin: 10px 0;
+}
+
+div#back-to-software {
+  clear: both;
+  width: 56px;
+  float: left;
+}
+
+span#portal-title-1 {
+  font-size: 13px;
+}
+
+h1#portal-title {
+  font-size: 24px;
+}
