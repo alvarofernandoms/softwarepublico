@@ -1,7 +1,9 @@
 include_recipe 'mezuro::service'
 include_recipe 'mezuro::repo'
 
-package 'prezento-spb'
+package 'prezento-spb' do
+  action :upgrade
+end
 
 template '/etc/mezuro/prezento/database.yml' do
   source 'prezento/database.yml.erb'

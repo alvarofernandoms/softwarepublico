@@ -1,7 +1,9 @@
 include_recipe 'mezuro::service'
 include_recipe 'mezuro::repo'
 
-package 'kalibro-configurations'
+package 'kalibro-configurations' do
+  action :upgrade
+end
 
 template '/etc/mezuro/kalibro-configurations/database.yml' do
   source 'kalibro_configurations/database.yml.erb'
