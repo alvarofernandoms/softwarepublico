@@ -299,6 +299,13 @@
   width: 449px;
 }
 
+.action-software_communities_plugin_myprofile-edit_software #content .main-block form table input[type="text"] {
+  width: 315px;
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
 .action-software_communities_plugin_myprofile-edit_software #content .main-content #basic-info #profile_change_picture input,
 .action-software_communities_plugin_myprofile-new_software #content .formfield input{
   background: none #FFFFFF;
