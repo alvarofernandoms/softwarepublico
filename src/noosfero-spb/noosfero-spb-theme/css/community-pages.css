@@ -1400,8 +1400,8 @@
 .action-search-communities #colorbox .join-community-confirmation,
 .action-profile-members #colorbox .join-community-confirmation,
 .action-profile-index #colorbox .join-community-confirmation {
-  height: 255px;
-  width: 320px;
+  min-height: 255px;
+  max-width: 320px;
   padding: 0;
 }
 
@@ -1524,7 +1524,7 @@
 .action-search-communities #colorbox .button.with-text.icon-ok.submit,
 .action-profile-members #colorbox .button.with-text.icon-ok.submit,
 .action-profile-index #colorbox .button.with-text.icon-ok.submit {
-  margin: 12px 0 0 92px;
+  margin: 12px 0 10px 92px;
   padding: 9px 15px 24px 15px;
 }
 
