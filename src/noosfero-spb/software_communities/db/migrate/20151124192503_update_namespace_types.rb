@@ -11,6 +11,7 @@ class UpdateNamespaceTypes < ActiveRecord::Migration
     execute("UPDATE blocks SET type = 'SoftwareCommunitiesPlugin::WikiBlock' WHERE type = 'WikiBlock'")
     execute("UPDATE blocks SET type = 'SoftwareCommunitiesPlugin::SoftwareInformationBlock' WHERE type = 'SoftwareInformationBlock'")
     execute("UPDATE blocks SET type = 'SoftwareCommunitiesPlugin::CategoriesSoftwareBlock' WHERE type = 'CategoriesSoftwareBlock'")
+    execute("UPDATE blocks SET type = 'SoftwareCommunitiesPlugin::SoftwareEventsBlock' WHERE type = 'SoftwareEventsBlock'")
     execute("UPDATE tasks SET type = 'SoftwareCommunitiesPlugin::CreateSoftware' WHERE type = 'CreateSoftware'")
   end
 
