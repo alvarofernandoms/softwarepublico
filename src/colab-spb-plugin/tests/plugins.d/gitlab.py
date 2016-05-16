@@ -38,3 +38,5 @@ menu_urls = (
         kwargs={'path': '/merge_requests'}, auth=True),
 
 )
+
+change_header = True
