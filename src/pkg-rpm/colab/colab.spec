@@ -1,5 +1,5 @@
 %define name colab
-%define version 1.13.5
+%define version 1.13.7
 %define buildvenv /var/tmp/%{name}-%{version}
 
 Summary: Collaboration platform for communities
@@ -14,8 +14,8 @@ Prefix: %{_prefix}
 Vendor: Sergio Oliveira <sergio@tracy.com.br>
 Url: https://github.com/colab/colab
 BuildArch: noarch
-BuildRequires: colab-deps >= 1.12.17, python-virtualenv
-Requires: colab-deps >= 1.12.17, solr, mailman-api >= 0.3rc3
+BuildRequires: colab-deps >= 1.13.3, python-virtualenv
+Requires: colab-deps >= 1.13.3, solr, mailman-api >= 0.3rc3
 
 %description
 Integrated software development platform.
