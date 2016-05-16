@@ -47,9 +47,13 @@ plugins = [
   'statistics',
   'sub_organizations',
   'video',
-  'environment_notification',
+  'admin_notifications',
   'community_block',
 ]
+
+execute 'disable all noosfero plugins' do
+  command '/usr/lib/noosfero/script/noosfero-plugins disableall'
+end
 
 execute 'plugins:enable' do
   command '/usr/lib/noosfero/script/noosfero-plugins enable ' + plugins.join(' ')
@@ -72,7 +76,6 @@ execute 'noosfero:migrate' do
   cwd '/usr/lib/noosfero'
   user 'noosfero'
 end
-
 
 #FIXME: We did it, because we have to enable each plugin and migrate it separately.
 plugins_spb.each do |plugin|
