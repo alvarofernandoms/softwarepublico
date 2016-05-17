@@ -19,9 +19,16 @@ Esta operação vai copiar arquivos e *dumps* dos bancos de dados do
 Noosfero, GitLab, Colab e Mailman, e copiá-los para um subdiretório
 chamado ``backups`` na sua estação de trabalho.
 
-Toda vez que o procedimento de backup é executado, o diretório ``backups`` é removido no início do procedimento, de modo que não se deve armazenar os backups obtidos em tal diretório.
+Toda vez que o procedimento de backup é executado, o diretório ``backups`` 
+é removido no início do procedimento, de modo que não se deve armazenar os
+backups obtidos em tal diretório.
 
-Note que o comando para resgatar os backups, especificado acima, apenas copia arquivos das máquinas ``integration`` e ``social`` para sua estação de trabalho. Os backups são realizados em tais servidores utilizando o ``rsnapshot``, e podem ser encontrados no diretório ``/.snapshots`` em cada um dos servidores mencionados.
+Note que o comando para resgatar os backups, especificado acima, apenas
+copia arquivos das máquinas ``integration`` e ``social`` para sua estação
+de trabalho. Os backups são realizados em tais servidores utilizando o
+``rsnapshot``, e podem ser encontrados no diretório ``/.snapshots`` em cada
+um dos servidores mencionados.
+
 
 Procedimento de restauração
 ---------------------------
@@ -29,7 +36,10 @@ Procedimento de restauração
 **Importante:** o procedimento de restauração é suportado apenas para uma
 versão idêntica da plataforma, ou seja, não é suportado fazer um *backup*
 de uma versão mais antiga da plataforma e restaurar esse *backup* numa
-versão mais recente da plataforma, e nem vice-versa.
+versão mais recente da plataforma, e nem vice-versa. Exemplo:
+A versão referente a *branch* *stable-4.2* foi lançada no mês
+de janeiro, ou seja, o *backup* deve ser deste período. Se tal *backup* for
+restaurado na versão *stable-5.0* pode haver efeitos colaterais.
 
 O comando para restaurar um backup no ambiente **@@SPB_ENV@@** é o seguinte::
 
@@ -41,3 +51,4 @@ chamado **@@SPB_ENV@@**.
 **Importante:** a restauração do backup irá apagar os dados existes no
 ambiente @@SPB_ENV@@. Confira duas vezes antes de iniciar o
 procedimento.
+

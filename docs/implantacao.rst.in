@@ -51,7 +51,6 @@ onde foi clonado o repositório::
 
 Preparação dos servidores
 -------------------------
-
 * Os servidores precisam estar acessíveis por SSH. Caso necessário,
   podem ser feitas configurações do SSH em
   ``config/@@SPB_ENV@@/ssh_config`` para isso.
@@ -133,6 +132,9 @@ DNS:
 
 Verificando o ambiente
 ----------------------
+
+**Importante:** A máquina *integration* tem o requisito mínimo de 8Gb de
+memória RAM.
 
 Para listar as máquinas do ambiente::
 
