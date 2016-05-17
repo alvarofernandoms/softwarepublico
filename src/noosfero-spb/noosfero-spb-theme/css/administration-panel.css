@@ -578,7 +578,8 @@
 /*Edition configuration profile */
 
 .action-profile_editor-edit_software_community #content .main-content #profile-data #profile-is-template,
-.action-profile_editor-edit #content .main-content #profile-data #profile-is-template{
+.action-profile_editor-edit #content .main-content #profile-data #profile-is-template,
+#noosfero_profile-content #content .main-content #profile-data #profile-is-template{
   background-color: #F0F1F1;
   padding: 6px;
   font-size: 14px;
@@ -587,50 +588,61 @@
   max-width: 405px;
 }
 
-.action-profile_editor-edit div#errorExplanation{
+.action-profile_editor-edit div#errorExplanation,
+#noosfero_profile-content div#errorExplanation{
   margin-left: 0px;
   color: #FF0366;
 }
 
-.action-profile_editor-edit div#errorExplanation ul li{
+.action-profile_editor-edit div#errorExplanation ul li,
+#noosfero_profile-content div#errorExplanation ul li {
   list-style-type: disc;
   list-style-position: inside;
   margin-bottom: 5px;
   font-size: 13px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #profile-is-template input[type="checkbox"]{
+.action-profile_editor-edit #content .main-content #profile-data #profile-is-template input[type="checkbox"],
+#noosfero_profile-content #content .main-content #profile-data #profile-is-template input[type="checkbox"] {
   margin: 0 10px 0 10px;
 }
 
 .action-profile_editor-edit #content .main-content #email_public_message,
-.action-profile_editor-edit #content .main-content .formfieldline {
+#noosfero_profile-content #content .main-content #email_public_message,
+.action-profile_editor-edit #content .main-content .formfieldline,
+#noosfero_profile-content #content .main-content .formfieldline {
   margin: 5px 0 5px 0;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #profile_change_picture div{
+.action-profile_editor-edit #content .main-content #profile-data #profile_change_picture div,
+#noosfero_profile-content #content .main-content #profile-data #profile_change_picture div {
   margin-bottom: 0px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #institution_modal_container{
+.action-profile_editor-edit #content .main-content #profile-data #institution_modal_container,
+#noosfero_profile-content #content .main-content #profile-data #institution_modal_container {
   margin: 15px 0 11px 0;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #institution_modal_container a{
+.action-profile_editor-edit #content .main-content #profile-data #institution_modal_container a,
+#noosfero_profile-content #content .main-content #profile-data #institution_modal_container a {
   margin-left: 0px;
 }
 
 .action-profile_editor-edit #content .main-content #profile-data .formlabel,
+#noosfero_profile-content #content .main-content #profile-data .formlabel,
 .controller-maps.action-maps-edit_location #content .main-content form label,
 .action-account-change_password #content .main-content form label,
-.action-profile_editor-edit #content .main-content #profile-data .formfieldline label :not(#institution_modal_body) :not(.modal-body) {
+.action-profile_editor-edit #content .main-content #profile-data .formfieldline label :not(#institution_modal_body) :not(.modal-body),
+#noosfero_profile-content #content .main-content #profile-data .formfieldline label :not(#institution_modal_body) :not(.modal-body) {
   color: #231F20;
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 5px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data div span div div #email_public_message{
+.action-profile_editor-edit #content .main-content #profile-data div span div div #email_public_message,
+#noosfero_profile-content #content .main-content #profile-data div span div div #email_public_message {
   color: #888;
   font-size: 12px;
   font-weight: 300;
@@ -639,11 +651,12 @@
 }
 
 
-.action-profile_editor-edit #content .main-content #profile-data .formlabel::after{
+.action-profile_editor-edit #content .main-content #profile-data .formlabel::after,
+#noosfero_profile-content #content .main-content #profile-data .formlabel::after {
   color:#F00;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data p .required-field{
+.action-profile_editor-edit #content .main-content #profile-data p .required-field {
   max-width: 374px;
   padding: 15px 20px;
   margin: 20px 0px 25px;
@@ -665,6 +678,7 @@
 .action-admin_panel-site_info #content .main-content input[type="text"],
 .action-profile_editor-edit_software_community #content .main-content #profile-data input[type="text"],
 .action-profile_editor-edit #content .main-content #profile-data input[type="text"],
+#noosfero_profile-content #content .main-content #profile-data input[type="text"],
 .controller-maps.action-maps-edit_location #content .main-content form input[type="text"]{
   background: none;
   display: block;
@@ -693,7 +707,8 @@
   bottom: 20px;
 }
 
-.action-profile_editor-edit #content #profile_change_picture div div div div div div input[type="file"]{
+.action-profile_editor-edit #content #profile_change_picture div div div div div div input[type="file"],
+#noosfero_profile-content #content #profile_change_picture div div div div div div input[type="file"] {
   background: none;
   color: #999;
   padding: 0px;
@@ -703,39 +718,48 @@
   border-radius: 4px;
 }
 
-.action-profile_editor-edit #content #profile_change_picture{
+.action-profile_editor-edit #content #profile_change_picture,
+#noosfero_profile-content #content #profile_change_picture {
   margin-top: 0px;
 }
 
 .action-profile_editor-edit #content .main-content form div input[type="radio"],
-.action-profile_editor-edit #content .main-content form input[type="checkbox"]{
+#noosfero_profile-content #content .main-content form div input[type="radio"],
+.action-profile_editor-edit #content .main-content form input[type="checkbox"],
+#noosfero_profile-content #content .main-content form input[type="checkbox"] {
   margin-right: 5px;
   vertical-align: middle;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector:hover{
+.action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector:hover,
+#noosfero_profile-content #content .main-content #profile-data .field-with-privacy-selector:hover {
   background-color: #FFF;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector{
+.action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector,
+#noosfero_profile-content #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector {
   position: relative;
   top: 6px;
   text-align: right;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector div{
+.action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector div,
+#noosfero_profile-content #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector div {
   text-align: right;
   top: 0px;
 }
 
 .action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector label,
-.action-profile_editor-edit #content .main-content #profile-data #profile_change_picture_title span label{
+#noosfero_profile-content #content .main-content #profile-data .field-with-privacy-selector .field-privacy-selector label,
+.action-profile_editor-edit #content .main-content #profile-data #profile_change_picture_title span label,
+#noosfero_profile-content #content .main-content #profile-data #profile_change_picture_title span label {
   font-size: 12px;
   font-family: 'open_sansregular';
 }
 
 .action-profile_editor-edit_software_community .main-content #category-ajax-selector,
-.action-profile_editor-edit #content .main-content #category-ajax-selector{
+.action-profile_editor-edit #content .main-content #category-ajax-selector,
+#noosfero_profile-content #content .main-content #category-ajax-selector {
   border-radius: 4px;
   background: #F0F1F1;
   border-color: #ccc;
@@ -744,7 +768,8 @@
 }
 
 .action-profile_editor-edit_software_community #content .main-content #category-ajax-selector hr,
-.action-profile_editor-edit #content .main-content #category-ajax-selector hr{
+.action-profile_editor-edit #content .main-content #category-ajax-selector hr,
+#noosfero_profile-content #content .main-content #category-ajax-selector hr {
   border-bottom: 1px solid #ddd;
 }
 
@@ -752,23 +777,28 @@
   margin-bottom: 15px;
 }
 
-.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories .toplevel-categories hr{
+.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories .toplevel-categories hr,
+#noosfero_profile-content #content .main-content #category-ajax-selector #select-categories .toplevel-categories hr {
   border-color: #ccc;
 }
 
 .action-profile_editor-edit_software_community #content .main-content #category-ajax-selector #selected-categories .label,
-.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div .category-helper-label{
+.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div .category-helper-label,
+#noosfero_profile-content #content .main-content #category-ajax-selector #select-categories div .category-helper-label {
   font-size: 14px;
 }
 
-.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div .category-helper-label{
+.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div .category-helper-label,
+#noosfero_profile-content #content .main-content #category-ajax-selector #select-categories div .category-helper-label {
   color: #888;
 }
 
 .action-profile_editor-edit_software_community #content .main-content #category-ajax-selector #select-categories div a:hover,
 .action-profile_editor-edit #content .main-content #category-ajax-selector .select-subcategory-link:hover,
+#noosfero_profile-content #content .main-content #category-ajax-selector .select-subcategory-link:hover,
 .action-profile_editor-edit_software_community #content .main-content #category-ajax-selector .select-subcategory-link:hover,
-.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div a:hover{
+.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div a:hover,
+#noosfero_profile-content #content .main-content #category-ajax-selector #select-categories div a:hover {
   cursor: move;
   border: 1px solid #3E67B1;
 }
@@ -776,7 +806,9 @@
 .action-profile_editor-edit_software_community #content .main-content #category-ajax-selector #select-categories div a,
 .action-profile_editor-edit_software_community #content .main-content #category-ajax-selector .select-subcategory-link,
 .action-profile_editor-edit #content .main-content #category-ajax-selector .select-subcategory-link,
-.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div a{
+#noosfero_profile-content #content .main-content #category-ajax-selector .select-subcategory-link,
+.action-profile_editor-edit #content .main-content #category-ajax-selector #select-categories div a,
+#noosfero_profile-content #content .main-content #category-ajax-selector #select-categories div a {
   padding: 2px 5px;
   margin: 2px 0;
   background: #fff;
@@ -784,25 +816,29 @@
   border: 1px solid #bbb;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #image-builder-remove-checkbox{
+.action-profile_editor-edit #content .main-content #profile-data #image-builder-remove-checkbox,
+#noosfero_profile-content #content .main-content #profile-data #image-builder-remove-checkbox {
   float: left;
   width: 100%;
   position: relative;
   margin-top: 0px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #image-builder-remove-checkbox div label{
+.action-profile_editor-edit #content .main-content #profile-data #image-builder-remove-checkbox div label,
+#noosfero_profile-content #content .main-content #profile-data #image-builder-remove-checkbox div label {
   position: absolute;
   left: 20px;
   padding-top: 0px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data #image-builder-remove-checkbox div div {
+.action-profile_editor-edit #content .main-content #profile-data #image-builder-remove-checkbox div div,
+#noosfero_profile-content #content .main-content #profile-data #image-builder-remove-checkbox div div {
   margin-top: 0px;
 }
 
 .action-profile_editor-edit_software_community #content .main-content #profile-data .button-bar,
-.action-profile_editor-edit #content .main-content #profile-data .button-bar{
+.action-profile_editor-edit #content .main-content #profile-data .button-bar,
+#noosfero_profile-content #content .main-content #profile-data .button-bar {
   margin: 15px 0 30px 0;
 }
 
@@ -811,31 +847,37 @@
 }
 
 .action-profile_editor-edit_software_community #content .main-content #profile-data .button-bar .submit,
-.action-profile_editor-edit #content .main-content #profile-data .button-bar .submit{
+#profile_content #noosfero_profile-content #content .main-content #profile-data .button-bar .submit,
+.action-profile_editor-edit #content .main-content #profile-data .button-bar .submit,
+#noosfero_profile-content #content .main-content #profile-data .button-bar .submit {
   background-color: #3E67B1;
   color: #FFF;
   margin-right: 10px;
 }
 
-.action-profile_editor-edit #delete-profile{
+.action-profile_editor-edit #delete-profile,
+#noosfero_profile-content #delete-profile {
   margin-top:0px;
 }
 
 
 .action-profile_editor-edit_software_community .main-content #profile-data #delete-profile a,
-.action-profile_editor-edit #content .main-content #profile-data #delete-profile a{
+.action-profile_editor-edit #content .main-content #profile-data #delete-profile a,
+#noosfero_profile-content #content .main-content #profile-data #delete-profile a {
   border-color: #df3e3e;
   color: #df3e3e;
 }
 
 
 .action-profile_editor-edit_software_community #content .main-content #profile-data #delete-profile a:hover,
-.action-profile_editor-edit #content .main-content #profile-data #delete-profile a:hover{
+.action-profile_editor-edit #content .main-content #profile-data #delete-profile a:hover,
+#noosfero_profile-content #content .main-content #profile-data #delete-profile a:hover {
   color: #FFF;
   background: #df3e3e;
 }
 
-.action-profile_editor-edit .controller-profile_editor #profile-data{
+.action-profile_editor-edit .controller-profile_editor #profile-data,
+#noosfero_profile-content .controller-profile_editor #profile-data {
   display: block;
 }
 
@@ -1056,3 +1098,39 @@
   overflow: auto;
 }
 /*** End - Download Link Scroll options */
+
+/* profile edition page with colab account */
+#noosfero_profile-content #content .button-bar a,
+#noosfero_profile-content #content .button-bar input {
+  height: 30px;
+  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#noosfero_profile-content #content-inner label {
+  font-weight: normal;
+}
+
+#noosfero_profile-content #content .main-content #category-ajax-selector #selected-categories .label {
+  color: #172738;
+}
+
+#noosfero_profile-content #content .main-content #profile-data #a {
+  height: 33px;
+}
+
+#noosfero_profile-content #content {
+  margin-top: 15px;
+}
+
+#noosfero_profile-content #content .main-content #profile-data p .required-field,
+#noosfero_profile-content #content .main-content .icon-remove::before,
+#noosfero_profile-content #content .main-content #cancel-category-button {
+  display: none;
+}
+
+#noosfero_profile-edit main-content{
+  background-color: #fff;
+  color: #172738;
+  font-size: 12px;
+  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
