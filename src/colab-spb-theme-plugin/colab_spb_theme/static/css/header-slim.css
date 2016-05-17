@@ -1,12 +1,12 @@
-div#header {
+header div#header {
   height: 70px;
 }
 
-ul#login-menu {
+header ul#login-menu {
   margin: 10px 0;
 }
 
-div#back-to-software {
+header div#back-to-software {
   clear: both;
   width: 56px;
   height: 40px;
@@ -15,24 +15,24 @@ div#back-to-software {
   padding-left: 10px;
   padding-top: 8px;
 }
-div#back-to-software span#back-arrow {
+header div#back-to-software span#back-arrow {
   font-size: 35px;
   color: #2C65CD;
   cursor: pointer;
 }
 
-div#logo {
-  min-height: 70px;
+header #logo {
+  height: 0px;
 }
 
-div#logo-holder {
+header div#logo-holder {
   margin-left: 10px;
 }
 
-span#portal-title-1 {
+header span#portal-title-1 {
   font-size: 13px;
 }
 
-h1#portal-title {
+header h1#portal-title {
   font-size: 24px;
 }
