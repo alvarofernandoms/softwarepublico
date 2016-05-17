@@ -782,3 +782,8 @@ body > .alert,
 #password_container {
     float: right
 }
+
+/* MESSAGES FORMAT  */
+.container.messages {
+    margin-top: 30px;
+}
