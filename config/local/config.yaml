@@ -1,3 +1,5 @@
+rpm_repository: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/epel-7-$basearch/
+rpm_gpgkey: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/pubkey.gpg
 admins:
   - ["Paulo Meirelles", "paulo@softwarelivre.org"]
 site_url: https://softwarepublico.dev
@@ -8,6 +10,7 @@ alternative_hostnames:
   - beta.softwarepublico.dev
   - portal.softwarepublico.dev
 external_ip: 10.10.10.6
+alt_ssh_port: 5555
 colab_from_address: '"Portal do Software Publico" <noreply@softwarepublico.dev>'
 server_email: '"Portal do Software Publico" <noreply@softwarepublico.dev>'
 email_subject_prefix: '[spb]'
@@ -15,7 +18,6 @@ lists_hostname: listas.softwarepublico.dev
 lists_admin: paulo@softwarelivre.org
 relay_hostname: relay.softwarepublico.dev
 relay_ip: 10.10.10.3
-alt_ssh_port: 5555
 from_address: noreply@softwarepublico.dev
 raven_dsn: https://a5e2f92a83774dfc9de66486e0fe970b:1a9229a4e1d2483582144d302fb53115@sentry.tracy.com.br/19
 colab_http_workers: 1

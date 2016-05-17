@@ -168,18 +168,15 @@ template '/etc/colab/plugins.d/spb.py' do
   notifies :restart, 'service[colab]'
 end
 
-template '/etc/colab/plugins.d/sentry_client.py' do
+template '/etc/colab/plugins.d/mezuro.py' do
   owner 'root'
   group 'colab'
   mode 0640
   notifies :restart, 'service[colab]'
 end
 
-template '/etc/colab/plugins.d/mezuro.py' do
-  owner 'root'
-  group 'colab'
-  mode 0640
-  notifies :restart, 'service[colab]'
+file '/etc/colab/plugins.d/sentry_client.py' do
+  action :delete
 end
 
 execute 'colab-admin migrate'
@@ -202,6 +199,14 @@ cookbook_file '/etc/colab/widgets.d/profile.py' do
 end
 
 cookbook_file '/etc/colab/widgets.d/gitlab_profile.py' do
+  owner 'root'
+  group 'colab'
+  mode 0640
+
+  notifies :restart, 'service[colab]'
+end
+
+cookbook_file '/etc/colab/widgets.d/noosfero_profile.py' do
   owner 'root'
   group 'colab'
   mode 0640

@@ -1,11 +1,14 @@
+rpm_repository: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/epel-7-$basearch/
+rpm_gpgkey: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/pubkey.gpg
 admins:
   - ["Paulo Meirelles", "paulo@softwarelivre.org"]
+site_url: https://dev.softwarepublico.gov.br
 external_hostname: dev.softwarepublico.gov.br
 monitor_external_hostname: status.dev.softwarepublico.gov.br
-external_ip: 189.9.151.16
 alternative_hostnames:
   - www.dev.softwarepublico.gov.br
-site_url: https://dev.softwarepublico.gov.br
+external_ip: 189.9.151.16
+alt_ssh_port: 55555
 colab_from_address: '"Portal do Software Publico (dev)" <noreply@dev.softwarepublico.gov.br>'
 server_email: '"Portal do Software Publico (dev)" <noreply@dev.softwarepublico.gov.br>'
 email_subject_prefix: '[spb|dev]'
@@ -15,9 +18,9 @@ from_address: noreply@dev.softwarepublico.gov.br
 relay_hostname: relay.dev.softwarepublico.gov.br
 relay_ip: 189.9.151.44
 external_outgoing_mail_relay: 189.9.150.53
-alt_ssh_port: 55555
 external_outgoing_mail_domain: serpro.gov.br
 raven_dsn: https://a5e2f92a83774dfc9de66486e0fe970b:1a9229a4e1d2483582144d302fb53115@sentry.tracy.com.br/19
 google_analytics_id: 'UA-64206731-2'
+munin_master: 10.18.0.21
 dev_backup_frequency: true
 disable_send_emails: true

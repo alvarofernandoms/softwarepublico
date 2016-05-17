@@ -1,13 +1,9 @@
 include_recipe 'mezuro::service'
+include_recipe 'mezuro::repo'
 
-# TODO: remove before define main repo
-execute 'download:mezuro' do
-  command 'wget https://bintray.com/mezurometrics/rpm/rpm -O bintray-mezurometrics-rpm.repo'
-  cwd '/etc/yum.repos.d'
-  user 'root'
+package 'kalibro-configurations' do
+  action :upgrade
 end
-
-package 'kalibro-configurations'
 
 template '/etc/mezuro/kalibro-configurations/database.yml' do
   source 'kalibro_configurations/database.yml.erb'

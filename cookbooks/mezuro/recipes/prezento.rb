@@ -1,13 +1,9 @@
 include_recipe 'mezuro::service'
+include_recipe 'mezuro::repo'
 
-# change this to COPR repo when gets ready
-execute 'download:mezuro' do
-  command 'wget https://bintray.com/mezurometrics/rpm/rpm -O bintray-mezurometrics-rpm.repo'
-  cwd '/etc/yum.repos.d'
-  user 'root'
+package 'prezento-spb' do
+  action :upgrade
 end
-
-package 'prezento-spb'
 
 template '/etc/mezuro/prezento/database.yml' do
   source 'prezento/database.yml.erb'

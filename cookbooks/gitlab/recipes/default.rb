@@ -120,9 +120,14 @@ execute 'change-gitlab-assets-owner' do
   only_if 'ls -l /var/lib/gitlab-assets | grep root'
 end
 
+# TODO: the ignore_failure prevents the recipe to stop running when a exit non 0 happens
+#   The precompile-assets runs into a bug that happens when it runs the FIRST time
+#   This means that when runs into a new and clean machine it will crash
+#   This bug is related to gitlab 7.6.* it should fix on gitlab 8.*
 execute 'precompile-assets' do
   user 'git'
   cwd '/usr/lib/gitlab'
+  ignore_failure true
   command 'bundle exec rake assets:precompile RAILS_ENV=production'
   action :nothing
 end

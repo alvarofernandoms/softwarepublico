@@ -1,12 +1,9 @@
 include_recipe 'mezuro::service'
+include_recipe 'mezuro::repo'
 
-execute 'download:mezuro' do
-  command 'wget https://bintray.com/mezurometrics/rpm/rpm -O bintray-mezurometrics-rpm.repo'
-  cwd '/etc/yum.repos.d'
-  user 'root'
+package 'kalibro-processor' do
+  action :upgrade
 end
-
-package 'kalibro-processor'
 
 template '/etc/mezuro/kalibro-processor/database.yml' do
   source 'kalibro_processor/database.yml.erb'

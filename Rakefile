@@ -65,12 +65,6 @@ $nodes.each do |node|
   node.data['firewall'] = firewall
 end
 
-# In the absence of a dedicated munin master, reverseproxy will do that.
-if !config['munin_master']
-  config['munin_master'] = ips['reverseproxy']
-  $nodes.find { |node| node.hostname == 'reverseproxy' }.data['run_list'] << 'role[monitoring_server]'
-end
-
 task :console do
   require 'pry'
   binding.pry
