@@ -1,0 +1,59 @@
+{% load i18n gravatar plugins spb_extra %}
+{% load static from staticfiles %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="{% static 'css/header-slim.css' %}">
+{% endblock %}
+
+<header>
+  <div class="colab-style">
+    <div id="barra-brasil">
+      <a href="http://brasil.gov.br" style="background:#7F7F7F; height: 20px; padding:4px 0 4px 10px; display: block; font-family:sans,sans-serif; text-decoration:none; color:white; ">Software Público Brasileiro</a>
+    </div>
+    <script src="//barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
+    <div id="header" role="banner">
+      <div id="logo">
+        <div id="back-to-software" class="pull-left">
+            <span id="back-arrow"><a href="{{request.META.HTTP_REFERER}}">&larr;</a></span>
+        </div>
+        <div id="logo-holder" class="pull-left">
+          <a id="portal-logo" title="" href="/">
+            <span id="portal-title-1">Portal do</span>
+            <h1 id="portal-title" class="corto">Software Público Brasileiro</h1>
+          </a>
+        </div>
+      </div>
+      <div id="spb-header-content">
+        <ul id="login-menu">
+          {% if not user.is_authenticated %}
+          <li class="login-item"><a href="{% url 'signup' %}">Cadastre-se</a></li>
+          <li class="login-item last-item"><a href="{% url 'login' %}">Entrar</a></li>
+          {% else %}
+          <li id="user-menu" class="dropdown softwarepublico-item">
+            <a href="#" class="dropdown-toggle user" data-toggle="dropdown">{% gravatar user.email %} <b class="caret"></b>&nbsp;&nbsp;</a>
+            <ul id="login-menu-box" class="dropdown-menu" role="menu">
+              <li class="last-item">
+                <div class="wrapper">
+                  <div class="thumbnail">{% gravatar user.email %}</div>
+                  <div class="user-info">
+                    <span><b>{{ user.get_full_name }}</b></span>
+                    <span class="quiet">{{ user.email }}</span>
+                  </div>
+                  <div>
+                    <a class="btn btn-default btn-spb-profile pull-left" href="{% url 'user_profile' user.username %}">Meu perfil</a>
+                    <a class="btn btn-default pull-right" href="{% url 'logout' %}">Sair</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% block main_content %}
+<a name="acontent" id="acontent"></a>
+{% endblock %}

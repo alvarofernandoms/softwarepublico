@@ -1,0 +1,38 @@
+header div#header {
+  height: 70px;
+}
+
+header ul#login-menu {
+  margin: 10px 0;
+}
+
+header div#back-to-software {
+  clear: both;
+  width: 56px;
+  height: 40px;
+  border-right: 2px solid #CACACA;
+  padding-right: 20px;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+header div#back-to-software span#back-arrow {
+  font-size: 35px;
+  color: #2C65CD;
+  cursor: pointer;
+}
+
+header #logo {
+  height: 0px;
+}
+
+header div#logo-holder {
+  margin-left: 10px;
+}
+
+header span#portal-title-1 {
+  font-size: 13px;
+}
+
+header h1#portal-title {
+  font-size: 24px;
+}
