@@ -4,11 +4,11 @@
 .action-search-people #content form #search-header,
 .action-search-communities #content form #search-header,
 .action-search-institutions #content form #search-header {
-  float: right;
   border: none;
 }
 
 .action-search-index #content form #search-header {
+  height: 0px;
   margin-top: 5px;
 }
 
@@ -16,14 +16,21 @@
 .action-search-communities #content form #search-header,
 .action-search-institutions #content form #search-header {
   margin: 0 0 15px 0;
+  display: block;
+  height: 70px;
+  float: none;
+}
+
+.action-search-institutions #content form #search-header {
+  height: 0;
 }
 
 .action-search-people #content form #search-header #search-filters,
 .action-search-communities #content form #search-header #search-filters,
 .action-search-institutions #content form #search-header #search-filters {
-	position: absolute;
-	top: 40px;
-	right: 18px; 
+  position: absolute;
+  top: 40px;
+  right: 18px;
 }
 
 .action-search-people #content form #search-header #search-filters .sod_select,
@@ -169,7 +176,7 @@
 }
 
 #search-subheader{
-	display: none;
+  display: none;
 }
 
 .controller-search .main-content .search-form .search_form #search-header ul#assets-menu {
@@ -193,6 +200,7 @@
   font-size: 34px;
   font-weight: bold;
   font-variant: normal;
+  padding-left: 2px;
 }
 .controller-search .main-content .search-form .search_form #search-header ul#assets-menu li.selected a::before {
   content: "Buscar ";
@@ -204,5 +212,6 @@
 }
 
 .controller-search .main-content .search-form .search_form .search-field .formfield input#search-input {
-  margin-top: 70px;
+  display: block;
+  width: 100%;
 }
