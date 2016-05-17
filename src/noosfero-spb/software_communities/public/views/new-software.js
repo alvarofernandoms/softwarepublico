@@ -8,8 +8,7 @@ modulejs.define('NewSoftware', ['jquery', 'NoosferoRoot', 'AutoComplete', 'NewCo
 
   function replace_domain_and_repository_link(){
     var community_name = $("#community_name_id").val();
-    var domain =  'https://';
-    domain = domain.concat($("#software-hostname").text());
+    var domain = $("#software-hostname").text();
 
     var slug_name = community_name.replace(/\s+/g, '-').toLowerCase();
 
