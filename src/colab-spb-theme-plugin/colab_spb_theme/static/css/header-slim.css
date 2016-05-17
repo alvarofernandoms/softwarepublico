@@ -22,7 +22,7 @@ header div#back-to-software span#back-arrow {
 }
 
 header #logo {
-  height: 0px;
+  min-height: 0px !important;
 }
 
 header div#logo-holder {
