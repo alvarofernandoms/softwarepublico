@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="{% static 'css/header-slim.css' %}">
 {% endblock %}
 
-<header>
+<header class="header-slim">
   <div class="colab-style">
     <div id="barra-brasil">
       <a href="http://brasil.gov.br" style="background:#7F7F7F; height: 20px; padding:4px 0 4px 10px; display: block; font-family:sans,sans-serif; text-decoration:none; color:white; ">Software Público Brasileiro</a>
@@ -13,9 +13,11 @@
     <script src="//barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
     <div id="header" role="banner">
       <div id="logo">
+          <!--
         <div id="back-to-software" class="pull-left">
             <span id="back-arrow"><a href="{{request.META.HTTP_REFERER}}">&larr;</a></span>
         </div>
+          -->
         <div id="logo-holder" class="pull-left">
           <a id="portal-logo" title="" href="/">
             <span id="portal-title-1">Portal do</span>

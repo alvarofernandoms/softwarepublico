@@ -1,3 +1,4 @@
+
 header div#header {
   height: 70px;
 }
@@ -15,6 +16,7 @@ header div#back-to-software {
   padding-left: 10px;
   padding-top: 8px;
 }
+
 header div#back-to-software span#back-arrow {
   font-size: 35px;
   color: #2C65CD;
@@ -26,7 +28,7 @@ header #logo {
 }
 
 header div#logo-holder {
-  margin-left: 10px;
+  margin-left: 105px;
 }
 
 header span#portal-title-1 {
@@ -35,4 +37,10 @@ header span#portal-title-1 {
 
 header h1#portal-title {
   font-size: 24px;
+}
+
+.header-slim #login-menu-box {
+   right: 0;
+   left: auto;
+   padding: 10px 5px;
 }
