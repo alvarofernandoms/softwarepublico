@@ -1,5 +1,4 @@
-
-{% load i18n gravatar plugins %}
+{% load i18n gravatar plugins spb_extra %}
 {% load static from staticfiles %}
 
 {% block head_css %}
@@ -15,7 +14,7 @@
     <div id="header" role="banner">
       <div id="logo">
         <div id="back-to-software" class="pull-left">
-          <span onclick="window.location = '/social/{% get_software_community {{request.path}} %}'" id="back-arrow">&larr;</span>
+            <span id="back-arrow"><a href="{{request.META.HTTP_REFERER}}">&larr;</a></span>
         </div>
         <div id="logo-holder" class="pull-left">
           <a id="portal-logo" title="" href="/">
