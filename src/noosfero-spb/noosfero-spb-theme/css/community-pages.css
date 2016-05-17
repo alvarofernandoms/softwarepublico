@@ -1400,7 +1400,7 @@
 .action-search-communities #colorbox .join-community-confirmation,
 .action-profile-members #colorbox .join-community-confirmation,
 .action-profile-index #colorbox .join-community-confirmation {
-  min-height: 255px;
+  min-height: 235px;
   max-width: 320px;
   padding: 0;
 }
@@ -1430,6 +1430,7 @@
   color: #2d3a4a;
   font-family: "open_sansregular", Arial, Helvetica, sans-serif;
   margin: 20px 40px 50px 25px;
+  min-height: 84px;
 }
 
 .action-search-communities #colorbox .join-community-confirmation p::before,
