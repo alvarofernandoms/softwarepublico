@@ -9,7 +9,24 @@ ul#login-menu {
 div#back-to-software {
   clear: both;
   width: 56px;
-  float: left;
+  height: 40px;
+  border-right: 2px solid #CACACA;
+  padding-right: 20px;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+div#back-to-software span#back-arrow {
+  font-size: 35px;
+  color: #2C65CD;
+  cursor: pointer;
+}
+
+div#logo {
+  min-height: 70px;
+}
+
+div#logo-holder {
+  margin-left: 10px;
 }
 
 span#portal-title-1 {

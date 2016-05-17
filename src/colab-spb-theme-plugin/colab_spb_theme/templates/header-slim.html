@@ -13,6 +13,17 @@
     </div>
     <script src="//barra.brasil.gov.br/barra.js" type="text/javascript" defer async></script>
     <div id="header" role="banner">
+      <div id="logo">
+        <div id="back-to-software" class="pull-left">
+          <span onclick="window.location = '/'" id="back-arrow">&larr;</span>
+        </div>
+	<div id="logo-holder" class="pull-left">
+          <a id="portal-logo" title="" href="/">
+            <span id="portal-title-1">Portal do</span>
+            <h1 id="portal-title" class="corto">Software Público Brasileiro</h1>
+          </a>
+        </div>
+      </div>
       <div id="spb-header-content">
         <ul id="login-menu">
           {% if not user.is_authenticated %}
@@ -39,15 +50,6 @@
           </li>
           {% endif %}
         </ul>
-      </div>
-      <div id="logo">
-        <div id="back-to-software" class="pull-left">
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </div>
-        <a id="portal-logo" title="" href="/">
-          <span id="portal-title-1">Portal do</span>
-          <h1 id="portal-title" class="corto">Software Público Brasileiro</h1>
-        </a>
       </div>
     </div>
   </div>
