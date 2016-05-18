@@ -23,8 +23,8 @@ header div#back-to-software span#back-arrow {
   cursor: pointer;
 }
 
-header #logo {
-  min-height: 0px !important;
+header-slim #logo {
+  height: 50px;
 }
 
 header div#logo-holder {
@@ -40,6 +40,7 @@ header h1#portal-title {
 }
 
 .header-slim #login-menu-box {
+   z-index: 1001;
    right: 0;
    left: auto;
    padding: 10px 5px;
