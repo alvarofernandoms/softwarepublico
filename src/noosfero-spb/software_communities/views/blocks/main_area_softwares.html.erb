@@ -1,27 +1,14 @@
-<%= block_title(block.title) %>
-<% profiles.each do |profile| %>
-  <%= link_to profile.url do %>
-    <div class="software-block">
-      <div class="software-block-content">
-        <div class="software-block-logo">
-          <%= profile_image(profile, :big) %>
-        </div>
+<% extend PeopleBlockHelper %>
 
-        <div class="software-block-info">
-          <div class="software-block-title">
-            <h3> <%=profile.name%> </h3>
-          </div>
-          <div class="software-block-description"><%= profile.description %></div>
-        </div>
-      </div>
+<%= block_title(block.view_title) %>
 
-      <div class="software-block-finality">
-        <p>
-          <%= profile.software_info.finality %>
-        </p>
-
-        <%= _("See More") %>
-      </div>
-    </div>
+<div>
+  <% unless block.profile_count == 0 %>
+    <ul>
+      <%= profiles_images_list(block.profile_list) %>
+    </ul>
+  <% else %>
+    <div class="common-profile-list-block-none"><%= c_('None') %></div>
   <% end %>
-<% end %>
+  <br style="clear:both" />
+</div>

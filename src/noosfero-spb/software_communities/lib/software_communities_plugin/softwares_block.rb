@@ -69,15 +69,10 @@ class SoftwareCommunitiesPlugin::SoftwaresBlock < CommunitiesBlock
   end
 
   def content(arg={})
-    if self.box.owner_type == "Environment" && self.box.position == 1
-      block = self
-
-      proc do
-        render :file => 'blocks/main_area_softwares',
-               :locals => {:profiles=> block.profile_list(), :block => block}
-      end
-    else
-      super(arg)
+    block = self
+    proc do
+      render :file => 'blocks/main_area_softwares',
+             :locals => {:profiles=> block.profile_list(), :block => block}
     end
   end
 
