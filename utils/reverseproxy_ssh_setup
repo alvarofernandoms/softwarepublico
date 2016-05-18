@@ -28,7 +28,7 @@ fi
 systemctl restart sshd
 
 # Clean iptables before adding our rules
-systemctl stop iptables || echo "Not Installed"
+systemctl stop iptables || echo "Iptables server not installed. Does not needed to stop service. Moving on..."
 iptables -F
 iptables -F -t nat
 
