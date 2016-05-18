@@ -138,3 +138,19 @@ o maior limite de todas as aplicações deve ser colocado na configuração
 do Nginx `cookbooks/reverse_proxy/templates/reverse_proxy.conf.erb` na variável
 `client_max_upload_size`. O valor deve ser definido como `<valor>m`. Exemplo
 `client_max_body_size = 500m` sendo 500m o maior limite entre as ferramentas.
+
+ **Nota** Ferramenta Gitlab
+------------
+
+Atualmente o SPB está utilizando o Gitlab versão 7.6.2 mantido no repositório
+de pacotes RPM `Softwarepublico Copr Fedora`_ . O pacote é criado e mantido
+pelo SPB, ou seja, a instancia do Gitlab contém as configurações necessárias
+para a integração com as ferramenta e ambiente do SPB. Os pacotes de instação
+providos pelo próprio Gitlab não tem a garantia de funcionamento com o SPB.
+
+Há uma atualização do pacote Gitlab v8.5.0 disponível no projeto *eperimental* no
+mesmo repositório ( `Softwarepublico Copr Fedora`_ ) . O serviço é instanciado
+e é possível utiliza-lo em *stand alone*. Entretanto não foi realizado a
+integração e testes do novo pacote com o ambiente e ferramentas do SPB.
+
+.. _`Copr Fedora`: https://copr.fedorainfracloud.org/coprs/softwarepublico/
