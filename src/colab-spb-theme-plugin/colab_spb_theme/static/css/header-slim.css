@@ -23,7 +23,7 @@ header div#back-to-software span#back-arrow {
   cursor: pointer;
 }
 
-header-slim #logo {
+.header-slim #logo {
   height: 50px;
 }
 
