@@ -66,19 +66,19 @@
   color: red;
 }
 
-#content .softwares-block ul {
+#content .software-communities-plugin_softwares-block ul {
   min-width: 196px;
   width: 192px;
   margin: 0px 0px 0px -3px;
   padding: 0px;
 }
 
-#content .box-1 .softwares-block ul {
+#content .box-1 .software-communities-plugin_softwares-block ul {
   width: auto;
   display: block;
 }
 
-#content .softwares-block .block-footer-content a {
+#content .software-communities-plugin_softwares-block .block-footer-content a {
   background: url(../../../designs/themes/base/imgs/arrow-right-p.png) 100% 50% no-repeat;
 }
 
