@@ -13,10 +13,12 @@ equivalentes estejam instalados.
 As seguintes ferramentas serão necessárias:
 
 * git_: ferramenta de controle de versão.
-* chake_: ferramenta de gestão de configuração.
+* chake_: ferramenta de gestão de configuração. Version 0.13 ou maior.
+* python-sphinx_: ferramenta para gerar documentação HTML.
 
 .. _chake: https://gitlab.com/terceiro/chake
 .. _git: http://git-scm.com/
+.. _python-sphinx: http://www.sphinx-doc.org/en/stable/
 
 Para instalar em Debian/Ubuntu::
 

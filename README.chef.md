@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* [chake](https://rubygems.org/gems/chake)
+* [chake](https://rubygems.org/gems/chake). Version 0.13 or greater
 * [rake](https://rubygems.org/gems/rake)
 * python-sphinx
 
