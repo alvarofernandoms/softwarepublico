@@ -5,9 +5,9 @@ from django.db import models
 
 
 class CommunityAssociations(models.Model):
-    community = models.ForeignKey(noosfero.NoosferoCommunity, null=True)
-    group = models.ForeignKey(gitlab.GitlabGroup, null=True)
-    mail_list = models.ForeignKey(mailman.MailingList, null=True)
+    community = models.ForeignKey(noosfero.NoosferoCommunity, default=1)
+    group = models.ForeignKey(gitlab.GitlabGroup, default=1)
+    mail_list = models.ForeignKey(mailman.MailingList, default=1)
 
     def __unicode__(self):
         return u'Social: {} - Dev: {} - List: {}'.format(self.community.name,
