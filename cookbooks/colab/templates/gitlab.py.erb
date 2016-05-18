@@ -30,8 +30,6 @@ url = colab_url_factory('gitlab')
 menu_urls = (
     url(display=_('Public Projects'), viewname='gitlab',
         kwargs={'path': 'public/projects'}, auth=False),
-    url(display=_('Profile'), viewname='gitlab',
-        kwargs={'path': 'profile'}, auth=True),
     url(display=_('New Project'), viewname='gitlab',
         kwargs={'path': 'projects/new'}, auth=True),
     url(display=_('Projects'), viewname='gitlab',
