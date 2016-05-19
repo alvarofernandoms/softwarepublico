@@ -1114,7 +1114,7 @@
   color: #172738;
 }
 
-#noosfero_profile-content #content .main-content #profile-data #a {
+#noosfero_profile-content #content .main-content #profile-data input[type="text"] {
   height: 33px;
 }
 
