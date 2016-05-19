@@ -346,22 +346,33 @@
   margin-bottom: 10px;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content .formfieldline {
+  margin-top: 0;
+  padding: 0;
+}
+
 .action-gov_user_plugin_myprofile-edit_institution #community_name {
   color: black;
-  width: 220px
+  width: 402px;
 }
 
 .action-gov_user_plugin-create_institution_admin #community_name {
-  width: 200px;
+  width: 372px;
 }
 
 .action-gov_user_plugin_myprofile-edit_institution #institutions_corporate_name {
-  width: 287px;
+  width: 537px;
   color: black;
 }
 
+.action-gov_user_plugin-create_institution_admin #institutions_cnpj,
 .action-gov_user_plugin-create_institution_admin #institutions_corporate_name {
-  width: 310px;
+  width: 508px;
+}
+
+.action-gov_user_plugin_myprofile-edit_institution #institutions_cnpj {
+  width: 537px;
+  color: black;
 }
 
 .action-gov_user_plugin_myprofile-edit_institution #community_country {
@@ -383,20 +394,18 @@
 }
 
 .action-gov_user_plugin_myprofile-edit_institution #community_city {
-  width: 165px;
+  width: 171px;
   color: black;
 }
 
 .action-gov_user_plugin-create_institution_admin #community_city {
-  width: 222px;
+  width: 199px;
 }
 
-.action-gov_user_plugin_myprofile-edit_institution #institutions_cnpj,
 .action-gov_user_plugin_myprofile-edit_institution #institutions_acronym,
-.action-gov_user_plugin-create_institution_admin #institutions_cnpj,
 .action-gov_user_plugin-create_institution_admin #institutions_acronym {
   text-indent: 5px;
-  width: 530px;
+  width: 111px;
 }
 
 .action-gov_user_plugin_myprofile-edit_institution .modal-form-actions,
@@ -409,7 +418,20 @@
   margin-top: 15px;
 }
 
-.action-gov_user_plugin_myprofile-edit_institution #content form input.button.with-text,
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content input.button.with-text.icon-save.submit {
+  background: #3E67B1 none;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #3E67B1;
+  font-size: 14px;
+  font-family: "open_sansregular", Arial;
+  line-height: 17px;
+  max-height: 32px;
+  height: 32px;
+  padding: 5px 15px;
+  margin-right: 5px;
+}
+
 .action-gov_user_plugin-create_institution_admin #content form input.button.with-text {
   background-color: #3E67B1;
   color: #fff;
@@ -692,6 +714,14 @@
   font-size: 15px;
   font-family: Arial, helvetica;
   color: #585858;
+}
+
+#noosfero_profile-content #content .main-content #profile-data #institutions_siorg_code,
+.action-profile_editor-edit #content .main-content #profile-data #institutions_siorg_code,
+.action-gov_user_plugin-create_institution_admin #content .main-content #institutions_siorg_code,
+.action-gov_user_plugin_myprofile-edit_institution #content .main-content #institutions_siorg_code,
+.action-organization_ratings_plugin_profile-new_rating #content .main-content #institutions_siorg_code {
+  width: 189px;
 }
 
 .action-users-send_mail #content .main-content{
