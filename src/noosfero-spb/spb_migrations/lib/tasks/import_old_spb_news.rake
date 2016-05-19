@@ -11,8 +11,8 @@ namespace :spb do
 
     spb_profile = Profile['spb']
     error spb_profile.blank?, "There is no SPB community."
-    spb_blog = spb_profile.blog
-    error spb_blog.nil?, "There is no SPB blog in the SPB community to import the news to."
+    spb_blog = spb_profile.articles.find_by :slug => "noticias"
+    error spb_blog.nil?, "There is no SPB blog named 'noticias' in the SPB community to import the news to."
 
     CSV.foreach(ENV["CSV_FILE"], encoding: "UTF-8", headers: true, col_sep: "|", quote_char: "\"") do |row|
       date = DateTime.parse(row["max"])
