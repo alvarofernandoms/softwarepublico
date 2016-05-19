@@ -5,8 +5,6 @@ class GovUserPluginController < ApplicationController
     :governmental_sphere, :governmental_power, :juridical_nature, :sisp
   ]
 
-  protect "create_institution_admin", :environment, :except => [:get_institutions]
-
   def hide_registration_incomplete_percentage
     response = false
 
