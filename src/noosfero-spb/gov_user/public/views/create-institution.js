@@ -45,6 +45,7 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
 
 
   function get_institution_post_data() {
+
     return {
       cnpj: $("#institutions_cnpj").val(),
       type: $("input[name='institutions[type]']:checked").val(),
@@ -52,7 +53,9 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
       governmental_power: $("#institutions_governmental_power").selected().val(),
       governmental_sphere: $("#institutions_governmental_sphere").selected().val(),
       juridical_nature: $("#institutions_juridical_nature").selected().val(),
-      corporate_name: $("#institutions_corporate_name").val()
+      corporate_name: $("#institutions_corporate_name").val(),
+      siorg_code: $("#institutions_siorg_code").val(),
+      sisp: $('input[name="institutions[sisp]"]:checked').val()
     };
   }
 

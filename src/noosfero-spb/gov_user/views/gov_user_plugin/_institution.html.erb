@@ -30,36 +30,47 @@
   <%= hidden_field_tag "edit_institution_page", false %>
   <%= fields_for :institutions do |inst| %>
     <div class="spb-row no-margin-top">
-      <div class='spb-col spb-col-3'>
+      <div class='spb-col'>
         <%= labelled_radio_button _('Public Institution'), 'institutions[type]', 'PublicInstitution', true %>
       </div>
 
-      <div class="spb-col spb-col-3">
+      <div class="spb-col">
         <%= labelled_radio_button _('Private Institution'), 'institutions[type]', 'PrivateInstitution' %>
       </div>
 
-      <div class="spb-col spb-col-3"></div>
-      <div class="spb-col spb-col-3"></div>
     </div>
 
     <div class="spb-row">
-      <div class="spb-col spb-col-5">
+      <div class="spb-col spb-col-9">
         <label for="community_name" class="formlabel">
           <%= _("Corporate Name") %><!-- razão social -->
           <span class="required-field">(*)</span>
         </label>
 
-        <%= f.text_field(:name, :class => flash[:error_community_name], :value => params[:community][:name]) %>
+        <%= f.text_field(:name, :class => flash[:error_community_name], :maxlength => 250, :value => params[:community][:name]) %>
         <%= content_tag :span, _("Institution name already exists"), :id=>"already_exists_text", :class=>"errorExplanation hide-field" %>
       </div>
 
-      <div class="spb-col spb-col-6">
+    <div class="public-institutions-fields">
+      <div class="spb-col spb-col-3">
+        <%= hidden_field_tag "acronym_translate", _("Acronym") %>
+        <%= hidden_field_tag "fantasy_name_translate", _("Fantasy name") %>
+        <%= inst.label("acronym" ,_("Acronym"), :class=>"formlabel", id: "institution_acronym_label") %>
+        <%= inst.text_field(:acronym, :value => params[:institutions][:acronym], :maxlength => 12) %>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="spb-row">
+      <div class="spb-col spb-col-12">
         <%= inst.label "corporate_name", _("Fantasy name"), :class=>"formlabel" %><!-- Nome fantasia -->
-        <%= inst.text_field(:corporate_name, :value => params[:institutions][:corporate_name], :size => 55) %>
+        <%= inst.text_field(:corporate_name, :value => params[:institutions][:corporate_name], :size => 55, :maxlength => 250) %>
       </div>
     </div>
 
     <div class="spb-row">
+
       <div class="spb-col spb-col-5">
         <label for="community_country" class="formlabel">
           <%= _("Country") %>
@@ -84,7 +95,7 @@
           <span class="required-field">(*)</span>
         </label>
 
-        <%= f.text_field(:city, :class => flash[:error_community_city], :value => params[:community][:city]) %>
+        <%= f.text_field(:city, :class => flash[:error_community_city], :value => params[:community][:city], :maxlength => 250) %>
       </div>
     </div>
 
@@ -99,14 +110,6 @@
       </div>
     </div>
 
-    <div class="spb-row">
-      <div class="spb-col spb-col-12">
-        <%= hidden_field_tag "acronym_translate", _("Acronym") %>
-        <%= hidden_field_tag "fantasy_name_translate", _("Fantasy name") %>
-        <%= inst.label("acronym" ,_("Acronym"), :class=>"formlabel") %>
-        <%= inst.text_field(:acronym, :value => params[:institutions][:acronym]) %>
-      </div>
-    </div>
 
     <div class="spb-row public-institutions-fields">
       <div class="spb-col spb-col-6">
@@ -141,28 +144,35 @@
       </div>
     </div>
 
-    <div class="spb-row public-institutions-fields">
-      <div class="spc-col spb-col-12 sisp-fields">
-        <div class="spb-col spb-col-3">
-          <% if @show_sisp_field %>
+    <% if @show_admin_fields %>
+      <div class="spb-row public-institutions-fields">
+        <div class="spc-col spb-col-12 sisp-fields">
+          <div class="spb-col spb-col-3">
 
-          <div class="spb-col spb-col-12">
-            <%= _("SISP?") %>
-          </div>
+            <div class="spb-col spb-col-12">
+              <%= _("SISP?") %>
+            </div>
 
-          <div class="spb-col spb-col-5">
-            <%= inst.radio_button(:sisp, true, :class => "#{flash[:error_institution_sisp]}" ) %>
-            <%= inst.label :sisp ,_("Yes"), :value => true %>
-          </div>
+            <div class="spb-col spb-col-5">
+              <%= inst.radio_button(:sisp, true, :class => "#{flash[:error_institution_sisp]}" ) %>
+              <%= inst.label :sisp ,_("Yes"), :value => true %>
+            </div>
 
-          <div class="spb-col spb-col-6">
-            <%= inst.radio_button(:sisp, false, :checked=>"checked", :class => "#{flash[:error_institution_sisp]}") %>
-            <%= inst.label :sisp ,_("No"), :value => false %>
+            <div class="spb-col spb-col-6">
+              <%= inst.radio_button(:sisp, false, :checked=>"checked", :class => "#{flash[:error_institution_sisp]}") %>
+              <%= inst.label :sisp ,_("No"), :value => false %>
+            </div>
           </div>
-          <% end %>
         </div>
       </div>
-    </div>
+
+      <div class="spb-row public-institutions-fields">
+        <div class="spb-col spb-col-12">
+          <%= inst.label("siorg_code" ,_("SIORG Code"), :class=>"formlabel") %>
+          <%= inst.text_field(:siorg_code, :value => params[:institutions][:siorg_code]) %>
+        </div>
+      </div>
+    <% end %>
 
     <div class="spb-row modal-form-actions">
       <div class="spb-col spb-col-6">

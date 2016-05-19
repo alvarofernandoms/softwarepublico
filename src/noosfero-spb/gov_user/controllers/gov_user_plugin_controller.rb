@@ -114,7 +114,7 @@ class GovUserPluginController < ApplicationController
     params[:community] ||= {}
     params[:institutions] ||= {}
 
-    @show_sisp_field = user.is_admin?
+    @show_admin_fields = user.is_admin?
     @governmental_sphere = get_governmental_spheres()
     @governmental_power = get_governmental_powers()
     @juridical_nature = get_juridical_natures()

@@ -235,13 +235,15 @@
 .action-profile_editor-edit #content .main-content #profile-data .modal #community_name,
 .modal #community_name {
   height: 16px;
-  width: 200px;
+  width: 392px;
 }
 
+.action-profile_editor-edit #content .main-content #profile-data .modal #institutions_cnpj,
 .action-profile_editor-edit #content .main-content #profile-data .modal #institutions_corporate_name,
+.modal #institutions_cnpj,
 .modal #institutions_corporate_name {
   height: 16px;
-  width: 285px;
+  width: 533px;
 }
 
 .action-profile_editor-edit #content .main-content #profile-data .modal #community_country,
@@ -257,16 +259,14 @@
 .action-profile_editor-edit #content .main-content #profile-data .modal #community_city,
 .modal #community_city {
   height: 16px;
-  width: 190px;
+  width: 205px;
   margin-top: 2px;
 }
 
-.action-profile_editor-edit #content .main-content #profile-data .modal #institutions_cnpj,
 .action-profile_editor-edit #content .main-content #profile-data .modal #institutions_acronym,
-.modal #institutions_cnpj,
 .modal #institutions_acronym {
   height: 16px;
-  width: 530px;
+  width: 111px;
 }
 
 .action-profile_editor-edit #content .main-content #profile-data .modal a.button.with-text.icon-add,

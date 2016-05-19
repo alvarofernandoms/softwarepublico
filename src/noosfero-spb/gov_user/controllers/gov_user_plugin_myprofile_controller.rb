@@ -7,7 +7,7 @@ class GovUserPluginMyprofileController < MyProfileController
   end
 
   def edit_institution
-    @show_sisp_field = user.is_admin?
+    @show_admin_fields = user.is_admin?
     @state_list = NationalRegion.find(
                     :all,
                     :conditions => { :national_region_type_id => 2 },

@@ -60,6 +60,9 @@ msgstr "Instituição"
 msgid "institution"
 msgstr "instituição"
 
+msgid "invalid, only numbers are allowed."
+msgstr "inválido, apenas números são permitidos."
+
 msgid "invalid, only public and private institutions are allowed."
 msgstr "Inválido, somente instituições públicas e privadas são permitidas."
 
@@ -120,6 +123,9 @@ msgstr "Razão Social"
 msgid "Institution name already exists"
 msgstr "Nome de Instituição já existe"
 
+msgid "Acronym"
+msgstr "Sigla"
+
 msgid "Fantasy name"
 msgstr "Nome Fantasia"
 
@@ -141,9 +147,6 @@ msgstr "Cidade"
 msgid "CNPJ"
 msgstr "CNPJ"
 
-msgid "Acronym"
-msgstr "Sigla"
-
 msgid "Governmental Sphere"
 msgstr "Esfera Governamental:"
 
@@ -161,6 +164,9 @@ msgstr "Sim"
 
 msgid "No"
 msgstr "Não"
+
+msgid "SIORG Code"
+msgstr "Código SIORG"
 
 msgid "Save"
 msgstr "Salvar"
@@ -194,6 +200,9 @@ msgstr "Poder Governamental:"
 
 msgid "Juridical Nature:"
 msgstr "Natureza Jurídica:"
+
+msgid "SIORG Code:"
+msgstr "Código SIORG:"
 
 msgid "Complete Profile"
 msgstr "Complete o Perfil"

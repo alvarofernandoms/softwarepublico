@@ -352,7 +352,7 @@
 }
 
 .action-gov_user_plugin-create_institution_admin #community_name {
-  width: 200px;
+  width: 372px;
 }
 
 .action-gov_user_plugin_myprofile-edit_institution #institutions_corporate_name {
@@ -360,8 +360,10 @@
   color: black;
 }
 
+.action-gov_user_plugin_myprofile-edit_institution #institutions_cnpj,
+.action-gov_user_plugin-create_institution_admin #institutions_cnpj,
 .action-gov_user_plugin-create_institution_admin #institutions_corporate_name {
-  width: 310px;
+  width: 508px;
 }
 
 .action-gov_user_plugin_myprofile-edit_institution #community_country {
@@ -388,15 +390,13 @@
 }
 
 .action-gov_user_plugin-create_institution_admin #community_city {
-  width: 222px;
+  width: 199px;
 }
 
-.action-gov_user_plugin_myprofile-edit_institution #institutions_cnpj,
 .action-gov_user_plugin_myprofile-edit_institution #institutions_acronym,
-.action-gov_user_plugin-create_institution_admin #institutions_cnpj,
 .action-gov_user_plugin-create_institution_admin #institutions_acronym {
   text-indent: 5px;
-  width: 530px;
+  width: 111px;
 }
 
 .action-gov_user_plugin_myprofile-edit_institution .modal-form-actions,
@@ -692,6 +692,13 @@
   font-size: 15px;
   font-family: Arial, helvetica;
   color: #585858;
+}
+
+#noosfero_profile-content #content .main-content #profile-data #institutions_siorg_code,
+.action-profile_editor-edit #content .main-content #profile-data #institutions_siorg_code,
+.action-gov_user_plugin-create_institution_admin #content .main-content #institutions_siorg_code,
+.action-organization_ratings_plugin_profile-new_rating #content .main-content #institutions_siorg_code {
+  width: 189px;
 }
 
 .action-users-send_mail #content .main-content{

@@ -112,6 +112,17 @@
         </div>
       </div>
 
+      <div class="spb-row public-institutions-fields">
+        <div class="spb-col spb-col-6">
+          <span class='required-field public-institutions-fields'>
+            <div class="formfield type-text">
+              <%= inst.label("siorg_code" ,_("SIORG Code:"), :class=>"formlabel") %>
+              <%= inst.text_field(:siorg_code, :value => @institution.siorg_code) %>
+            </div>
+          </span>
+        </div>
+      </div>
+
       <div class="spc-col spb-col-12 sisp-fields">
         <div class="spb-row public-institutions-fields">
           <div class="spb-col spb-col-3">
@@ -120,7 +131,7 @@
                 <div class="spb-col spb-col-12">
                   <%= _("SISP?") %>
                 </div>
-                <% if @show_sisp_field %>
+                <% if @show_admin_fields %>
                   <div class="spb-col spb-col-4">
                     <%= inst.radio_button(:sisp, true, :checked=>(@institution.sisp ? true : false)) %>
                     <%= inst.label("sisp" ,_("Yes")) %>
