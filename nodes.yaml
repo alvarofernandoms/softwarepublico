@@ -14,10 +14,6 @@ database:
   run_list:
     - role[server]
     - role[database_server]
-mezuro:
-  run_list:
-    - role[server]
-    - role[mezuro_server]
 monitor:
   run_list:
     - recipe[basics]

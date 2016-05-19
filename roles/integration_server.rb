@@ -13,5 +13,5 @@ run_list *[
   'recipe[colab]',
   'recipe[colab::nginx]',
   'recipe[backup]',
-  'recipe[mezuro::prezento]'
+  #'recipe[mezuro::prezento]'
 ]
