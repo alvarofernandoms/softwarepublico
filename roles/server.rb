@@ -5,5 +5,5 @@ run_list *[
   'recipe[firewall]',
   'recipe[email::client]',
   'recipe[munin::node]',
-  'recipe[rsyslog]'
+  #'recipe[rsyslog]'
 ]

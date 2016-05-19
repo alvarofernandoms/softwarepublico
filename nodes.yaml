@@ -14,11 +14,6 @@ database:
   run_list:
     - role[server]
     - role[database_server]
-monitor:
-  run_list:
-    - recipe[basics]
-    - recipe[firewall]
-    - role[monitoring_server]
 reverseproxy:
   run_list:
     - role[server]
