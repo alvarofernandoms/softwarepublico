@@ -35,7 +35,6 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
     software_info_insert_models.call(@list_operating_systems, 'operating_systems')
     begin
       raise NotAdminException unless can_change_public_software?
-      @software_info.public_software = params['software']['public_software'].present?
       @software_info.update_attributes!(params[:software])
 
       @community = @software_info.community
@@ -66,7 +65,10 @@ class SoftwareCommunitiesPluginMyprofileController < MyProfileController
         @software_info.errors.add(:base, _("You don't have permission to change public software attributes"))
         return false
       end
+    else
+      @software_info.public_software = params['software']['public_software'].present?
     end
+
     return true
   end
 
