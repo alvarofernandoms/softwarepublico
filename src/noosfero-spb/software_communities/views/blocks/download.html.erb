@@ -1,7 +1,7 @@
 <% if block.owner.software_info.nil? %>
   <%= _("This community needs a software to use this block") %>
 <% else %>
-    <h3 class="block-title"> <%= _("Download") + block.owner.software_info.community.name %> </h3>
+    <h3 class="block-title"> <%= block.title.present? ? block.title : _("Download") +" "+ block.owner.software_info.community.name %> </h3>
     <ul class="download-list">
     <% block.download_records.sort_by(&:id).each do |download| %>
       <li id="download-item-<%= download.id %>">
