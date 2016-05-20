@@ -78,7 +78,7 @@ class SoftwareCommunitiesPlugin::SoftwareInfo < ActiveRecord::Base
   has_many :operating_system_names, :through => :operating_systems, :class_name => 'SoftwareCommunitiesPlugin::OperatingSystemName'
   has_many :categories, :through => :community
 
-  belongs_to :community, :dependent => :destroy
+  belongs_to :community
   belongs_to :license_info, :class_name => 'SoftwareCommunitiesPlugin::LicenseInfo'
 
   validates_length_of :finality, :maximum => 4000
