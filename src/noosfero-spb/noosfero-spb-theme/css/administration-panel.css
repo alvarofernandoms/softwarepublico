@@ -629,6 +629,7 @@
   margin-left: 0px;
 }
 
+.action-users-send_mail #content .main-content form label,
 .action-profile_editor-edit #content .main-content #profile-data .formlabel,
 #noosfero_profile-content #content .main-content #profile-data .formlabel,
 .controller-maps.action-maps-edit_location #content .main-content form label,
@@ -675,6 +676,7 @@
   font-size: 13px;
 }
 
+.action-users-send_mail #content .main-content input[type="text"],
 .action-admin_panel-site_info #content .main-content input[type="text"],
 .action-profile_editor-edit_software_community #content .main-content #profile-data input[type="text"],
 .action-profile_editor-edit #content .main-content #profile-data input[type="text"],
@@ -690,6 +692,39 @@
   font-size: 15px;
   font-family: Arial, helvetica;
   color: #585858;
+}
+
+.action-users-send_mail #content .main-content{
+  font-family: Arial;
+}
+
+.action-users-send_mail #content .main-content form label{
+  font-size: 12px;
+}
+
+.action-users-send_mail #content .main-content input[type="text"] {
+  width: 504px;
+}
+
+.action-users-send_mail #content .main-content .recipients{
+  margin-top: 30px;
+}
+
+.action-users-send_mail #content .main-content .formlabel {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.action-users-send_mail #content .main-content .recipients-checkboxes {
+  margin-left: 20px;
+}
+
+.action-users-send_mail #content .main-content #profile_admins{
+  margin-left: 10px
+}
+
+.action-users-send_mail #content .main-content .recipients-checkboxes input[disabled=""] {
+    opacity: 0.5;
 }
 
 .action-profile_editor-edit_software_community #content .main-content #profile-data .field-with-privacy-selector:hover{
@@ -723,12 +758,19 @@
   margin-top: 0px;
 }
 
+.action-users-send_mail #content .main-content form div input[type="radio"],
 .action-profile_editor-edit #content .main-content form div input[type="radio"],
 #noosfero_profile-content #content .main-content form div input[type="radio"],
+.action-users-send_mail #content .main-content form input[type="checkbox"],
 .action-profile_editor-edit #content .main-content form input[type="checkbox"],
 #noosfero_profile-content #content .main-content form input[type="checkbox"] {
   margin-right: 5px;
   vertical-align: middle;
+}
+
+.action-users-send_mail #content .main-content form div input[type="radio"],
+.action-users-send_mail #content .main-content form input[type="checkbox"]{
+  margin-bottom: 5px;
 }
 
 .action-profile_editor-edit #content .main-content #profile-data .field-with-privacy-selector:hover,
@@ -853,6 +895,23 @@
   background-color: #3E67B1;
   color: #FFF;
   margin-right: 10px;
+}
+
+.action-users-send_mail #content .main-content .submit {
+  background-color: #3E67B1;
+  color: #FFF;
+  height: 30px;
+  line-height: 26px;
+  padding: 0 15px 5px 15px;
+  margin: 10px 10px 0 0;
+}
+
+.action-users-send_mail #content .main-content .icon-cancel {
+  margin: 10px 10px 0 0;
+  display: inline-block;
+  line-height: 26px;
+  height: 23px;
+  padding: 0 15px 5px 15px;
 }
 
 .action-profile_editor-edit #delete-profile,
