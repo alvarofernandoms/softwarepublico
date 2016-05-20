@@ -172,6 +172,7 @@ template '/etc/colab/plugins.d/mezuro.py' do
   owner 'root'
   group 'colab'
   mode 0640
+  action :delete
   notifies :restart, 'service[colab]'
 end
 
