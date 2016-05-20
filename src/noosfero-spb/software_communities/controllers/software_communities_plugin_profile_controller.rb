@@ -15,6 +15,11 @@ class SoftwareCommunitiesPluginProfileController < ProfileController
       download.total_downloads += 1
       download.save
 
+      if profile.software?
+        profile.software_info.downloads_count += 1
+        profile.software_info.save
+      end
+
       redirect_to download.link
     else
       session[:notice] = ERROR_MESSAGES[:not_found]
