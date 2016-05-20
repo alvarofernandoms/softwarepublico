@@ -11,7 +11,7 @@ package 'noosfero-deps' do
 end
 
 package 'noosfero' do
-  action :upgrade
+  action :install
   notifies :restart, 'service[noosfero]'
 end
 
