@@ -226,17 +226,18 @@
 
 #content .box-1 .software-communities-plugin_categories-and-tags-block .block-title{
   float: left;
-  margin: 13px 0px 10px 0;
-  padding: 3px 0px;
+  margin: 13px 0 0 0;
+  padding: 3px 5px;
   background: none;
   color: #5E82C6;
   font-family: Arial, verdana;
   font-size: 12px;
   font-weight: 300;
+  width: 100%;
 }
 
 #content .box-1 .software-communities-plugin_categories-and-tags-block .category_cloud{
-  margin: 0px;
+  margin: 0px 0px 10px 0px;
   position: relative;
   top: 9px;
 }
