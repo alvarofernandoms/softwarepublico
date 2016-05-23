@@ -14,11 +14,6 @@ class SoftwareCommunitiesPlugin::StatisticBlock < Block
   end
 
   def content(args={})
-    download_blocks = get_profile_download_blocks(self.owner)
-    downloads = download_blocks.map do |download_block|
-      get_downloads_from_block(download_block)
-    end
-
     block = self
     statistics = get_software_statistics
 
@@ -27,7 +22,6 @@ class SoftwareCommunitiesPlugin::StatisticBlock < Block
         :file => 'blocks/software_statistics',
         :locals => {
           :block => block,
-          :total_downloads => downloads.sum,
           :statistics => statistics
         }
       )
@@ -44,23 +38,17 @@ class SoftwareCommunitiesPlugin::StatisticBlock < Block
     SoftwareCommunitiesPlugin::DownloadBlock.joins(:box).where("boxes.owner_id = ?", profile.id)
   end
 
-  def get_downloads_from_block download_block
-    downloads = download_block.download_records.map do |download|
-      download.total_downloads unless download.total_downloads.nil?
-    end
-    downloads.select! {|value| not value.nil? }
-    downloads.sum
-  end
-
   def get_software_statistics
     statistics = {}
     software = SoftwareCommunitiesPlugin::SoftwareInfo.find_by_community_id(self.owner.id)
     if software.present?
       statistics[:saved_resources] = software.saved_resources
       statistics[:benefited_people] = software.benefited_people
+      statistics[:downloads_count] = software.downloads_count
     else
       statistics[:saved_resources] = 0
       statistics[:benefited_people] = 0
+      statistics[:downloads_count] = 0
     end
     statistics
   end

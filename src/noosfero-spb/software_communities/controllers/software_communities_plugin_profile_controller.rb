@@ -11,9 +11,14 @@ class SoftwareCommunitiesPluginProfileController < ProfileController
   def download_file
     download = SoftwareCommunitiesPlugin::Download.where(:id => params[:download_id].to_i).detect{ |b| b.download_block.environment.id == environment.id }
 
-    if download
+    if download && (download.link =~ URI::regexp)
       download.total_downloads += 1
       download.save
+
+      if profile.software?
+        profile.software_info.downloads_count += 1
+        profile.software_info.save
+      end
 
       redirect_to download.link
     else
