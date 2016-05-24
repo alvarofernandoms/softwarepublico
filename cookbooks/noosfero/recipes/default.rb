@@ -11,7 +11,7 @@ package 'noosfero-deps' do
 end
 
 package 'noosfero' do
-  action :install
+  action [:install, :upgrade]
   notifies :restart, 'service[noosfero]'
 end
 
@@ -32,7 +32,7 @@ execute 'noosfero:schema' do
 end
 
 package 'noosfero-spb' do
-  action :upgrade
+  action [:install, :upgrade]
   notifies :restart, 'service[noosfero]'
 end
 
