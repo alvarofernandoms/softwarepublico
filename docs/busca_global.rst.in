@@ -1,0 +1,37 @@
+Busca Global
+==========
+
+Esta seção visa documentar o que é indexado pelo Portal do Software Público
+Brasileiro e se torna acessível via busca global.
+
+Segue abaixo uma lista de entidades que podem ser buscadas por ferramenta:
+
+Noosfero (Social)
+-------
+
+- Artigo
+- Comunidade
+- Comunidade de Software
+- Comentário
+
+
+Gitlab (Desenvolvimento)
+------
+
+- Projetos
+- Merge Request
+- Issue
+- Comentário
+ 
+
+Colab (Integração)
+-----
+
+- Usuário
+
+
+Mailman (Listas de email)
+-----
+
+- Lista de Discussões
+
