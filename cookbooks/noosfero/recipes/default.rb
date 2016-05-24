@@ -111,6 +111,11 @@ cookbook_file '/etc/noosfero/unicorn.rb' do
   notifies :restart, 'service[noosfero]'
 end
 
+cookbook_file '/etc/noosfero/application.rb' do
+  owner 'root'; group 'root'; mode 0644
+  notifies :restart, 'service[noosfero]'
+end
+
 cookbook_file '/etc/default/noosfero' do
   owner 'root'; group 'root'; mode 0644
   source 'noosfero-default'
