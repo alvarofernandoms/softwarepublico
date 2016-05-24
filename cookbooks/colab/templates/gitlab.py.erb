@@ -13,7 +13,8 @@ verify_ssl = False
 
 middlewares = [
     'colab.middlewares.cookie_middleware.CookiePreHandlerMiddleware',
-    'colab.middlewares.cookie_middleware.CookiePostHandlerMiddleware'
+    'colab.middlewares.cookie_middleware.CookiePostHandlerMiddleware',
+    'colab_gitlab.middlewares.cookie_middleware.CookiePostHandlerMiddleware'
 ]
 
 urls = {
