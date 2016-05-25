@@ -34,12 +34,8 @@ namespace :spb do
       if article.blank?
         article = TinyMceArticle.new(attrs)
         article.created_at = date
-        article.save!
-      else
-        article.path = "#{spb_blog.slug}/#{child.slug}"
-        article.parent = spb_blog
-        article.save!
       end
+      article.save!
 
       puts "#{spb_blog.slug}: Importing article: #{article.name}..."
     end
