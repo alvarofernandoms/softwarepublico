@@ -30,18 +30,18 @@ namespace :spb do
         :name => row["title"]
       }
 
-      unless article = Article.find_by(:slug => row["title"].to_slug)
+      article = Article.find_by(:slug => row["title"].to_slug)
+      if article.blank?
         article = TinyMceArticle.new(attrs)
         article.created_at = date
         article.save!
+      else
+        article.path = "#{spb_blog.slug}/#{child.slug}"
+        article.parent = spb_blog
+        article.save!
       end
-      puts "#{spb_blog.slug}: Importing article: #{article.name}..."
-    end
 
-    puts "","Updating paths..."
-    spb_blog.children.each do |child|
-      child.path = "#{spb_blog.slug}/#{child.slug}"
-      child.save!
+      puts "#{spb_blog.slug}: Importing article: #{article.name}..."
     end
 
   end
