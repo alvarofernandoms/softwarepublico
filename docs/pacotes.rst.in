@@ -1,0 +1,34 @@
+Pacotes das Ferramentas
+==========
+
+As ferramentas utilizadas no SPB são mantidas no repositório de pacotes
+`Copr Fedora`. Cada projeto contém um conjunto de pacotes RPM para instalação
+das ferramentas seguindo uma versão, exemplo, o projeto v4 contém os pacotes
+construidos para a versão stable-4.x (versão referente a branch utilizada para
+o converge). O projeto experimental contém os pacotes em versão de teste e pode
+apresentar instabilidade.
+
+.. _`Copr Fedora`: https://copr.fedorainfracloud.org/coprs/softwarepublico/
+
+Versão 
+------------
+
+Os pacotes são construidos com a utilização dos arquivos specs localizados em
+``softwarepublico/src/pkg-rpm/<pacote>/*.spec`` (repositório oficial do Softwarepublico)
+e cada pacote contem a sua versão definida pelo atributo ``Version``
+(mais informações sobre pacote RPM `aqui`).
+
+Para os pacotes *noosfero-spb*, *colab-spb-theme* e *colab-spb-plugin* tem a versão
+definida no arquivo VERSION na pasta raíz do repositório oficial do Softwarepublico.
+A lógica de criação desses pacotes são definidas no arquivo Makefile em
+``softwarepublico/src/Makefile`` e podem ser atualizados utilizando o comando
+``make release`` do qual automaticamente realizam o upload do arquivo.
+
+**Nota**: o arquivo VERSION foi criado ao final da release 4/início da release 5.
+A sua primeira versão foi lançada com ``5.0a0``, ou seja, não existe a versão
+``4.XaY``, portanto os pacotes referentes a v4 e branch stable-4.X contém os
+pacotes com as tags ``5.0a0`` não tendo correlação direta de versão.
+
+.. _`aqui`: https://fedoraproject.org/wiki/How_to_create_an_RPM_package/pt
+
+
