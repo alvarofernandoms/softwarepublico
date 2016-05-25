@@ -40,6 +40,10 @@ namespace :spb do
       puts "#{spb_blog.slug}: Importing article: #{article.name}..."
     end
 
+    puts "", "Deleting standard blog..."
+    old_blog = spb_profile.articles.find_by :slug => "blog"
+    old_blog.destroy if (old_blog.present? && old_blog.children.count.zero?)
+
   end
 
   def error failure_condition, msg="ERROR!!"
