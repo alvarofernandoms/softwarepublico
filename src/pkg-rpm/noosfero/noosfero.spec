@@ -3,7 +3,7 @@
 
 Name:    noosfero
 Version: 1.5.0+spb9
-Release: 2
+Release: 3
 Summary: Social Networking Platform
 Group:   Applications/Publishing
 License: AGPLv3
@@ -153,7 +153,7 @@ module Noosfero
       noosfero:translations:compile
       makemo
     ]
-    if $PROGRAM_NAME =~ /rake$/ && (ignore_rake_commands.include?(ARGV.first))
+    if \$PROGRAM_NAME =~ /rake$/ && (ignore_rake_commands.include?(ARGV.first))
       Noosfero::Plugin.should_load = false
     else
       config.active_record.observers = :article_sweeper, :role_assignment_sweeper, :friendship_sweeper, :category_sweeper, :block_sweeper
