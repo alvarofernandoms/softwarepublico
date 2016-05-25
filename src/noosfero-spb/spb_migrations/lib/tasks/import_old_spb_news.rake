@@ -35,8 +35,15 @@ namespace :spb do
         article.created_at = date
         article.save!
       end
-      puts "Importing article: #{article.name}..."
+      puts "#{spb_blog.slug}: Importing article: #{article.name}..."
     end
+
+    puts "","Updating paths..."
+    spb_blog.children.each do |child|
+      child.path = "#{spb_blog.slug}/#{child.slug}"
+      child.save!
+    end
+
   end
 
   def error failure_condition, msg="ERROR!!"
