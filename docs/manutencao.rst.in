@@ -139,6 +139,29 @@ do Nginx `cookbooks/reverse_proxy/templates/reverse_proxy.conf.erb` na variável
 `client_max_upload_size`. O valor deve ser definido como `<valor>m`. Exemplo
 `client_max_body_size = 500m` sendo 500m o maior limite entre as ferramentas.
 
+Atualizando Certificado Digital
+---------------
+
+A atualização do certificado digital do Portal é feito através das receitas Chef
+(especificamente esta: `cookbooks/reverse_proxy/recipes/default.rb`), e os mesmos
+se tornam disponíveis na máquina `reverseproxy`. Entretanto deve-se estar atento
+para o nome dos arquivos e o formato dos mesmos.
+
+Ao gerar o certificado digital deverão ser gerados dois arquivos: o certificado
+e a chave. O certificado deve estar no formato x509 e recomenda-se que a chave
+seja gerada usando o algoritmo de criptografia RSA. Tendo isso, o nome dos arquivos
+devem seguir o que é especificado na receita, que usa a variável
+`node['config']['external_hostname']` do arquivo de configuração, sendo essa
+variável o domínio do ambiente (por exemplo, 'softwarepublico.gov.br'). O nome
+dos arquivos devem seguir o seguinte padrão:
+
++ Certificado: $external_hostname.crt (nome do domínio com extensão crt)
++ Chave: $external_hostname.key (nome do domínio com extensão key)
+
+Com os arquivos no formato e nomenclatura corretos basta colocá-los no diretório
+`cookbooks/reverse_proxy/files/host-reverseproxy/` e convergir o ambiente
+normalmente.
+
 Nota Ferramenta Gitlab
 ------------
 
