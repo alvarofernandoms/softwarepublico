@@ -208,6 +208,7 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
 
             if( result.length === 0 ) {
               $('#institution_empty_ajax_message').switchClass("hide-field", "show-field");
+              $('#input_institution').addClass("highlight-error");
               $('#add_institution_link').hide();
               toggle_extra_fields_style_status(true);
               $("#institution_modal").css({display: "none"});
@@ -224,6 +225,7 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
       select : function (event, selected) {
         $('#institution_empty_ajax_message').switchClass("show-field", "hide-field");
         $('#add_institution_link').show();
+        $('#input_institution').removeClass("highlight-error");
         toggle_extra_fields_style_status(false);
         $("#institution_selected").val(selected.item.id).attr("data-name", selected.item.label);
       }

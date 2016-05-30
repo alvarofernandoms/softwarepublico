@@ -19,9 +19,15 @@ OrganizationRating.class_eval do
   end
 
   def verify_organization_rating_values
-    if self.institution.nil? && (self.people_benefited || self.saved_value)
-      self.errors.add :institution, _("Report values cannot be saved without an institution")
-      false
+    if self.institution.nil?
+      if self.people_benefited
+        self.errors.add _('institution'), _("needs to be valid to save the number of people benefited")
+        false
+      end
+      if self.saved_value
+        self.errors.add _('institution'), _("needs to be valid to save report values")
+        false
+      end
     end
   end
 
