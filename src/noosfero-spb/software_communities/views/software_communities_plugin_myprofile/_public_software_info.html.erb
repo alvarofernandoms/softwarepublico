@@ -71,27 +71,19 @@
   <%= render :partial => 'library_fields', :locals => {:object_name => 'community', :profile => @community, :libraries => @list_libraries } %>
 </div>
 
-<br />
-
 <div id='operating_system_fields'>
   <h4> <%= _("Operating Systems") %> </h4>
 
   <%= render :partial => 'operating_system_fields', :locals => {:object_name => 'community', :profile => @community, :operating_systems_fields => @list_operating_systems} %>
 </div>
-<br />
-
-<br />
 <div id='programming_languages_fields'>
   <h4> <%= _("Programming languages") %> </h4>
 
   <%= render :partial => 'language_fields', :locals => { :object_name => 'community', :profile => @community, :languages => @list_languages } %>
 </div>
 
-<br />
 <div id='database_fields'>
   <h4> <%= _("Databases") %> </h4>
 
   <%= render :partial => 'database_fields', :locals => {:object_name => 'community', :profile => @community, :database => @list_databases } %>
 </div>
-
-<br>
