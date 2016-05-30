@@ -11,7 +11,7 @@
 		</div>
             {% endfor %}
           <div class="text-right">
-            <a href="{% url 'haystack_search' %}?order=latest&tag={{ listname }}&type=thread&q=tag:{{ listname }}">
+            <a href="{% url 'mailinglist_view' listname %}?order=latest">
               {% trans "see all discussions" %}
             </a>
           </div>
@@ -25,7 +25,7 @@
     		</div>
             {% endfor %}
           <div class="text-right">
-            <a href="{% url 'haystack_search' %}?tag={{ listname }}&type=thread&q=tag:{{ listname }}">
+            <a href="{% url 'mailinglist_view' listname %}?order=rating">
               {% trans "see all discussions" %}
             </a>
           </div>
