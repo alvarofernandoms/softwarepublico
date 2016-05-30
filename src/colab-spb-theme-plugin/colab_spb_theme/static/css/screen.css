@@ -787,3 +787,93 @@ body > .alert,
 .container.messages {
     margin-top: 30px;
 }
+
+/* PROFILE FORMAT */
+
+#main-content > div > h2 {
+    color: #FF0366;
+    font-size: 16px;
+    font-family: "open_sansregular",Arial, Helvetica,sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+#main-content a.gravatar {
+    margin-bottom: 60px;
+    display: block;
+    color: #2c66ce;
+    text-decoration: underline;
+}
+
+body div#main-content {
+    margin-top: 0;
+    color: #172738;
+    max-width: 960px;
+    padding: 40px 0 60px 0;
+}
+
+#main-content > div > h3 > img {
+    float: left;
+    margin-right: 20px;
+}
+
+#colab_profile-content label.control-label, label {
+    font-size: 12px;
+    font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+#profile_content {
+    margin-top: 40px;
+}
+
+#colab_profile-content .panel label {
+    font-size: 12px;
+}
+
+#colab_profile-content .btn.btn-primary, #colab_profile-content .links-group .btn.btn-primary {
+    color: #fff;
+    background-color: #3E67B1;
+    border-color: #3E67B1;
+    font-size: 12px;
+}
+
+#colab_profile-content .btn.btn-lg, #colab_profile-content .links-group .btn.btn-lg  {
+  font-size: 12px;
+  font-family: "open_sansregular";
+  padding: 6px 12px;
+  border-radius: 5px;
+  line-height: 18px;
+}
+
+#colab_profile-content .unstyled-list.emails img {
+    float: left;
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+#colab_profile-content .unstyled-list.emails li hr {
+    margin: 10px 0;
+    float: left;
+    width: 100%;
+}
+
+#gitlab_profile-content .container {
+    max-width: 960px;
+}
+
+#gitlab_profile-content .brand-image img {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+#gitlab_profile-content .brand_text p.lead {
+    font-size: 12px;
+}
+
+#gitlab_profile-content #user_login {
+    margin-bottom: 10px;
+}
