@@ -19,15 +19,18 @@
   overflow-y: auto;
 }
 
+#noosfero_profile-content .fade,
 .fade {
   opacity: 0;
   transition: opacity 0.15s linear 0s;
 }
 
+#noosfero_profile-content .fade.in,
 .fade.in {
   opacity: 1;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-dialog,
 .action-profile_editor-edit #content .main-content #profile-data .modal-dialog,
 .modal-dialog {
   width: 45%;
@@ -35,21 +38,25 @@
   position: relative;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal.in .modal-dialog,
 .action-profile_editor-edit #content .main-content #profile-data .modal.in .modal-dialog,
 .modal.in .modal-dialog {
   transform: translate(0px, 0px);
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal.fade .modal-dialog,
 .action-profile_editor-edit #content .main-content #profile-data .modal.fade .modal-dialog,
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out 0s;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-content,
 .action-profile_editor-edit #content .main-content #profile-data .modal-content,
 .modal-content {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+#noosfero_profile-content .modal-content,
 .modal-content {
   position: relative;
   background-color: #FFF;
@@ -60,6 +67,7 @@
   box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-header,
 .action-profile_editor-edit #content .main-content #profile-data .modal-header,
 .modal-header {
   min-height: 16.43px;
@@ -67,11 +75,13 @@
   border-bottom: 1px solid #E5E5E5;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-header .close,
 .action-profile_editor-edit #content .main-content #profile-data .modal-header .close,
 .modal-header .close {
   margin-top: -2px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-header button.close,
 .action-profile_editor-edit #content .main-content #profile-data .modal-header button.close,
 .modal-header button.close {
   padding: 0px;
@@ -80,6 +90,7 @@
   border: 0px none;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-header .close,
 .action-profile_editor-edit #content .main-content #profile-data .modal-header .close,
 .modal-header .close {
   float: right;
@@ -96,12 +107,14 @@
   line-height: 1.42857 !important;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-body,
 .action-profile_editor-edit #content .main-content #profile-data .modal-body,
 .modal-body {
   position: relative;
   padding: 15px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-footer,
 .action-profile_editor-edit #content .main-content #profile-data .modal-footer,
 .modal-footer {
   padding: 15px;
@@ -111,23 +124,31 @@
 
 
 /* Bootstrap modal override */
+#noosfero_profile-content #content .main-content #profile-data .modal-title,
 .action-profile_editor-edit #content .main-content #profile-data .modal-title,
 .modal-title {
   font-family: 'open_sansregular', Arial, Helvetica, sans-serif;
 }
 
+#noosfero_profile-content #content .main-header h4,
 .action-profile_editor-edit #content .main-header h4,
 .modal-header h4 {
   color: #333 !important;
   font-size: 17px !important;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-body,
 .action-profile_editor-edit #content .main-content #profile-data .modal-body,
 .modal-body {
   overflow: hidden;
 }
 
 /* Bootstrap modal form fields */
+#noosfero_profile-content #content .main-content #profile-data .modal,
+#noosfero_profile-content #content .main-content #profile-data .modal input,
+#noosfero_profile-content #content .main-content #profile-data .modal select,
+#noosfero_profile-content #content .main-content #profile-data .modal .formlabel,
+#noosfero_profile-content #content .main-content #profile-data .modal .button.with-text,
 .action-profile_editor-edit #content .main-content #profile-data .modal,
 .action-profile_editor-edit #content .main-content #profile-data .modal input,
 .action-profile_editor-edit #content .main-content #profile-data .modal select,
@@ -142,21 +163,33 @@
   font-style: normal;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .button.with-text.icon-cancel {
+  color: #3E67B1;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal .button.with-text.icon-cancel:hover {
+  color: #fff;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal label,
 .action-profile_editor-edit #content .main-content #profile-data .modal label,
 .modal label {
   margin-left: 4px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .sisp-fields label,
 .action-profile_editor-edit #content .main-content #profile-data .modal .sisp-fields label,
 .modal .sisp-fields label {
   margin-left: 0px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal h2,
 .action-profile_editor-edit #content .main-content #profile-data .modal h2,
 .modal h2 {
   margin-top: 0px !important;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .form-description,
 .action-profile_editor-edit #content .main-content #profile-data .modal .form-description,
 .modal .form-description {
   border-bottom: 1px solid #E5E5E5;
@@ -164,12 +197,15 @@
   overflow: hidden;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .formfieldline,
 .action-profile_editor-edit #content .main-content #profile-data .modal .formfieldline,
 .modal .formfieldline {
   padding: 0px;
   margin: 0px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal input[type="text"],
+#noosfero_profile-content #content .main-content #profile-data .modal select,
 .action-profile_editor-edit #content .main-content #profile-data .modal input[type="text"],
 .action-profile_editor-edit #content .main-content #profile-data .modal select,
 .modal input[type="text"],
@@ -180,12 +216,14 @@
   background-color: #fff;
 }
 
+#noosfero_profile-content #content .main-content form .modal input[type="radio"],
 .action-profile_editor-edit #content .main-content form .modal input[type="radio"],
 .modal input[type="radio"] {
   vertical-align: middle;
   margin: 0;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .explanation,
 .action-profile_editor-edit #content .main-content #profile-data .modal .explanation,
 .modal .explanation {
   color: #3F60C6;
@@ -195,6 +233,8 @@
   letter-spacing: 0.1px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .required-field,
+#noosfero_profile-content #content .main-content #profile-data .modal .errorExplanation,
 .action-profile_editor-edit #content .main-content #profile-data .modal .required-field,
 .action-profile_editor-edit #content .main-content #profile-data .modal .errorExplanation,
 .modal .required-field,
@@ -204,6 +244,8 @@
   margin-bottom: 20px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .required-field,
+#noosfero_profile-content #content .main-content #profile-data .modal .errorExplanation:empty,
 .action-profile_editor-edit #content .main-content #profile-data .modal .required-field,
 .action-profile_editor-edit #content .main-content #profile-data .modal .errorExplanation:empty,
 .modal .required-field,
@@ -211,22 +253,26 @@
   margin-bottom: 0px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .spb-row,
 .action-profile_editor-edit #content .main-content #profile-data .modal .spb-row,
 .modal .spb-row {
   margin-top: 15px;
   letter-spacing: 0.1px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .no-margin-top,
 .action-profile_editor-edit #content .main-content #profile-data .no-margin-top,
 .no-margin-top {
   margin-top: 0px !important;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .modal-margin-right,
 .action-profile_editor-edit #content .main-content #profile-data .modal .modal-margin-right,
 .modal .modal-margin-right {
   margin-right: 4%;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .modal-margin-left,
 .action-profile_editor-edit #content .main-content #profile-data .modal .modal-margin-left,
 .modal .modal-margin-left {
   margin-left: 4%;
@@ -238,6 +284,8 @@
   width: 392px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_cnpj,
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_corporate_name,
 .action-profile_editor-edit #content .main-content #profile-data .modal #institutions_cnpj,
 .action-profile_editor-edit #content .main-content #profile-data .modal #institutions_corporate_name,
 .modal #institutions_cnpj,
@@ -251,11 +299,13 @@
   width: 220px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal #community_state,
 .action-profile_editor-edit #content .main-content #profile-data .modal #community_state,
 .modal #community_state {
   width: 80px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal #community_city,
 .action-profile_editor-edit #content .main-content #profile-data .modal #community_city,
 .modal #community_city {
   height: 16px;
@@ -269,6 +319,33 @@
   width: 111px;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal #community_city,
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_acronym,
+#noosfero_profile-content #content .main-content #profile-data .modal #community_name,
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_cnpj,
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_corporate_name {
+  height: 38px;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_acronym {
+  width: 133px;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal #community_name {
+  width: 410px;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_cnpj,
+#noosfero_profile-content #content .main-content #profile-data .modal #institutions_corporate_name {
+  width: 553px;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal #community_city {
+  width: 225px;
+}
+
+#noosfero_profile-content #content .main-content #profile-data .modal a.button.with-text.icon-add,
+#noosfero_profile-content #content .main-content #profile-data .modal a.button.with-text.icon-cancel,
 .action-profile_editor-edit #content .main-content #profile-data .modal a.button.with-text.icon-add,
 .action-profile_editor-edit #content .main-content #profile-data .modal a.button.with-text.icon-cancel,
 .modal a.button.with-text.icon-add,
@@ -278,17 +355,20 @@
   font-size: 12px !important;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal a.button.with-text.icon-add,
 .action-profile_editor-edit #content .main-content #profile-data .modal a.button.with-text.icon-add,
 .modal a.button.with-text.icon-add {
   background-color: #3E67B1 !important;
   color: #fff !important;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .public-institutions-fields,
 .action-profile_editor-edit #content .main-content #profile-data .modal .public-institutions-fields,
 .modal .public-institutions-fields {
   display: none;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal .modal-form-actions,
 .action-profile_editor-edit #content .main-content #profile-data .modal .modal-form-actions,
 .modal .modal-form-actions {
   margin-top: 20px;
@@ -317,4 +397,8 @@
   background-color: #3E67B1 !important;
   color: #FFF !important;
   text-transform: none !important;
+}
+
+body .modal-backdrop.fade.in {
+  display: none;
 }
