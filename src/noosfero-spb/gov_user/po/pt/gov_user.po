@@ -57,6 +57,9 @@ msgstr "Informações da Instituição"
 msgid "Institution"
 msgstr "Instituição"
 
+msgid "institution"
+msgstr "instituição"
+
 msgid "invalid, only public and private institutions are allowed."
 msgstr "Inválido, somente instituições públicas e privadas são permitidas."
 

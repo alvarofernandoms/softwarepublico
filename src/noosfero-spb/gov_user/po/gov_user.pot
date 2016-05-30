@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-10 17:07-0300\n"
-"PO-Revision-Date: 2016-05-10 17:07-0300\n"
+"POT-Creation-Date: 2016-05-30 11:46-0300\n"
+"PO-Revision-Date: 2016-05-30 11:46-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,31 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../controllers/gov_user_plugin_controller.rb:142
+#: ../controllers/gov_user_plugin_controller.rb:140
 #: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:87
 msgid "Select a Governmental Sphere"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:147
+#: ../controllers/gov_user_plugin_controller.rb:145
 #: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:98
 msgid "Select a Governmental Power"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:152
+#: ../controllers/gov_user_plugin_controller.rb:150
 #: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:109
 msgid "Select a Juridical Nature"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:186
+#: ../controllers/gov_user_plugin_controller.rb:184
 #: ../controllers/gov_user_plugin_myprofile_controller.rb:30
 msgid "Could not find Governmental Power or Governmental Sphere"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:232
+#: ../controllers/gov_user_plugin_controller.rb:230
 msgid "Institution successful created!"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:237
+#: ../controllers/gov_user_plugin_controller.rb:235
 msgid "Institution could not be created!"
 msgstr ""
 
@@ -80,15 +80,19 @@ msgstr ""
 msgid "Institution"
 msgstr ""
 
-#: ../lib/institution.rb:66
+#: ../lib/institution.rb:6
+msgid "institution"
+msgstr ""
+
+#: ../lib/institution.rb:68
 msgid "invalid, only public and private institutions are allowed."
 msgstr ""
 
-#: ../lib/institution.rb:78 ../lib/institution.rb:89 ../lib/institution.rb:105
+#: ../lib/institution.rb:80 ../lib/institution.rb:91 ../lib/institution.rb:107
 msgid "can't be blank"
 msgstr ""
 
-#: ../lib/institution.rb:92
+#: ../lib/institution.rb:94
 msgid "invalid state"
 msgstr ""
 
@@ -305,19 +309,19 @@ msgstr ""
 msgid "No institution found"
 msgstr ""
 
-#: ../views/person_editor_extras.html.erb:32
+#: ../views/person_editor_extras.html.erb:30
 msgid "Should begin with a capital letter and no special characters"
 msgstr ""
 
-#: ../views/person_editor_extras.html.erb:33
+#: ../views/person_editor_extras.html.erb:31
 msgid "Email should have the following format: name@host.br"
 msgstr ""
 
-#: ../views/person_editor_extras.html.erb:34
+#: ../views/person_editor_extras.html.erb:32
 msgid "Site should have a valid format: http://name.hosts"
 msgstr ""
 
-#: ../views/person_editor_extras.html.erb:35
+#: ../views/person_editor_extras.html.erb:33
 msgid "If you work in a public agency use your government e-Mail"
 msgstr ""
 
@@ -369,7 +373,7 @@ msgstr ""
 msgid "No organization or company found"
 msgstr ""
 
-#: ../views/ratings_extra_field.html.erb:9
+#: ../views/ratings_extra_field.html.erb:8
 msgid "Add"
 msgstr ""
 
