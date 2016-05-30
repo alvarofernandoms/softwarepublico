@@ -799,7 +799,7 @@ body > .alert,
     margin-bottom: 40px;
 }
 
-#main-content a.gravatar {
+div#main-content .col-lg-12 a {
     margin-bottom: 60px;
     display: block;
     color: #2c66ce;
