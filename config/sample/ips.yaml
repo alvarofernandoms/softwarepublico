@@ -1,0 +1,10 @@
+# This file contains the IP of all the machines on the environment.
+# All of them must be the private IP.
+reverseproxy: <IP>
+database: <IP>
+social: <IP>
+email: <IP>
+integration: <IP>
+mezuro: <IP>
+monitor: <IP>
+

@@ -1,0 +1,90 @@
+# This is a sample of config.yaml file. Make the changes according to your
+#   environment.
+
+# Valid RPM repository and gpgkey links of SoftwarePublico packages
+# Default: "https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/epel-7-$basearch/"
+#          "https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/pubkey.gpg"
+#
+#rpm_repository: <RPM REPO>
+#rpm_gpgkey: <RPM REPO GPG KEY>
+
+# Users admins for the environment
+admins:
+  - ["USER NAME", "USER EMAIL"]
+
+# External domain name for Softwarepublico
+#   Example:
+#     site_url: https://softwarepublico.gov.br
+#     external_hostname: softwarepublico.gov.br
+site_url: https://<SOFTWAREPUBLICO DOMAIN>
+external_hostname: <SOFTWAREPUBLICO DOMAIN>
+
+# External domain for monitoring server
+# Default: "status.sofwarepublico"
+#
+# This is for a production environment. You don't really needs that for
+#   development or test environments.
+#
+#monitor_external_hostname: <SOFTWAREPUBLICO STATUS DOMAIN>
+
+# Munin master private IP addr
+#
+# This also is used for production environment purposes
+munin_master: <IP ADDR>
+
+# Raven dsn key for sentry
+raven_dsn: <URL SENTRY KEY>
+
+# Alternatives hostname for Softwarepulico
+#
+#alternative_hostnames:
+#  - <ALT HOSTNAMES>
+
+# The public IP address for the reverseproxy machine
+# If the public IP is provided from other machine, just put the private IP of
+#   the reverseproxy machine
+external_ip: <IP ADDR>
+
+# Alternative port for ssh access of reverseproxy machine
+alt_ssh_port: <PORT>
+
+# Configurations for the email reply.
+#
+# Example:
+#   colab_from_address: '"Softwarepublico" <noreply@softwarepublico.gov>'
+#   server_email: '"Softwarepublico" <noreply@softwarepublico.gov>'
+#   email_subject_prefix: '[spb]'
+colab_from_address: '"EMAIL HEADER" <NOREPLY EMAIL>'
+server_email: '"EMAIL HEADER" <NOREPLY EMAIL>'
+email_subject_prefix: '[EMAIL PREFIX]'
+
+# Email list addresses
+#
+# Example:
+#   lists_admin: admin@admin.gov
+#   from_address: noreply@softwarepublico.gov
+lists_admin: <ADM EMAIL ADDR>
+from_address: <NOREPLY EMAIL>
+
+# Email hostnames
+#
+# Example:
+#   lists_hostname: listas.softwarepublico.gov
+#   relay_hostname: relay.softwarepublico.gov
+lists_hostname: <LIST HOSTNAME>
+relay_hostname: <RELAY HOSTNAME>
+
+# Relay external IP address. Used to send reply emails.
+relay_ip: <IP ADDR>
+external_outgoing_mail_relay: <IP ADDR>
+external_outgoing_mail_domain: <EXTERNAL DOMAIN>
+
+# Google Analytics ID. Check out the google documentation for more information
+#   about the ID: https://support.google.com/analytics/answer/1032385?hl=pt-BR
+google_analytics_id: '<ID>'
+
+# Numbers of workes for colab.
+# Default: numbers of cpu * 2 + 1
+#
+# Make sure that you have enough resources for the amount of workers
+#colab_http_workers: <NUMBER OF WORKERS>

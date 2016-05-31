@@ -1,0 +1,50 @@
+# This file contains the ssh configurations for access the SPB machines
+Host *
+  ForwardAgent yes
+
+# The reverseproxy unconfigured is the reverseproxy machine
+#   before "rake preconfig" command
+Host reverseproxy.unconfigured
+  User spb
+  Hostname <REVERSEPROXY UNCONFIGURED EXTERNAL IP>
+
+Host reverseproxy
+  User spb
+  Hostname <REVERSEPROXY INTERNAL IP>
+  # The port must be equals to the one defined on config.yaml file "alt_ssh_port"
+  Port <PORT>
+  ProxyCommand ssh spb@<REVERSEPROXY EXTERNAL IP> -p 22 nc %h %p
+
+Host integration
+  User spb
+  Hostname <REVERSEPROXY EXTERNAL IP>
+
+Host database
+  User spb
+  Hostname <DATABASE INTERNAL IP>
+  # connect via reverseproxy host
+  ProxyCommand ssh spb@<REVERSEPROXY EXTERNAL IP> -p %p nc %h 22
+
+Host social
+  User spb
+  Hostname <SOCIAL INTERNAL IP>
+  # connect via reverseproxy host
+  ProxyCommand ssh spb@<REVERSEPROXY EXTERNAL IP> -p %p nc %h 22
+
+Host email
+  User spb
+  Hostname <EMAIL INTERNAL IP>
+  # connect via reverseproxy host
+  ProxyCommand ssh spb@<REVERSEPROXY EXTERNAL IP> -p %p nc %h 22
+
+Host mezuro
+  User spb
+  Hostname <MAZURO INTERNAL IP>
+  # connect via reverseproxy host
+  ProxyCommand ssh spb@<REVERSEPROXY EXTERNAL IP> -p %p nc %h 22
+
+Host monitor
+  User spb
+  Hostname <MONITOR INTERNAL IP>
+  # connect via reverseproxy host
+  ProxyCommand ssh spb@<REVERSEPROXY EXTERNAL IP> -p %p nc %h 22
