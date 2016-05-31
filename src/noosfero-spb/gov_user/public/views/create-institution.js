@@ -165,11 +165,6 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
     });
   }
 
-  function cancel_institution(evt){
-    evt.preventDefault();
-    $('#institution_modal').modal('toggle');
-  }
-
   function institution_already_exists(){
     if( this.value.length >= 3 ) {
       $.get(AJAX_URL.institution_already_exists, {name:this.value}, function(response){
@@ -371,7 +366,6 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
     });
 
     $('#save_institution_button').click(save_institution);
-    $('#cancel_institution_button').click(cancel_institution);
 
     $("#community_name").keyup(institution_already_exists);
 

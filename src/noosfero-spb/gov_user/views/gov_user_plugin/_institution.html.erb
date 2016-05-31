@@ -181,7 +181,7 @@
           <%= button(:cancel, _("Cancel"), {:controller => "admin_panel", :action => 'index'}) %>
         <% else %>
            <%= link_to(_('Save'), '#', :id=>'save_institution_button', :class=>'button with-text icon-add') %>
-           <%= link_to(_('Cancel'), '#', :id=>"cancel_institution_button", :class=>'button with-text icon-cancel') %>
+           <%= link_to(_('Cancel'), '#', :id=>"cancel_institution_button", :class=>'button with-text icon-cancel', "data-dismiss".to_sym => "modal") %>
            <%= hidden_field_tag :institution_error_message, _("Could not send the form data to the server") %>
         <% end %>
       </div>
