@@ -5,6 +5,12 @@ class GovUserPluginController < ApplicationController
     :governmental_sphere, :governmental_power, :juridical_nature, :sisp
   ]
 
+  before_action :require_login, :only => [:create_institution, :create_institution_admin, :create_institution_view_variables]
+
+  def require_login
+    redirect_to :controller => "/account", :action => "login" unless user.present?
+  end
+
   def hide_registration_incomplete_percentage
     response = false
 
