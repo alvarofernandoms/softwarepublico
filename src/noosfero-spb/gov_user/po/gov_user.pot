@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 11:46-0300\n"
-"PO-Revision-Date: 2016-05-30 11:46-0300\n"
+"POT-Creation-Date: 2016-05-30 17:16-0300\n"
+"PO-Revision-Date: 2016-05-30 17:16-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -50,8 +50,17 @@ msgstr ""
 msgid "institution not found"
 msgstr ""
 
-#: ../lib/ext/organization_rating.rb:23
-msgid "Report values cannot be saved without an institution"
+#: ../lib/ext/organization_rating.rb:24 ../lib/ext/organization_rating.rb:28
+#: ../lib/institution.rb:6
+msgid "institution"
+msgstr ""
+
+#: ../lib/ext/organization_rating.rb:24
+msgid "needs to be valid to save the number of people benefited"
+msgstr ""
+
+#: ../lib/ext/organization_rating.rb:28
+msgid "needs to be valid to save report values"
 msgstr ""
 
 #: ../lib/ext/search_controller.rb:6
@@ -78,10 +87,6 @@ msgstr ""
 #: ../views/organization_ratings_container_extra_fields_show_institution.html.erb:4
 #: ../views/organization_ratings_task_extra_fields_show_institution.html.erb:4
 msgid "Institution"
-msgstr ""
-
-#: ../lib/institution.rb:6
-msgid "institution"
 msgstr ""
 
 #: ../lib/institution.rb:68

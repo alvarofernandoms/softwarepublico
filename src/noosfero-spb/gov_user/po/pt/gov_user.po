@@ -36,8 +36,14 @@ msgstr "Instituição não pode ser criada!"
 msgid "institution not found"
 msgstr "Nenhuma instituição encontrada"
 
-msgid "Report values cannot be saved without an institution"
-msgstr "Recursos economizados não podem ser salvos sem uma instituição"
+msgid "institution"
+msgstr "instituição"
+
+msgid "needs to be valid to save the number of people benefited"
+msgstr "precisa ser válida para salvar o número de pessoas beneficiadas"
+
+msgid "needs to be valid to save report values"
+msgstr "precisa ser válida para salvar valores de recursos economizados"
 
 msgid "Communities Search"
 msgstr "Buscar Comunidades"
@@ -56,9 +62,6 @@ msgstr "Informações da Instituição"
 
 msgid "Institution"
 msgstr "Instituição"
-
-msgid "institution"
-msgstr "instituição"
 
 msgid "invalid, only public and private institutions are allowed."
 msgstr "Inválido, somente instituições públicas e privadas são permitidas."
