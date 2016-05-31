@@ -35,6 +35,10 @@
   position: relative;
 }
 
+#noosfero_profile-content #content .main-content #profile-data .modal-dialog{
+  position: static;
+}
+
 .action-profile_editor-edit #content .main-content #profile-data .modal.in .modal-dialog,
 .modal.in .modal-dialog {
   transform: translate(0px, 0px);
