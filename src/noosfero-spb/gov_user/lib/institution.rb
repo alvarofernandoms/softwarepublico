@@ -49,7 +49,7 @@ class Institution < ActiveRecord::Base
            :verify_institution_type, :verify_siorg_code
 
   def verify_siorg_code
-    if (self.siorg_code =~ /^[0-9]+$/).nil?
+    if (self.siorg_code.present? && (self.siorg_code =~ /^[0-9]+$/).nil?)
       self.errors.add(
         :siorg_code,
         _("invalid, only numbers are allowed.")
