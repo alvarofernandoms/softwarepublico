@@ -130,6 +130,7 @@ template '/etc/colab/settings.d/06-raven-settings.py' do
   group 'colab'
   mode 0640
   notifies :restart, 'service[colab]'
+  only_if { node['config']['raven_dsn'] }
 end
 
 # Adding plugins for colab

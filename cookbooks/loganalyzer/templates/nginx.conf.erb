@@ -4,7 +4,7 @@ server {
   root /usr/share/nginx/html/;
   index index.php index.html index.htm;
 
-  server_name <%= node['config']['monitor_external_hostname'] %>;
+  server_name <%= node['config']['monitor_external_hostname'] || 'status.softwarepublico' %>;
 
   location /loganalyzer/images/ {
     alias /usr/share/nginx/html/loganalyzer/images/;
