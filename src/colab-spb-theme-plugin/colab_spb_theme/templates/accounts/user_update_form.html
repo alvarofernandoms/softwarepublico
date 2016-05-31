@@ -145,7 +145,7 @@ jQuery(function() {
     {% endwith %}
 
     <h3>{% gravatar user_.email 50 %} {{ user_.get_full_name }} ({{ user_.username }})</h3>
-    <a href="https://gravatar.com" target="_blank">
+    <a class="gravatar" href="https://gravatar.com" target="_blank">
       {% trans "Change your avatar at Gravatar.com" %}
     </a>
   </div>
