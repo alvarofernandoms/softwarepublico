@@ -278,7 +278,6 @@ class GovUserPluginControllerTest < ActionController::TestCase
 
     post :create_institution_admin
 
-    assert_response 403
-    assert_template :access_denied
+    assert_response 200
   end
 end
