@@ -17,7 +17,7 @@ database:
 monitor:
   run_list:
     - role[server]
-    - role[monitor_server]
+    - role[monitoring_server]
 reverseproxy:
   run_list:
     - role[server]
