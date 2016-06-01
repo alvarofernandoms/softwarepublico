@@ -46,18 +46,11 @@ class Institution < ActiveRecord::Base
   }
 
   validate :validate_country, :validate_state, :validate_city,
-           :verify_institution_type, :verify_siorg_code
+           :verify_institution_type
 
-  def verify_siorg_code
-    if (self.siorg_code.present? && (self.siorg_code =~ /^[0-9]+$/).nil?)
-      self.errors.add(
-        :siorg_code,
-        _("invalid, only numbers are allowed.")
-      )
-      return false
-    end
-    true
-  end
+  validates :siorg_code,
+            format: {with: /\A[0-9]+\z/, message: _("invalid, only numbers are allowed.")},
+            allow_blank: true
 
   def has_accepted_rating? user_rating
     rating_ids = OrganizationRating.where(institution_id: self.id, organization_id: user_rating.organization_id).map(&:id)
