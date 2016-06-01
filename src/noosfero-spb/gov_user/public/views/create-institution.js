@@ -76,9 +76,9 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
     add_selected_institution_to_list(institution_id, institution_name);
 
     $(".remove-institution").click(remove_institution);
-    //$('#institution_dialog').dialog('close');
     $('#institution_modal').modal('toggle');
   }
+
 
 
   function success_ajax_response(response) {
@@ -107,6 +107,7 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
       update_user_institutions_list();
     } else {
       var errors = create_error_list(response);
+
       $("#create_institution_errors").switchClass("hide-field", "show-field").html("<h2>"+response.message+"</h2>"+errors);
 
       show_errors_in_each_field(response.errors);
@@ -117,8 +118,8 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
     var errors = "<ul>";
     var field_name;
 
-    for(var error in response.errors) {
-        errors += "<li>"+response.errors[error]+"</li>";
+    for(var i =0;i<response.errors.length;i++) {
+        errors += "<li>"+response.errors[i]+"</li>";
     }
 
     errors += "</ul>";
@@ -163,12 +164,6 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
       }
     });
   }
-
-  function cancel_institution(evt){
-    evt.preventDefault();
-    $('#institution_modal').modal('toggle');
-  }
-
 
   function institution_already_exists(){
     if( this.value.length >= 3 ) {
@@ -373,7 +368,6 @@ modulejs.define('CreateInstitution', ['jquery', 'NoosferoRoot', 'SelectElement']
     });
 
     $('#save_institution_button').click(save_institution);
-    $('#cancel_institution_button').click(cancel_institution);
 
     $("#community_name").keyup(institution_already_exists);
 
