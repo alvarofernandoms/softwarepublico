@@ -124,10 +124,13 @@ end
 #   The precompile-assets runs into a bug that happens when it runs the FIRST time
 #   This means that when runs into a new and clean machine it will crash
 #   This bug is related to gitlab 7.6.* it should fix on gitlab 8.*
+#
+#   The returns is accepting 1 as return for this case
 execute 'precompile-assets' do
   user 'git'
   cwd '/usr/lib/gitlab'
   ignore_failure true
   command 'bundle exec rake assets:precompile RAILS_ENV=production'
   action :nothing
+  returns [0,1]
 end
