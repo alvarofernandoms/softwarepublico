@@ -73,4 +73,19 @@ class InstitutionTest < ActiveSupport::TestCase
     assert_includes search_result_env1, @institution.id
     assert_not_includes search_result_env2, @institution.id
   end
+
+  should "not save if siorg_code is not a number" do
+    @institution.siorg_code = "not a number"
+    assert_equal false, @institution.save
+
+    @institution.siorg_code = "1111111"
+    assert_equal true, @institution.save
+  end
+
+  should "validate siorg_code if it is blank" do
+    @institution.siorg_code = ""
+    assert_equal true, @institution.save
+  end
+
+
 end

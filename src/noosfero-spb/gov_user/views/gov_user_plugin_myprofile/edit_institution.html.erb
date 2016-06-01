@@ -41,10 +41,21 @@
       </div>
 
       <div class="spb-row">
-        <div class="spb-col spb-col-4">
+        <div class="spb-col spb-col-7">
           <%= required labelled_form_field(_('Corporate Name'), text_field_tag('community[name]', @institution.community.name)) %>
         </div>
-        <div class="spb-col spb-col-5">
+        <span class='optional-field'>
+          <div class="spb-col spb-col-5">
+            <%= hidden_field_tag "acronym_translate", _("Acronym") %>
+            <%= hidden_field_tag "fantasy_name_translate", _("Fantasy name") %>
+            <%= inst.label("acronym" ,_("Acronym"), :class=>"formlabel") %>
+            <%= inst.text_field(:acronym, :value => @institution.acronym) %>
+          </div>
+        </div>
+      </div>
+
+      <div class="spb-row">
+        <div class="spb-col spb-col-12">
           <%= labelled_form_field(_('Fantasy name'), inst.text_field(:corporate_name, :value => @institution.corporate_name)) %>
         </div>
       </div>
@@ -63,21 +74,16 @@
         </div>
       </div>
 
-      <span class='optional-field'>
-        <div class="formfield type-text">
-          <%= inst.label("cnpj" ,_("CNPJ"), :class=>"formlabel") %>
-          <%= required inst.text_field(:cnpj, :placeholder=>"99.999.999/9999-99", :class=>"intitution_cnpj_field", :value => @institution.cnpj) %>
+      <div class="spb-row">
+        <div class="spb-col spb-col-12">
+          <span class='optional-field'>
+            <div class="formfield type-text">
+              <%= inst.label("cnpj" ,_("CNPJ"), :class=>"formlabel") %>
+              <%= required inst.text_field(:cnpj, :placeholder=>"99.999.999/9999-99", :class=>"intitution_cnpj_field", :value => @institution.cnpj) %>
+            </div>
+          </span>
         </div>
-      </span>
-
-      <span class='optional-field'>
-        <div class="formfield type-text">
-          <%= hidden_field_tag "acronym_translate", _("Acronym") %>
-          <%= hidden_field_tag "fantasy_name_translate", _("Fantasy name") %>
-          <%= inst.label("acronym" ,_("Acronym"), :class=>"formlabel") %>
-          <%= inst.text_field(:acronym, :value => @institution.acronym) %>
-        </div>
-      </span>
+      </div>
 
       <div class="spb-row public-institutions-fields">
         <div class="spb-col spb-col-6">
@@ -112,6 +118,17 @@
         </div>
       </div>
 
+      <div class="spb-row public-institutions-fields">
+        <div class="spb-col spb-col-6">
+          <span class='required-field public-institutions-fields'>
+            <div class="formfield type-text">
+              <%= inst.label("siorg_code" ,_("SIORG Code:"), :class=>"formlabel") %>
+              <%= inst.text_field(:siorg_code, :value => @institution.siorg_code) %>
+            </div>
+          </span>
+        </div>
+      </div>
+
       <div class="spc-col spb-col-12 sisp-fields">
         <div class="spb-row public-institutions-fields">
           <div class="spb-col spb-col-3">
@@ -120,7 +137,7 @@
                 <div class="spb-col spb-col-12">
                   <%= _("SISP?") %>
                 </div>
-                <% if @show_sisp_field %>
+                <% if @show_admin_fields %>
                   <div class="spb-col spb-col-4">
                     <%= inst.radio_button(:sisp, true, :checked=>(@institution.sisp ? true : false)) %>
                     <%= inst.label("sisp" ,_("Yes")) %>

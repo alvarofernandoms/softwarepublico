@@ -48,6 +48,9 @@ class Institution < ActiveRecord::Base
   validate :validate_country, :validate_state, :validate_city,
            :verify_institution_type
 
+  validates :siorg_code,
+            format: {with: /\A[0-9]+\z/, message: _("invalid, only numbers are allowed.")},
+            allow_blank: true
 
   def has_accepted_rating? user_rating
     rating_ids = OrganizationRating.where(institution_id: self.id, organization_id: user_rating.organization_id).map(&:id)

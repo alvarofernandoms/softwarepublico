@@ -47,3 +47,25 @@ Feature: Institution Field
     And I should not see "community_city"
     And I select "Brazil" from "community_country"
     Then I should not see "Gama"
+
+  @selenium
+  Scenario: Show sisp and siorg field to admin on create new institution form
+    Given I follow "Control panel"
+    And I follow "Edit Profile"
+    When I follow "Create new institution"
+    And I choose "Public Institution"
+    Then I should see "SISP?"
+    And I should see "SIORG Code"
+
+  @selenium
+  Scenario: Not show sisp and siorg field to regular user on create new institution form
+    Given the following users
+    | login   |
+    | zombie  |
+    And I am logged in as "zombie"
+    When I follow "Control panel"
+    And I follow "Edit Profile"
+    And I follow "Create new institution"
+    And I choose "Public Institution"
+    Then I should not see "SISP?"
+    And I should not see "SIORG Code"
