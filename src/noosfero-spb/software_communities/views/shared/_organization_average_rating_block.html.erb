@@ -1,6 +1,6 @@
 <div class="star-container catalog_rating_block">
   <% (1..5).each do |rate_number| %>
-    <% if rate_number <= OrganizationRating.average_rating(community.id) %>
+    <% if rate_number <= OrganizationRating.statistics_for_profile(community)[:average] %>
       <div class="medium-star-positive"></div>
     <% else %>
       <div class="medium-star-negative"></div>

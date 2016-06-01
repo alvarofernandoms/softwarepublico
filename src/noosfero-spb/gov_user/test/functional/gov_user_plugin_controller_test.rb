@@ -268,8 +268,8 @@ class GovUserPluginControllerTest < ActionController::TestCase
 
     post :create_institution_admin
 
-    assert_response 403
-    assert_template :access_denied
+    assert_response 302
+    assert_redirected_to(controller: "/account", action: "login")
   end
 
   should "regular user can not access action create_institution_admin" do

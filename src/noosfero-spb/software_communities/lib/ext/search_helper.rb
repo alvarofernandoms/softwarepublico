@@ -32,9 +32,9 @@ module SearchHelper
 
   def sort_by_average_rating list
     list.sort! do |a, b|
-      rating_a = OrganizationRating.average_rating(a.id)
+      rating_a = OrganizationRating.statistics_for_profile(a)[:average]
       rating_a = 0 if rating_a.nil?
-      rating_b = OrganizationRating.average_rating(b.id)
+      rating_b = OrganizationRating.statistics_for_profile(b)[:average]
       rating_b = 0 if rating_b.nil?
       rating_a - rating_b
     end
