@@ -124,7 +124,8 @@ class SoftwareCommunitiesPlugin < Noosfero::Plugin
 
   def organization_ratings_title
     title = _('Use reports')
-    Proc::new do "<h1 class='title'>#{title}</h1>" end
+    ratings_count = OrganizationRating.statistics_for_profile(profile)[:total]
+    Proc::new do "<h1 class='title'>#{title} (#{ratings_count})</h1>" end
   end
 
   def organization_ratings_plugin_container_extra_fields user_rating
