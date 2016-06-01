@@ -23,7 +23,9 @@
 
 {% block head_js %}
   {% for widget in widgets_profile %}
+    {% if widget.identifier in request.get_full_path %}
       {{widget.get_header}}
+    {% endif %}
   {% endfor %}
 <script>
 jQuery(function() {
@@ -166,9 +168,9 @@ jQuery(function() {
 
   {% if widgets_profile %}
       <ul id='navbar' class="nav nav-tabs">
-          <li  id='colab_profile' class='active' role="presentation"><a href="#colab_profile" onclick="active('#colab_profile')">{% trans 'Colab Profile' %}</a></li>
+          <li  id='colab_profile' class='active' role="presentation"><a href="{% url 'user_profile_update' user %}#colab_profile" >{% trans 'Colab Profile' %}</a></li>
       {% for widget in widgets_profile %}
-      <li id='{{widget.identifier}}' role="presentation"><a href="#{{widget.identifier}}" onclick="active('#{{widget.identifier}}')">{{widget.name}}</a></li>
+      <li id='{{widget.identifier}}' role="presentation"><a href="{% url 'user_profile_update' user %}?target={{widget.identifier}}#{{widget.identifier}}" >{{widget.name}}</a></li>
       {% endfor %}
       </ul>
   {% endif %}
@@ -262,7 +264,9 @@ jQuery(function() {
 
       {% for widget in widgets_profile %}
         <div id='{{widget.identifier}}-content' class='profile_item hidden'>
-          {{widget.get_body}}
+          {% if widget.identifier in request.get_full_path %}
+            {{widget.get_body}}
+          {% endif %}
         </div>
       {% endfor %}
   </div>
