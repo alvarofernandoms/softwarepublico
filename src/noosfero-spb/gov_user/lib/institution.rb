@@ -49,7 +49,7 @@ class Institution < ActiveRecord::Base
            :verify_institution_type
 
   validates :siorg_code,
-            format: {with: /\A[0-9]+\z/, message: _("invalid, only numbers are allowed.")},
+            numericality: {only_integer: true, message: _("invalid, only numbers are allowed.")},
             allow_blank: true
 
   def has_accepted_rating? user_rating
