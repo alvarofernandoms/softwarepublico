@@ -796,20 +796,29 @@ body > .alert,
     font-family: "open_sansregular",Arial, Helvetica,sans-serif;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 div#main-content .col-lg-12 a.gravatar {
-    margin-bottom: 60px;
+    font-family: "open_sansregular",Arial, Helvetica,sans-serif;
+    font-size: 12px;
     display: block;
     color: #2c66ce;
     text-decoration: underline;
 }
 
+div#main-content .col-lg-12 h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div#main-content .col-lg-12 {
+    margin-bottom: 60px;
+}
+
 body div#main-content {
     margin-top: 0;
     color: #172738;
-    padding: 40px 0 60px 0;
 }
 
 #main-content > div > h3 > img {
@@ -875,4 +884,55 @@ body div#main-content {
 
 #gitlab_profile-content #user_login {
     margin-bottom: 10px;
+}
+
+
+/* tabs */
+
+.nav.nav-tabs li > a, ul.nav.nav-projects-tabs li > a {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-right: 5px;
+  line-height: 20px;
+  border-color: #EEE;
+  color: #888;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#333;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  font-weight: bold;
+  font-size:14px;
+}
+
+.nav-tabs > li > a {
+  font-size:14px;
+  margin-right: 2px;
+  line-height: 1.428571429;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+
+.nav li > a {
+  color: #888;
+  text-decoration: none;
 }
