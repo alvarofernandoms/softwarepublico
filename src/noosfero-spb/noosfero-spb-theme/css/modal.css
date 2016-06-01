@@ -30,7 +30,10 @@
   opacity: 1;
 }
 
-#noosfero_profile-content #content .main-content #profile-data .modal-dialog,
+#noosfero_profile-content #content .main-content #profile-data .modal-dialog{
+  width: 605px;
+}
+
 .action-profile_editor-edit #content .main-content #profile-data .modal-dialog,
 .modal-dialog {
   width: 590px;
