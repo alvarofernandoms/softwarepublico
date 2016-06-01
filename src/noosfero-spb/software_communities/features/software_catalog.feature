@@ -30,7 +30,7 @@ Feature: Search software
 
   Scenario: Show all "public_software" softwares when open search page
     Given I go to /search/software_infos
-    Then the "all_radio_button" checkbox should be checked
+    Then the "public_software_radio_button" checkbox should be checked
 
   @selenium
   Scenario: Show search for a query when I click on search button
