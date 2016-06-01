@@ -153,7 +153,7 @@ task :preconfig => ssh_config_file do
     puts "I: delete #{preconfig_file} to force running again"
   else
     sh 'scp', '-F', ssh_config_file, 'utils/reverseproxy_ssh_setup', 'reverseproxy.unconfigured:/tmp'
-    sh 'ssh', '-F', ssh_config_file, 'reverseproxy.unconfigured', 'sudo', '/tmp/reverseproxy_ssh_setup', $ALT_SSH_PORT.to_s, config['external_ip'], ips['integration']
+    sh 'ssh', '-F', ssh_config_file, 'reverseproxy.unconfigured', 'sudo', '/tmp/reverseproxy_ssh_setup', $ALT_SSH_PORT.to_s, config['external_ip'], ips['reverseproxy'], ips['integration']
 
     File.open(preconfig_file, 'w') do |f|
       f.puts($ALT_SSH_PORT)

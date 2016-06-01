@@ -4,8 +4,9 @@ set -e
 set -x
 
 port="$1"
-reverseproxy_ip="$2"
-integration_ip="$3"
+reverseproxy_external="$2"
+reverseproxy_ip="$3"
+integration_ip="$4"
 
 # switch SSH to port $port
 sed -i -e 's/^#\?\s*Port\s*[0-9]\+\s*$/Port '$port'/g' /etc/ssh/sshd_config
@@ -33,7 +34,7 @@ iptables -F
 iptables -F -t nat
 
 # Setup port redirect
-iptables -t nat -A PREROUTING -d $reverseproxy_ip/32 -p tcp -m tcp --dport 22 -j DNAT --to-destination $integration_ip:22
+iptables -t nat -A PREROUTING -d $reverseproxy_external/32 -p tcp -m tcp --dport 22 -j DNAT --to-destination $integration_ip:22
 iptables -t nat -A POSTROUTING -d $integration_ip/32 -p tcp -m tcp --dport 22 -j SNAT --to-source $reverseproxy_ip
 if grep -q '/$' /proc/1/cgroup; then
   # only on non-containers
