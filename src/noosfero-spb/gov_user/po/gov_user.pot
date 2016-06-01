@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-30 17:16-0300\n"
-"PO-Revision-Date: 2016-05-30 17:16-0300\n"
+"POT-Creation-Date: 2016-06-01 15:40-0300\n"
+"PO-Revision-Date: 2016-06-01 15:40-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,31 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../controllers/gov_user_plugin_controller.rb:140
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:87
+#: ../controllers/gov_user_plugin_controller.rb:146
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:93
 msgid "Select a Governmental Sphere"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:145
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:98
+#: ../controllers/gov_user_plugin_controller.rb:151
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:104
 msgid "Select a Governmental Power"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:150
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:109
+#: ../controllers/gov_user_plugin_controller.rb:156
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:115
 msgid "Select a Juridical Nature"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:184
+#: ../controllers/gov_user_plugin_controller.rb:190
 #: ../controllers/gov_user_plugin_myprofile_controller.rb:30
 msgid "Could not find Governmental Power or Governmental Sphere"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:230
+#: ../controllers/gov_user_plugin_controller.rb:236
 msgid "Institution successful created!"
 msgstr ""
 
-#: ../controllers/gov_user_plugin_controller.rb:235
+#: ../controllers/gov_user_plugin_controller.rb:241
 msgid "Institution could not be created!"
 msgstr ""
 
@@ -89,23 +89,19 @@ msgstr ""
 msgid "Institution"
 msgstr ""
 
-#: ../lib/institution.rb:6
-msgid "institution"
-msgstr ""
-
-#: ../lib/institution.rb:55
+#: ../lib/institution.rb:52
 msgid "invalid, only numbers are allowed."
 msgstr ""
 
-#: ../lib/institution.rb:78
+#: ../lib/institution.rb:71
 msgid "invalid, only public and private institutions are allowed."
 msgstr ""
 
-#: ../lib/institution.rb:90 ../lib/institution.rb:101 ../lib/institution.rb:117
+#: ../lib/institution.rb:83 ../lib/institution.rb:94 ../lib/institution.rb:110
 msgid "can't be blank"
 msgstr ""
 
-#: ../lib/institution.rb:104
+#: ../lib/institution.rb:97
 msgid "invalid state"
 msgstr ""
 
@@ -179,35 +175,35 @@ msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:56
 #: ../views/gov_user_plugin/_institution.html.erb:58
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:75
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:77
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:49
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:51
 msgid "Acronym"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:57
 #: ../views/gov_user_plugin/_institution.html.erb:67
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:48
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:76
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:50
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:59
 msgid "Fantasy name"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:76
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:54
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:65
 msgid "Country"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:80
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:54
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:65
 msgid "Select a country"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:85
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:58
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:69
 msgid "State"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:89
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:58
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:69
 msgid "Select a state"
 msgstr ""
 
@@ -216,7 +212,7 @@ msgid "City"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:106
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:68
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:81
 msgid "CNPJ"
 msgstr ""
 
@@ -233,19 +229,19 @@ msgid "Juridical Nature"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:153
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:132
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:138
 msgid "SISP?"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:158
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:137
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:143
 #: ../views/profile/_institution_tab.html.erb:19
 msgid "Yes"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:163
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:141
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:144
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:147
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:150
 #: ../views/profile/_institution_tab.html.erb:19
 msgid "No"
 msgstr ""
@@ -256,13 +252,13 @@ msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:180
 #: ../views/gov_user_plugin/_institution.html.erb:183
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:154
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:160
 msgid "Save"
 msgstr ""
 
 #: ../views/gov_user_plugin/_institution.html.erb:181
 #: ../views/gov_user_plugin/_institution.html.erb:184
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:155
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:161
 msgid "Cancel"
 msgstr ""
 
@@ -285,22 +281,22 @@ msgid ""
 "tors and will be approved or rejected according to their methods and criteria."
 msgstr ""
 
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:86
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:92
 #: ../views/profile/_institution_tab.html.erb:17
 msgid "Governmental Sphere:"
 msgstr ""
 
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:97
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:103
 #: ../views/profile/_institution_tab.html.erb:16
 msgid "Governmental Power:"
 msgstr ""
 
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:108
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:114
 #: ../views/profile/_institution_tab.html.erb:18
 msgid "Juridical Nature:"
 msgstr ""
 
-#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:119
+#: ../views/gov_user_plugin_myprofile/edit_institution.html.erb:125
 msgid "SIORG Code:"
 msgstr ""
 

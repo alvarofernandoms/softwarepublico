@@ -63,9 +63,6 @@ msgstr "Informações da Instituição"
 msgid "Institution"
 msgstr "Instituição"
 
-msgid "institution"
-msgstr "instituição"
-
 msgid "invalid, only numbers are allowed."
 msgstr "inválido, apenas números são permitidos."
 
