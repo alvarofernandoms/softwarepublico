@@ -464,9 +464,13 @@
 .ratings-list .make-report-block {
   background-repeat: no-repeat;
   border-bottom: 1px solid #D3D6DE;
-  border-top: none;
-  margin-top: 0px;
+  margin-top: 16px;
   padding-top: 32px;
+}
+
+.action-content_viewer-view_page .ratings-list .make-report-block {
+  border-top: none;
+  margin-top: 0;
 }
 
 .make-report-block .star-profile-information {
