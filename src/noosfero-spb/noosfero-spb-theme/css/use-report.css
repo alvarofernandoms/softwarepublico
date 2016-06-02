@@ -464,8 +464,7 @@
 .ratings-list .make-report-block {
   background-repeat: no-repeat;
   border-bottom: 1px solid #D3D6DE;
-  border-top: none;
-  margin-top: 0px;
+  margin-top: 16px;
   padding-top: 32px;
 }
 
