@@ -468,6 +468,11 @@
   padding-top: 32px;
 }
 
+.action-content_viewer-view_page .ratings-list .make-report-block {
+  border-top: none;
+  margin-top: 0;
+}
+
 .make-report-block .star-profile-information {
   padding-right: 13px;
   padding-left: 0px;
