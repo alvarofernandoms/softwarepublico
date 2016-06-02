@@ -10,7 +10,7 @@ alternative_hostnames:
   - www.softwarepublico.gov.br
   - portal.softwarepublico.gov.br
   - beta.softwarepublico.gov.br
-external_ip: 189.9.151.64
+external_ip: 10.21.0.4
 alt_ssh_port: 55555
 colab_from_address: '"Portal do Software Publico" <noreply@portal.softwarepublico.gov.br>'
 server_email: '"Portal do Software Publico" <noreply@portal.softwarepublico.gov.br>'

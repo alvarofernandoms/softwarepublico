@@ -7,7 +7,7 @@ external_hostname: dev.softwarepublico.gov.br
 monitor_external_hostname: status.dev.softwarepublico.gov.br
 alternative_hostnames:
   - www.dev.softwarepublico.gov.br
-external_ip: 189.9.151.16
+external_ip: 10.18.0.15
 alt_ssh_port: 55555
 colab_from_address: '"Portal do Software Publico (dev)" <noreply@dev.softwarepublico.gov.br>'
 server_email: '"Portal do Software Publico (dev)" <noreply@dev.softwarepublico.gov.br>'
