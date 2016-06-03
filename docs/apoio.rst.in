@@ -2,6 +2,23 @@ Documentação de Apoio
 =====================
 .. _referencia:
 
+Configuração de Usuário
+---------------
+
+Para a criação de usuário utilize (o comando deve ser executado por um
+usuário com permissão sudo)::
+
+    # adduser <NOME DO USUÁRIO>
+
+Edite o arquivo de sudoers com o comando::
+
+    # visudo
+
+Adicione a linha no arquivo::
+
+    <NOME DO USUÁRIO> ALL=(ALL:ALL) NOPASSWD:ALL
+
+
 Gerar Chave SSH
 ---------------
 Antes de gerar a chave SSH, verifique se o seu sistema já não possui uma chave::
