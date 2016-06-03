@@ -35,7 +35,7 @@ emulador de terminal padrão do seu ambiente de trabalho, ou qualquer
 outro, vai servir.
 
 **Nota Sphinx**: em alguns casos é necessário configurar as variáveis de ambientes
-`LANGUAGE`, `LANG` e `LC_ALL` para `pt_BR.UTF-8` como::
+`LANGUAGE`, `LANG` e `LC_ALL` para `pt_BR.UTF-8` com::
 
     $ export LANG=pt_BR.UTF-8
     $ export LC_ALL=pt_BR.UTF-8
@@ -45,19 +45,19 @@ Para as máquinas do ambiente é necessário as seguintes dependências:
 
 * rsync_: ferramenta de sincronização de arquivos;
 * wget_: ferramenta de download de arquivos via terminal;
-* netcat_: farramenta com utilitários para escrita e leitura de dados por TCP/IP.
+* netcat_: ferramenta com utilitários para escrita e leitura de dados por TCP/IP.
 
 .. _rsync: https://rsync.samba.org/
 .. _wget: https://www.gnu.org/software/wget/
 .. _netcat: http://netcat.sourceforge.net/
 
-Para instalar em Debian/Ubuntu::
+Para instalar::
 
-    $ sudo apt-get install rsync wget nc
+    $ sudo yum install rsync wget nc
 
 As máquinas também deve estar com o SELinux habilitado e em modo `permissive`.
 Para isso, altere o arquivo `/etc/sysconfig/selinux` e altere a variável `SELINUX`
-para permissive. Se necessário reinicie a máquina.
+para `permissive`. Se necessário reinicie a máquina.
 
 
 Obtendo o repositório de configuração
