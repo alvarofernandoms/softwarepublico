@@ -31,4 +31,12 @@ pacotes com as tags ``5.0a0`` não tendo correlação direta de versão.
 
 .. _`aqui`: https://fedoraproject.org/wiki/How_to_create_an_RPM_package/pt
 
+Automação de Criação dos Pacotes
+------------
 
+A contrução dos pacotes do SPB são feitos com a utilização de comandos 'Make' disponíveis
+nos diretórios ``softwarepublico/src/`` e ``softwarepublico/src/pkg-rpm/``. Todas as instruções
+estão disponíveis nos README.md's nos respectivos diretórios.
+
+**Nota**: como parte dos objetivos do DevOps, uma feature foi iniciada, entretanto
+não foi completamente testada e validada.
