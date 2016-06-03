@@ -24,10 +24,10 @@
 </div>
 
 <div>
-  <%= labelled_form_for :community,:html => { :multipart => true, :id=>"institution_form" } do |f| %>
+  <%= labelled_form_for :community, :html => { :multipart => true, :id=>"institution_form" } do |f| %>
     <%= hidden_field_tag "edit_institution_page", true %>
     <%= fields_for :institutions do |inst| %>
-    <div class="spb-row no-margin-top">
+      <div class="spb-row no-margin-top">
         <span class=''>
           <div class='formfield type-radio'>
             <div class='spb-col spb-col-2'>
@@ -51,7 +51,7 @@
             <%= inst.label("acronym" ,_("Acronym"), :class=>"formlabel") %>
             <%= inst.text_field(:acronym, :value => @institution.acronym) %>
           </div>
-        </div>
+        </span>
       </div>
 
       <div class="spb-row">
@@ -120,7 +120,7 @@
 
       <div class="spb-row public-institutions-fields">
         <div class="spb-col spb-col-6">
-          <span class='required-field public-institutions-fields'>
+          <span class='public-institutions-fields'>
             <div class="formfield type-text">
               <%= inst.label("siorg_code" ,_("SIORG Code:"), :class=>"formlabel") %>
               <%= inst.text_field(:siorg_code, :value => @institution.siorg_code) %>
@@ -149,11 +149,12 @@
                 <% else %>
                   <%= inst.label("sisp", _("No")) %>
                 <% end %>
-                </div>
+              </div>
             </span>
           </div>
         </div>
       </div>
+
 
     <div class="spb-row modal-form-actions">
       <div class="spb-col spb-col-6">
@@ -161,6 +162,6 @@
         <%= button(:cancel, _("Cancel"), {:controller => "profile", :action => 'index'}) %>
       </div>
     </div>
-
   <% end %>
 <% end %>
+</div>
