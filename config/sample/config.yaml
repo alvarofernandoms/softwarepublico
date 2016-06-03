@@ -88,3 +88,15 @@ google_analytics_id: '<ID>'
 #
 # Make sure that you have enough resources for the amount of workers
 #colab_http_workers: <NUMBER OF WORKERS>
+
+# Backup frequence,
+#   True if you want to the frequency to be monthly
+#   False if you want to the frequency to be hourly, daily, weekly and monthly
+#   Default: False
+#dev_backup_frequency: false
+
+# Disabling send email
+#   True the emails to be sent will be write on file
+#   False the emails will be sent normally
+#   Default: False
+#disable_send_emails: true

@@ -1,3 +1,5 @@
+# This file contains the IP of all the machines on the environment.
+# All of them must be the private IP.
 reverseproxy: 10.21.0.4
 database: 10.21.0.6
 social: 10.21.0.5

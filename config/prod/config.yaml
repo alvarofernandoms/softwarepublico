@@ -1,28 +1,105 @@
+# This is a sample of config.yaml file. Make the changes according to your
+#   environment.
+
+# Valid RPM repository and gpgkey links of SoftwarePublico packages
+# Default: "https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/epel-7-$basearch/"
+#          "https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/pubkey.gpg"
+#
 rpm_repository: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/epel-7-$basearch/
 rpm_gpgkey: https://copr-be.cloud.fedoraproject.org/results/softwarepublico/v5/pubkey.gpg
+
+# Users admins for the environment
 admins:
   - ["Nayanne Araújo", "nayanne.bonifacio@planejamento.gov.br"]
   - ["Marisa Souza dos Santos", "marisa.santos@planejamento.gov.br"]
+
+# External domain name for Softwarepublico
+#   Example:
+#     site_url: https://softwarepublico.gov.br
+#     external_hostname: softwarepublico.gov.br
 site_url: https://softwarepublico.gov.br
 external_hostname: softwarepublico.gov.br
+
+# External domain for monitoring server
+# Default: "status.sofwarepublico"
+#
+# This is for a production environment. You don't really needs that for
+#   development or test environments.
+#
 monitor_external_hostname: status.softwarepublico.gov.br
+
+# Munin master private IP addr
+#
+# This also is used for production environment purposes
+munin_master: 10.21.0.10
+
+# Raven dsn key for sentry
+raven_dsn: https://4418146896924efe9b73d557f803f047:8a59f39b5f584ff589ecf3dd47faaead@sentry.tracy.com.br/13
+
+# Alternatives hostname for Softwarepulico
+#
 alternative_hostnames:
   - www.softwarepublico.gov.br
   - portal.softwarepublico.gov.br
   - beta.softwarepublico.gov.br
+
+# The public IP address for the reverseproxy machine
+# If the public IP is provided from other machine, just put the private IP of
+#   the reverseproxy machine
 external_ip: 10.21.0.4
+
+# Alternative port for ssh access of reverseproxy machine
 alt_ssh_port: 55555
+
+# Configurations for the email reply.
+#
+# Example:
+#   colab_from_address: '"Softwarepublico" <noreply@softwarepublico.gov>'
+#   server_email: '"Softwarepublico" <noreply@softwarepublico.gov>'
+#   email_subject_prefix: '[spb]'
 colab_from_address: '"Portal do Software Publico" <noreply@portal.softwarepublico.gov.br>'
 server_email: '"Portal do Software Publico" <noreply@portal.softwarepublico.gov.br>'
 email_subject_prefix: '[spb]'
-lists_hostname: listas.softwarepublico.gov.br
+
+# Email list addresses
+#
+# Example:
+#   lists_admin: admin@admin.gov
+#   from_address: noreply@softwarepublico.gov
 lists_admin: nayanne.bonifacio@planejamento.gov.br
 from_address: noreply@softwarepublico.gov.br
+
+# Email hostnames
+#
+# Example:
+#   lists_hostname: listas.softwarepublico.gov
+#   relay_hostname: relay.softwarepublico.gov
+lists_hostname: listas.softwarepublico.gov.br
 relay_hostname: relay.softwarepublico.gov.br
+
+# Relay external IP address. Used to send reply emails.
 relay_ip: 189.9.151.68
 external_outgoing_mail_relay: 189.9.150.53
 external_outgoing_mail_domain: serpro.gov.br
-raven_dsn: https://4418146896924efe9b73d557f803f047:8a59f39b5f584ff589ecf3dd47faaead@sentry.tracy.com.br/13
+
+# Google Analytics ID. Check out the google documentation for more information
+#   about the ID: https://support.google.com/analytics/answer/1032385?hl=pt-BR
 google_analytics_id: 'UA-64206731-1'
-munin_master: 10.21.0.10
+
+# Numbers of workes for colab.
+# Default: numbers of cpu * 2 + 1
+#
+# Make sure that you have enough resources for the amount of workers
 colab_http_workers: 32
+
+# Backup frequence,
+#   True if you want to the frequency to be monthly
+#   False if you want to the frequency to be hourly, daily, weekly and monthly
+#   Default: False
+#dev_backup_frequency: false
+
+# Disabling send email
+#   True the emails to be sent will be write on file
+#   False the emails will be sent normally
+#   Default: False
+#disable_send_emails: true
